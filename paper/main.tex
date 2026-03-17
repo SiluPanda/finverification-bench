@@ -90,7 +90,7 @@ We make the following contributions:
     \item We formalize \textbf{financial statement verification} as a distinct evaluation task for LLMs, defining it as the detection and localization of numerical inconsistencies in structured financial documents (\Cref{sec:task}).
     \item We introduce a \textbf{four-category, twelve-subtype error taxonomy} grounded in auditing practice, covering arithmetic errors, cross-statement linkage violations, year-over-year inconsistencies, and magnitude perturbations (\Cref{sec:taxonomy}).
     \item We present \benchmark{}, a \textbf{benchmark dataset} of 1,985 instances constructed from real SEC 10-K filings via controlled error injection at six magnitude levels, enabling fine-grained analysis of model sensitivity (\Cref{sec:benchmark}).
-    \item We evaluate a \textbf{deterministic rule-based verifier} and nine \textbf{frontier LLMs} spanning seven providers, revealing a \emph{calibration spectrum} with a calibration spectrum ranging from full calibration (0\% FPR), through conservative verification (21\% FPR), moderate recall-specificity tradeoff (51\% FPR), and partial calibration (74--84\% FPR), to error detection bias (95--100\% FPR in six models)---a cross-provider, cross-architecture, and intra-family phenomenon (\Cref{sec:results}).
+    \item We evaluate a \textbf{deterministic rule-based verifier} and eleven \textbf{frontier LLMs} spanning seven providers, revealing a \emph{calibration spectrum} ranging from full calibration (0\% FPR), through conservative verification (21\% FPR), moderate recall-specificity tradeoff (51\% FPR), and partial calibration (74--84\% FPR), to error detection bias (95--100\% FPR in six models)---a cross-provider, cross-architecture, and intra-family phenomenon (\Cref{sec:results}).
     \item We identify a \textbf{verification noise floor} in real financial data arising from partial observability in XBRL taxonomies, and demonstrate through a \textbf{rounding ablation} that construct validity of error injection methodology materially affects benchmark conclusions (\Cref{sec:analysis}).
 \end{enumerate}
 
@@ -726,9 +726,11 @@ The most striking result is the wide \emph{calibration spectrum} across models t
 Claude Sonnet 4 achieves \textbf{98.1\% accuracy} with \textbf{perfect precision} (0\% FPR) and \textbf{96.9\% recall}, correctly identifying 63 of 65 injected errors while producing zero false positives across all 43 clean instances.
 At the other extreme, five models achieve \textbf{100\% FPR} across all evaluated instances: Claude Opus 4.6, Claude Sonnet 4.6, DeepSeek V3.2, MiniMax M2.5, and Gemini 2.5 Pro.
 GPT-4.1 achieves \textbf{100\% recall} with \textbf{95.3\% FPR} (flagging 41 of 43 clean instances).
-Between these extremes, two models show intermediate calibration.
+Between these extremes, four models show intermediate calibration.
+Gemma 3 27B achieves a \textbf{conservative} profile: 50.8\% recall with only 20.9\% FPR---the second-lowest FPR after Claude, but at a significant recall cost, with the highest precision (78.6\%) among non-calibrated models and 93.9\% localization accuracy.
+Llama 4 Maverick occupies a \textbf{moderate} position: 67.7\% recall with 51.2\% FPR.
 Qwen 3 235B achieves \textbf{partial calibration}: 93.8\% recall with 74.4\% FPR (correctly identifying 11 of 43 clean instances).
-Llama 4 Maverick occupies a unique \textbf{moderate} position: 67.7\% recall with 51.2\% FPR---the only model to trade recall for specificity, achieving the highest precision (66.7\%) among non-calibrated models but the lowest recall (67.7\%).
+Llama 4 Scout shows \textbf{near-biased} behavior: 86.2\% recall with 83.7\% FPR, notably weaker than its sibling Maverick, demonstrating intra-family calibration variation within Meta's model line.
 This spectrum---from 0\% to 100\% FPR---spans seven independent providers and both closed-source and open-weight architectures, establishing that calibration quality varies continuously.
 These systems occupy fundamentally different positions in the precision-recall space (\Cref{fig:precision_recall}), with Claude Sonnet 4 uniquely achieving the calibrated judgment that practical deployment requires.
 
@@ -736,7 +738,8 @@ These systems occupy fundamentally different positions in the precision-recall s
 \centering
 \includegraphics[width=0.95\textwidth]{figures/figure_model_comparison_updated.pdf}
 \caption{Comparison of all verification systems across five metrics.
-Eight of eleven LLMs achieve $\geq$93.8\% recall; Llama 4 Maverick alone trades recall (67.7\%) for higher precision.
+Eight of eleven LLMs achieve $\geq$86\% recall; Gemma 3 27B and Llama 4 Maverick trade recall for higher precision.
+Only Claude Sonnet 4 combines high recall with low FPR.
 Only Claude Sonnet 4 achieves low FPR (0\%) and high accuracy (98.1\%).}
 \label{fig:model_comparison}
 \end{figure}
@@ -809,7 +812,7 @@ The dotted line marks the $m_{50}$ threshold (50\% detection rate).}
 \end{figure}
 
 \paragraph{Finding 4: error detection bias is the default LLM behavior.}
-Six of nine LLMs exhibit strong \emph{error detection bias}: when instructed to examine for errors, these models find discrepancies in nearly every financial statement, including those without injected errors.
+Six of eleven LLMs exhibit strong \emph{error detection bias}: when instructed to examine for errors, these models find discrepancies in nearly every financial statement, including those without injected errors.
 Five models achieve 100\% FPR---Claude Opus 4.6, Claude Sonnet 4.6, DeepSeek V3.2, Gemini 2.5 Pro, and MiniMax M2.5---flagging every clean instance as erroneous.
 GPT-4.1 flags 41 of 43 clean instances (FPR = 95.3\% [84.5, 98.7\%]).
 This is particularly notable for three reasons.
@@ -878,22 +881,27 @@ The chain-of-thought prompt partially addresses this by making key relationships
 \subsection{The Precision-Recall Spectrum in Financial Verification}
 \label{sec:analysis:rulevllm}
 
-Our results reveal a spectrum of verification behaviors across four LLM archetypes (plus the rule-based baseline):
+Our results reveal a spectrum of verification behaviors across six LLM archetypes (plus the rule-based baseline):
 
 \begin{itemize}[topsep=2pt,itemsep=1pt]
-    \item \textbf{Rule-based (conservative)}: By restricting checks to relationships that hold exactly in clean data, the verifier achieves 0\% FPR but only 52.8\% recall---missing errors that violate unchecked relationships.
+    \item \textbf{Rule-based (deterministic)}: By restricting checks to relationships that hold exactly in clean data, the verifier achieves 0\% FPR but only 52.8\% recall---missing errors that violate unchecked relationships.
     \item \textbf{Biased (6 models)}: Claude Opus 4.6, Claude Sonnet 4.6, DeepSeek V3.2, Gemini 2.5 Pro, MiniMax M2.5, and GPT-4.1 all achieve 95--100\% FPR, identifying nearly every financial statement as inconsistent.
     GPT-4.1 correctly identifies 2 of 43 clean instances; the other five flag every clean instance as erroneous.
+    \item \textbf{Llama 4 Scout (near-biased)}: Achieves 86.2\% recall with 83.7\% FPR, positioned between the biased cluster and the partially calibrated models.
+    Notably weaker than its sibling Maverick (51.2\% FPR), demonstrating calibration variability within Meta's model family.
     \item \textbf{Qwen 3 235B (partially calibrated)}: Achieves 93.8\% recall with 74.4\% FPR, correctly identifying 11 of 43 clean instances.
     Maintains high recall while beginning to exercise selective judgment.
-    \item \textbf{Llama 4 Maverick (moderate)}: Achieves 67.7\% recall with 51.2\% FPR---the only model to genuinely trade recall for specificity.
+    \item \textbf{Llama 4 Maverick (moderate)}: Achieves 67.7\% recall with 51.2\% FPR, genuinely trading recall for specificity.
     Excels on cross-statement linkage errors (87.5\%) but struggles with arithmetic column sums (43.8\%), revealing category-specific verification capabilities.
+    \item \textbf{Gemma 3 27B (conservative)}: Achieves 50.8\% recall with only 20.9\% FPR---the most conservative LLM.
+    Excels on cross-statement errors (75.0\%) but detects only 25.0\% of arithmetic errors, suggesting reliance on a narrow set of well-known accounting relationships.
+    Achieves the highest localization accuracy (93.9\%) among non-calibrated models.
     \item \textbf{Claude Sonnet 4 (fully calibrated)}: Achieves 100\% precision \emph{and} 96.9\% recall, successfully distinguishing injected errors from expected rounding discrepancies.
 \end{itemize}
 
 The contrast across all eleven LLMs is particularly illuminating.
 All ten CoT-evaluated models process the same financial statements under the same prompt, yet only Claude Sonnet 4 correctly classifies all 43 clean instances.
-With six of nine frontier models from five of the seven evaluated providers exhibiting error detection bias---including two \emph{from the same provider} as the calibrated model---we conclude that this is the \emph{default} LLM behavior for verification tasks.
+With six of eleven frontier models from five of the seven evaluated providers exhibiting error detection bias---including two \emph{from the same provider} as the calibrated model---we conclude that this is the \emph{default} LLM behavior for verification tasks.
 Flagging everything as suspicious is the ``safe'' response when asked to look for errors, and calibrated behavior is the \emph{exception}.
 The key capability that Claude Sonnet 4 uniquely demonstrates is \emph{tolerance for expected imprecision}---the ability to recognize that financial statements reported in millions of dollars will have minor rounding discrepancies that do not constitute genuine errors.
 
@@ -936,7 +944,7 @@ This quantitative decomposition confirms that the central challenge is calibrati
 Cohen's $\kappa = 0.051$ between the two models' predictions reflects near-zero agreement beyond chance, driven by GPT-4.1's near-uniform ``error'' prediction ($65/65$ error instances plus $41/43$ clean instances, i.e., 98.1\% of all instances predicted as errors).
 
 \paragraph{Pairwise analysis across all models.}
-Extending McNemar's test to all $\binom{9}{2} = 36$ model pairs (with Bonferroni-corrected $\alpha = 0.05/36 = 0.0014$) reveals a stark pattern: \textbf{Claude Sonnet 4 significantly outperforms every other model} ($p < 10^{-4}$ in all 8 comparisons), while \textbf{no other pairwise comparison reaches significance} after correction.
+Extending McNemar's test to all $\binom{11}{2} = 55$ model pairs (with Bonferroni-corrected $\alpha = 0.05/55 = 0.0009$) reveals a stark pattern: \textbf{Claude Sonnet 4 significantly outperforms every other model} ($p < 10^{-4}$ in all 10 comparisons), while \textbf{no other pairwise comparison reaches significance} after correction.
 This confirms that the calibrated model's advantage is statistically robust and that the remaining ten models---despite spanning seven providers---are statistically indistinguishable from each other in overall accuracy.
 
 Inter-rater agreement further clarifies the landscape.
@@ -944,8 +952,9 @@ Three models (Claude Opus 4.6, Sonnet 4.6, and DeepSeek V3.2) produce \emph{iden
 Fleiss' $\kappa$ across all eleven models' raw predictions is $-0.005$ (no agreement beyond chance), reflecting the fundamental disagreement: models do not agree on \emph{which} instances contain errors, despite similar aggregate accuracy.
 Fleiss' $\kappa$ on correctness (whether each model's prediction matches the ground truth) is $0.448$ (moderate agreement), indicating that models tend to agree on which instances are easy versus hard---but differ in how they resolve the hard ones.
 
-Instance-level analysis reveals that 22 of 108 instances are \emph{universally correct} (all eleven models answer correctly), while zero instances are universally wrong.
+Instance-level analysis on the original nine models reveals that 22 of 108 instances are \emph{universally correct} (all models answer correctly), while zero instances are universally wrong.
 Thirteen instances are correctly classified \emph{only} by Claude Sonnet 4; all 13 are clean (no-error) instances, confirming that the calibrated model's advantage lies entirely in clean-instance specificity rather than superior error detection.
+The two additional models (Gemma 3 27B, Llama 4 Scout) do not alter these conclusions: both fall within the non-calibrated cluster and neither achieves the clean-instance specificity of Claude Sonnet 4.
 
 \subsection{Anatomy of False Positives: Why Models Miscalibrate}
 \label{sec:analysis:fp}
@@ -1059,8 +1068,8 @@ Our benchmark design and baseline analysis have direct implications for the depl
 \paragraph{Verification as a safety check.}
 LLMs are increasingly used to generate financial analyses and summaries~\citep{lin2026openfinllm}.
 Our results demonstrate that some frontier LLMs can serve as effective verification layers, but the capability varies dramatically---even among leading models.
-Claude Sonnet 4's 98.1\% accuracy and 0\% false positive rate suggest that AI-assisted financial verification is feasible, while the 95--100\% FPR exhibited by six of nine evaluated models demonstrates that na\"ive deployment of \emph{most} frontier models would produce an overwhelming number of false alarms, rendering the system unusable in practice.
-That six of nine evaluated models---including two from the same family as the calibrated model---exhibit this failure mode underscores the importance of task-specific evaluation.
+Claude Sonnet 4's 98.1\% accuracy and 0\% false positive rate suggest that AI-assisted financial verification is feasible, while the 95--100\% FPR exhibited by six of eleven evaluated models demonstrates that na\"ive deployment of \emph{most} frontier models would produce an overwhelming number of false alarms, rendering the system unusable in practice.
+That six of eleven evaluated models---including two from the same family as the calibrated model---exhibit this failure mode underscores the importance of task-specific evaluation.
 
 \paragraph{Materiality thresholds.}
 The SEC's Staff Accounting Bulletin No.\ 99 considers misstatements below 5\% of a relevant benchmark as presumptively immaterial.
