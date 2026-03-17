@@ -823,7 +823,7 @@ Manual inspection reveals that all biased models identify \emph{genuine but beni
 For GPT-4.1, false positives typically involve miscomputing operating income from an abbreviated statement that omits certain line items (e.g., stock-based compensation).
 Among models with high FPR, localization accuracy on true positives varies: DeepSeek V3.2 achieves 86.2\%, Qwen 85.2\%, Gemini 85.0\%, Claude Opus 4.6 78.5\%, Claude Sonnet 4.6 73.8\%, and GPT-4.1 70.8\%---suggesting that even when models correctly detect an injected error, they frequently attribute it to the wrong field.
 Claude Sonnet 4, by contrast, demonstrates the calibrated judgment needed to distinguish injected errors from expected rounding discrepancies, achieving a 0\% false positive rate [95\% CI: 0--8.2\%] with 100\% localization accuracy.
-The observation that error detection bias appears across six of seven evaluated providers (Anthropic, OpenAI, DeepSeek, Google, Alibaba/Qwen, MiniMax), across prompting strategies (CoT, zero-shot), and \emph{within} a single model family, establishes this as a fundamental challenge for LLMs in verification tasks.
+The observation that non-calibrated behavior (FPR $>$ 0\%) appears across all seven evaluated providers (Anthropic, OpenAI, DeepSeek, Google, Alibaba/Qwen, Meta, MiniMax), across prompting strategies (CoT, zero-shot), and \emph{within} three model families (Anthropic, Meta, Google), establishes this as a fundamental challenge for LLMs in verification tasks.
 \Cref{fig:category_heatmap} visualizes detection rates across error categories and systems, highlighting the contrast between universal error recall and divergent clean-instance specificity.
 
 \begin{figure}[t]
