@@ -1223,61 +1223,69 @@ The finding that Claude Sonnet 4 achieves the best calibration in our benchmark 
 
 \subsection{Zero-Shot Prompt}
 \begin{verbatim}
-You are a financial auditor reviewing corporate financial
-statements. Examine the following financial statements for
-internal consistency.
+You are an expert financial auditor. Your task is to
+verify whether the following financial statements are
+internally consistent.
 
-[BALANCE SHEET]
-{balance_sheet}
+Check for:
+- Arithmetic errors (do line items sum to their stated
+  totals?)
+- Cross-statement linkage errors (does net income match
+  between IS and CFS? does ending cash on CFS match the
+  balance sheet? etc.)
+- Year-over-year inconsistencies (does the prior-year
+  ending balance equal the current-year opening balance?)
+- Magnitude / rounding errors (are any values suspiciously
+  different from what the arithmetic implies?)
 
-[INCOME STATEMENT]
-{income_statement}
+FINANCIAL STATEMENTS:
+{formatted_statements}
 
-[CASH FLOW STATEMENT]
-{cash_flow_statement}
-
-Determine whether there are any numerical errors or
-inconsistencies in these financial statements.
-
-If you find any inconsistencies:
-1. Identify the specific line items involved
-2. Explain the expected relationship between them
-3. State the actual values and why they are inconsistent
-
-If the statements are internally consistent, state so
-and briefly explain the key relationships you verified.
+Respond in JSON: {"has_error": true/false,
+  "error_location": "...", "explanation": "..."}
 \end{verbatim}
 
 \subsection{Chain-of-Thought Prompt}
 \begin{verbatim}
-You are a financial auditor. Systematically verify the
-internal consistency of the following financial statements
-by checking each relationship step by step.
+You are an expert financial auditor performing a
+systematic verification of financial statements. Work
+through each check step by step, showing your
+calculations, before reaching a final conclusion.
 
-[FINANCIAL STATEMENTS]
-{statements}
+FINANCIAL STATEMENTS:
+{formatted_statements}
 
-Check each of the following relationships:
-1. Do all line items on the balance sheet sum correctly?
-   (Current assets + Non-current assets = Total assets;
-    Current liabilities + Non-current liabilities
-    = Total liabilities;
-    Total liabilities + Equity = Total assets)
-2. Do all line items on the income statement sum correctly?
-   (Revenue - COGS = Gross profit;
-    Gross profit - OpEx = Operating income; ...)
-3. Does net income on the income statement match the
-   starting point of operating activities on the cash
-   flow statement?
-4. Does the ending cash on the cash flow statement
-   match cash on the balance sheet?
-5. Do the three sections of the cash flow statement
-   (operating + investing + financing) sum to the
-   net change in cash?
+STEP-BY-STEP VERIFICATION:
 
-For each check, state the values you are comparing and
-whether they are consistent. Then provide your overall
-assessment.
+Step 1 -- Income Statement Arithmetic
+  - Does Revenue + COGS = Gross Profit?
+  - Does Gross Profit + OpEx + D&A = Operating Income?
+  - Does Operating Income + Interest = Income Before Tax?
+  - Does IBT + Tax Expense = Net Income?
+
+Step 2 -- Balance Sheet Arithmetic
+  - Does Cash + AR + Inventory = Total Current Assets?
+  - Does Total Current Assets + PP&E = Total Assets?
+  - Does Total Liabilities + Total Equity = Total Assets?
+
+Step 3 -- Cash Flow Statement Arithmetic
+  - Does NI + D&A + WC Changes = Cash from Operations?
+  - Do subtotals (Ops + Inv + Fin) = Net Change in Cash?
+  - Does Beginning Cash + Net Change = Ending Cash?
+
+Step 4 -- Cross-Statement Linkages
+  - Does Net Income on IS = Net Income on CFS?
+  - Does Ending Cash on CFS = Cash on BS?
+  - Is change in Retained Earnings = NI - Dividends?
+
+Step 5 -- Year-over-Year Consistency
+  - Do prior-year values match comparative presentation?
+  - Is Beginning Cash on CFS = prior-year Cash on BS?
+
+After completing all checks, provide your final answer.
+
+Respond in JSON: {"has_error": true/false,
+  "error_location": "...", "explanation": "..."}
 \end{verbatim}
 
 \section{Error Taxonomy Details}
