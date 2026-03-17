@@ -52,11 +52,11 @@
 % ==============================================================================
 We introduce \benchmark{}, a benchmark for evaluating LLMs on financial statement \emph{verification}---detecting numerical inconsistencies in real corporate filings---a task distinct from the question-answering paradigm of existing financial NLP benchmarks.
 \benchmark{} comprises 1,985 instances constructed from 43 S\&P 500 companies' SEC 10-K filings via controlled error injection across a four-category taxonomy (arithmetic, cross-statement linkage, year-over-year, and magnitude errors) at six magnitude levels.
-Evaluating nine frontier LLMs---spanning seven providers, both closed-source and open-weight architectures, and three model generations within a single provider---alongside a rule-based baseline, we identify \emph{error detection bias} as the dominant failure mode: six of nine models flag 95--100\% of \emph{clean} statements as erroneous.
-Two models achieve intermediate calibration---Qwen 3 235B at 74.4\% FPR and Llama 4 Maverick at 51.2\%---revealing that calibration quality forms a \emph{spectrum} rather than a binary outcome.
+Evaluating eleven frontier LLMs---spanning seven providers, both closed-source and open-weight architectures, and multiple model generations within three providers---alongside a rule-based baseline, we identify \emph{error detection bias} as the dominant failure mode: six of eleven models flag 95--100\% of \emph{clean} statements as erroneous.
+Four models achieve intermediate calibration---Gemma 3 27B at 20.9\% FPR, Llama 4 Maverick at 51.2\%, Qwen 3 235B at 74.4\%, and Llama 4 Scout at 83.7\%---revealing that calibration quality forms a \emph{spectrum} rather than a binary outcome.
 Only one model achieves fully calibrated verification (0\% FPR, 96.9\% recall); a rounding ablation shows 21.5 percentage points of this recall reflects format anomalies, reducing true arithmetic recall to 75.4\%.
 Two newer models from the \emph{same provider} exhibit 100\% FPR, demonstrating checkpoint-specific rather than provider-level calibration.
-Pairwise McNemar's tests confirm the calibrated model significantly outperforms all others ($p < 10^{-4}$, Bonferroni-corrected), while the remaining eight are statistically indistinguishable.
+Pairwise McNemar's tests confirm the calibrated model significantly outperforms all others ($p < 10^{-4}$, Bonferroni-corrected), while the remaining ten are statistically indistinguishable.
 These findings establish that (1)~the central challenge in LLM-based financial verification is \emph{calibration}, not detection; (2)~error detection bias is a cross-provider \emph{and} intra-family phenomenon; and (3)~construct validity of error injection methodology critically affects benchmark conclusions.
 \benchmark{} and all code are publicly available.
 \end{abstract}
@@ -70,7 +70,7 @@ Financial statements are the primary mechanism through which corporations commun
 The integrity of these statements is safeguarded by a multi-layered verification ecosystem: internal controls, external audits, and regulatory review~\citep{auditllm2025}.
 A fundamental property of well-formed financial statements is \emph{internal consistency}: the balance sheet must balance (assets equal liabilities plus equity), the income statement's net income must flow into retained earnings on the balance sheet, the cash flow statement must reconcile to the change in cash on the balance sheet, and dozens of other numerical relationships must hold simultaneously.
 
-The rapid deployment of large language models (LLMs) in financial applications---from automated analysis~\citep{kim2024financial, wu2023bloomberggpt} to question answering~\citep{chen2021finqa, islam2023financebench}---raises a critical question: \emph{can these models reliably verify the numerical consistency of financial statements?}
+The rapid deployment of large language models (LLMs) in financial applications---from automated analysis~\citep{wu2023bloomberggpt} to question answering~\citep{chen2021finqa, islam2023financebench}---raises a critical question: \emph{can these models reliably verify the numerical consistency of financial statements?}
 This question is practically important for two reasons.
 First, LLM-based tools are increasingly used to process, summarize, and analyze financial filings~\citep{lin2026openfinllm}, and a model that cannot detect basic inconsistencies may propagate or even introduce errors in downstream analyses---a risk that \citet{failsafeqa2025} found materializes in 41\% of cases even for the most robust models.
 Second, with over 6,500 XBRL tagging errors identified in SEC filings in 2023 alone~\citep{fintagging2025}, the volume of financial data to verify exceeds what human auditors can manually inspect, creating demand for automated verification capabilities.
@@ -90,7 +90,7 @@ We make the following contributions:
     \item We formalize \textbf{financial statement verification} as a distinct evaluation task for LLMs, defining it as the detection and localization of numerical inconsistencies in structured financial documents (\Cref{sec:task}).
     \item We introduce a \textbf{four-category, twelve-subtype error taxonomy} grounded in auditing practice, covering arithmetic errors, cross-statement linkage violations, year-over-year inconsistencies, and magnitude perturbations (\Cref{sec:taxonomy}).
     \item We present \benchmark{}, a \textbf{benchmark dataset} of 1,985 instances constructed from real SEC 10-K filings via controlled error injection at six magnitude levels, enabling fine-grained analysis of model sensitivity (\Cref{sec:benchmark}).
-    \item We evaluate a \textbf{deterministic rule-based verifier} and nine \textbf{frontier LLMs} spanning seven providers, revealing a \emph{calibration spectrum} with four behavioral archetypes: full calibration (0\% FPR), partial calibration (74\% FPR), moderate recall-specificity tradeoff (51\% FPR), and error detection bias (95--100\% FPR in six models)---a cross-provider, cross-architecture, and intra-family phenomenon (\Cref{sec:results}).
+    \item We evaluate a \textbf{deterministic rule-based verifier} and nine \textbf{frontier LLMs} spanning seven providers, revealing a \emph{calibration spectrum} with a calibration spectrum ranging from full calibration (0\% FPR), through conservative verification (21\% FPR), moderate recall-specificity tradeoff (51\% FPR), and partial calibration (74--84\% FPR), to error detection bias (95--100\% FPR in six models)---a cross-provider, cross-architecture, and intra-family phenomenon (\Cref{sec:results}).
     \item We identify a \textbf{verification noise floor} in real financial data arising from partial observability in XBRL taxonomies, and demonstrate through a \textbf{rounding ablation} that construct validity of error injection methodology materially affects benchmark conclusions (\Cref{sec:analysis}).
 \end{enumerate}
 
@@ -124,8 +124,7 @@ None evaluate the ability to \emph{verify} the internal consistency of financial
 \subsection{LLMs for Financial Analysis and Auditing}
 \label{sec:related:analysis}
 
-Domain-specific financial LLMs, including BloombergGPT~\citep{wu2023bloomberggpt} (50B parameters, trained on 363B tokens of financial data) and FinGPT~\citep{yang2023fingpt} (an open-source alternative), have demonstrated competence on standard financial NLP tasks.
-\citet{kim2024financial} showed that GPT-4 achieved 60.35\% accuracy on directional earnings prediction, outperforming human analysts (52.71\%), though the extent to which this reflects genuine reasoning versus memorization remains debated~\citep{memorization2025}.
+Domain-specific financial LLMs, including BloombergGPT~\citep{wu2023bloomberggpt} (50B parameters, trained on 363B tokens of financial data) and FinGPT~\citep{yang2023fingpt} (an open-source alternative), have demonstrated competence on standard financial NLP tasks, though the extent to which this reflects genuine reasoning versus memorization remains debated~\citep{memorization2025}.
 
 In the auditing domain, \citet{auditllm2025} proposed a five-stage evaluation framework and found that LLMs can identify errors in financial statements but struggle to explain them or cite relevant accounting standards.
 FinAuditing~\citep{wang2025finauditing} introduced a taxonomy-structured multi-document benchmark from real XBRL filings, testing semantic matching, relationship extraction, and mathematical reasoning, with accuracy dropping by 60--90\% on hierarchical multi-document structures.
@@ -468,6 +467,14 @@ Together with Claude Sonnet 4 and Opus 4.6, these three Anthropic models enable 
 We evaluate Llama 4 Maverick~\citep{meta2025llama4}, Meta's frontier open-weight multimodal model with 17B active parameters and 128 experts, on the same 108-instance sample under CoT prompting.
 Together with DeepSeek V3.2 and Qwen 3 235B, Llama 4 Maverick provides a third open-weight model from a different provider, broadening coverage of the open-weight landscape.
 
+\paragraph{Llama 4 Scout.}
+We evaluate Llama 4 Scout~\citep{meta2025llama4}, Meta's smaller Llama 4 variant with 17B active parameters and 16 experts (versus Maverick's 128), on the same 108-instance sample under CoT prompting.
+Together with Maverick, Scout enables intra-family analysis within Meta's model line.
+
+\paragraph{Gemma 3 27B.}
+We evaluate Gemma 3 27B, Google's open-weight instruction-tuned model, on the same 108-instance sample under CoT prompting.
+Gemma complements the closed-source Gemini 2.5 Pro evaluation, enabling comparison between Google's open-weight and closed-source offerings.
+
 \paragraph{Gemini 2.5 Pro.}
 We evaluate Gemini 2.5 Pro~\citep{google2025gemini}, Google's frontier reasoning model, on the same 108-instance sample under CoT prompting.
 We note that 40 of 108 API calls returned server errors; we report metrics on the 68 instances with valid responses.
@@ -479,7 +486,7 @@ Preliminary runs with chain-of-thought prompting produced identical behavior (al
 
 \paragraph{Evaluation protocol.}
 All models are evaluated at temperature 0 for deterministic output.
-Eight of nine models are evaluated with chain-of-thought prompting (\Cref{app:prompts}), which instructs the model to systematically check specific accounting relationships step by step, mirroring audit procedures.
+Ten of eleven models are evaluated with chain-of-thought prompting (\Cref{app:prompts}), which instructs the model to systematically check specific accounting relationships step by step, mirroring audit procedures.
 MiniMax is evaluated with zero-shot prompting, which provides general verification instructions without step-by-step guidance; supplementary CoT and few-shot evaluations produced identical behavior (100\% FPR).
 All strategies instruct the model to respond in structured JSON format with detection decision, error location, and explanation.
 Responses are parsed with a multi-stage pipeline: JSON extraction from code fences, inline JSON matching, and keyword heuristic fallback.
@@ -670,15 +677,15 @@ The framework also includes a few-shot template (not evaluated in this study) fo
 \subsection{LLM Evaluation}
 \label{sec:results:llm}
 
-\Cref{tab:llm_results} presents results from evaluating nine frontier LLMs---Claude Sonnet~4~\citep{claude2025} ($n=108$), Claude Opus~4.6 ($n=108$), Claude Sonnet~4.6 ($n=108$), GPT-4.1~\citep{openai2025gpt41} ($n=108$), DeepSeek V3.2~\citep{deepseek2025v3} ($n=108$), Qwen 3 235B~\citep{qwen2025qwen3} ($n=108$), Llama 4 Maverick~\citep{meta2025llama4} ($n=108$), Gemini 2.5 Pro~\citep{google2025gemini} ($n=68$ valid), and MiniMax~M2.5~\citep{minimax2025} ($n=90$)---on stratified samples from the benchmark.
+\Cref{tab:llm_results} presents results from evaluating eleven frontier LLMs---Claude Sonnet~4~\citep{claude2025} ($n=108$), Claude Opus~4.6 ($n=108$), Claude Sonnet~4.6 ($n=108$), GPT-4.1~\citep{openai2025gpt41} ($n=108$), DeepSeek V3.2~\citep{deepseek2025v3} ($n=108$), Qwen 3 235B~\citep{qwen2025qwen3} ($n=108$), Llama 4 Maverick~\citep{meta2025llama4} ($n=108$), Llama 4 Scout ($n=108$), Gemma 3 27B ($n=108$), Gemini 2.5 Pro~\citep{google2025gemini} ($n=68$ valid), and MiniMax~M2.5~\citep{minimax2025} ($n=90$)---on stratified samples from the benchmark.
 
 \begin{table}[t]
 \centering
 \footnotesize
-\caption{Comparison of the rule-based verifier and nine frontier LLMs on \benchmark{}.
+\caption{Comparison of the rule-based verifier and eleven frontier LLMs on \benchmark{}.
 95\% Wilson confidence intervals shown in brackets.
 $n$: number of evaluation instances with valid responses.
-Eight of nine models evaluated under CoT prompting; MiniMax under zero-shot.
+Ten of eleven models evaluated under CoT prompting; MiniMax under zero-shot.
 $^\dagger$Gemini: 40/108 API calls returned server errors; metrics on 68 valid responses.
 }
 \label{tab:llm_results}
@@ -690,6 +697,8 @@ Rule-based & $\tau=0.01\%$ & 1985 & 53.8 & 100.0 & 52.8 & 69.1 & 0.0 & 62.6 \\
 \midrule
 Claude Sonnet 4 & CoT & 108 & \textbf{98.1} & \textbf{100.0} & 96.9 & \textbf{98.4} & \textbf{0.0} & \textbf{100.0} \\
  & & & \scriptsize{[93.5, 99.5]} & \scriptsize{[94.3, 100]} & \scriptsize{[89.5, 99.2]} &  & \scriptsize{[0, 8.2]} & \\
+Gemma 3 27B & CoT & 108 & 62.0 & 78.6 & 50.8 & 61.7 & 20.9 & 93.9 \\
+ & & & \scriptsize{[52.6, 70.7]} & \scriptsize{[66.2, 87.5]} & \scriptsize{[38.9, 62.6]} &  & \scriptsize{[11.4, 35.2]} & \\
 Qwen 3 235B & CoT & 108 & 66.7 & 65.6 & 93.8 & 77.2 & 74.4 & 85.2 \\
  & & & \scriptsize{[57.3, 75.0]} & \scriptsize{[55.7, 74.4]} & \scriptsize{[85.0, 97.5]} & & \scriptsize{[60.2, 85.0]} & \\
 GPT-4.1 & CoT & 108 & 62.0 & 61.3 & \textbf{100.0} & 76.0 & 95.3 & 70.8 \\
@@ -702,6 +711,8 @@ DeepSeek V3.2 & CoT & 108 & 60.2 & 60.2 & \textbf{100.0} & 75.1 & 100.0 & 86.2 \
  & & & \scriptsize{[50.8, 68.8]} & \scriptsize{[50.8, 68.8]} & \scriptsize{[94.4, 100]} & & \scriptsize{[91.8, 100]} & \\
 Llama 4 Maverick & CoT & 108 & 60.2 & 66.7 & 67.7 & 67.2 & 51.2 & 84.1 \\
  & & & \scriptsize{[50.8, 68.8]} & \scriptsize{[54.7, 76.8]} & \scriptsize{[55.6, 77.8]} & & \scriptsize{[36.8, 65.4]} & \\
+Llama 4 Scout & CoT & 108 & 58.3 & 60.9 & 86.2 & 71.3 & 83.7 & 82.1 \\
+ & & & \scriptsize{[48.8, 67.1]} & \scriptsize{[51.3, 69.7]} & \scriptsize{[75.7, 92.5]} & & \scriptsize{[70.0, 92.0]} & \\
 MiniMax M2.5 & Zero-shot & 90 & 58.9 & 58.9 & \textbf{100.0} & 74.1 & 100.0 & --- \\
  & & & \scriptsize{[48.8, 68.3]} & \scriptsize{[48.8, 68.3]} & \scriptsize{[93.4, 100]} & & \scriptsize{[89.3, 100]} & \\
 Gemini 2.5 Pro$^\dagger$ & CoT & 68 & 58.8 & 58.8 & \textbf{100.0} & 74.1 & 100.0 & 85.0 \\
@@ -725,7 +736,7 @@ These systems occupy fundamentally different positions in the precision-recall s
 \centering
 \includegraphics[width=0.95\textwidth]{figures/figure_model_comparison_updated.pdf}
 \caption{Comparison of all verification systems across five metrics.
-Eight of nine LLMs achieve $\geq$93.8\% recall; Llama 4 Maverick alone trades recall (67.7\%) for higher precision.
+Eight of eleven LLMs achieve $\geq$93.8\% recall; Llama 4 Maverick alone trades recall (67.7\%) for higher precision.
 Only Claude Sonnet 4 achieves low FPR (0\%) and high accuracy (98.1\%).}
 \label{fig:model_comparison}
 \end{figure}
@@ -740,23 +751,23 @@ Notably, Claude achieves \textbf{100\% localization accuracy}: for every detecte
 \centering
 \small
 \caption{Detection rate (\%) by error category.
-Eight of nine LLMs achieve $\geq$93.8\% recall, but six achieve this trivially by flagging all instances (including clean ones) as erroneous.
+Eight of eleven LLMs achieve $\geq$93.8\% recall, but six achieve this trivially by flagging all instances (including clean ones) as erroneous.
 Only Claude Sonnet 4 achieves selective detection with 0\% FPR.
 $^\dagger$Gemini metrics on 68 valid responses (37\% API error rate).
 }
 \label{tab:category_results}
-\begin{tabular}{lrrrrrrrrrr}
+\begin{tabular}{lrrrrrrrrrrrrr}
 \toprule
-\textbf{Cat.} & $\bm{n}$ & \textbf{Cl.S4} & \textbf{Qwen} & \textbf{GPT} & \textbf{Llama} & \textbf{O4.6} & \textbf{S4.6} & \textbf{DSk} & \textbf{Gem$^\dagger$} & \textbf{Rule} \\
+\textbf{Cat.} & $\bm{n}$ & \textbf{Cl.S4} & \textbf{Gem3} & \textbf{Qwen} & \textbf{GPT} & \textbf{Mav} & \textbf{Sct} & \textbf{O4.6} & \textbf{S4.6} & \textbf{DSk} & \textbf{Gmi$^\dagger$} & \textbf{Rule} \\
 \midrule
-AE       & 16 & 100.0 & 93.8 & 100.0 & 43.8 & 100.0 & 100.0 & 100.0 & 100.0 & 31.0 \\
-CL  & 24 & 100.0 & 95.8 & 100.0 & 87.5 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
-YoY  & 16 & 93.8 & 87.5 & 100.0 & 62.5 & 100.0 & 100.0 & 100.0 & 100.0 & 14.2 \\
-MR        &  9 & 88.9 & 100.0 & 100.0 & 66.7 & 100.0 & 100.0 & 100.0 & 100.0 & 32.0 \\
+AE       & 16 & 100.0 & 25.0 & 93.8 & 100.0 & 43.8 & 87.5 & 100.0 & 100.0 & 100.0 & 100.0 & 31.0 \\
+CL  & 24 & 100.0 & 75.0 & 95.8 & 100.0 & 87.5 & 83.3 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
+YoY  & 16 & 93.8 & 37.5 & 87.5 & 100.0 & 62.5 & 87.5 & 100.0 & 100.0 & 100.0 & 100.0 & 14.2 \\
+MR        &  9 & 88.9 & 55.6 & 100.0 & 100.0 & 66.7 & 88.9 & 100.0 & 100.0 & 100.0 & 100.0 & 32.0 \\
 \midrule
-\textbf{Overall}      & 65 & \textbf{96.9} & 93.8 & 100.0 & 67.7 & 100.0 & 100.0 & 100.0 & 100.0 & 52.8 \\
+\textbf{Overall}      & 65 & \textbf{96.9} & 50.8 & 93.8 & 100.0 & 67.7 & 86.2 & 100.0 & 100.0 & 100.0 & 100.0 & 52.8 \\
 \midrule
-\textbf{Clean}  & 43 & \textbf{100.0} & 25.6 & 4.7 & 48.8 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 \\
+\textbf{Clean}  & 43 & \textbf{100.0} & 79.1 & 25.6 & 4.7 & 48.8 & 16.3 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -802,7 +813,7 @@ Six of nine LLMs exhibit strong \emph{error detection bias}: when instructed to 
 Five models achieve 100\% FPR---Claude Opus 4.6, Claude Sonnet 4.6, DeepSeek V3.2, Gemini 2.5 Pro, and MiniMax M2.5---flagging every clean instance as erroneous.
 GPT-4.1 flags 41 of 43 clean instances (FPR = 95.3\% [84.5, 98.7\%]).
 This is particularly notable for three reasons.
-First, six of the eight CoT-evaluated models share the \emph{identical} prompt, ruling out prompting strategy as the explanation.
+First, six of the ten CoT-evaluated models share the \emph{identical} prompt, ruling out prompting strategy as the explanation.
 Second, MiniMax exhibits the same bias under all three tested strategies (zero-shot, few-shot, CoT), confirming prompt independence.
 Third---and most strikingly---Claude Opus 4.6 and Sonnet 4.6, from the \emph{same provider} as the calibrated Claude Sonnet 4, both exhibit 100\% FPR, demonstrating that error detection bias can emerge \emph{within a model family} across generations.
 Manual inspection reveals that all biased models identify \emph{genuine but benign} discrepancies arising from partial observability in the data---the same issues discussed in \Cref{sec:results:noise}.
@@ -880,8 +891,8 @@ Our results reveal a spectrum of verification behaviors across four LLM archetyp
     \item \textbf{Claude Sonnet 4 (fully calibrated)}: Achieves 100\% precision \emph{and} 96.9\% recall, successfully distinguishing injected errors from expected rounding discrepancies.
 \end{itemize}
 
-The contrast across all nine LLMs is particularly illuminating.
-All eight CoT-evaluated models process the same financial statements under the same prompt, yet only Claude Sonnet 4 correctly classifies all 43 clean instances.
+The contrast across all eleven LLMs is particularly illuminating.
+All ten CoT-evaluated models process the same financial statements under the same prompt, yet only Claude Sonnet 4 correctly classifies all 43 clean instances.
 With six of nine frontier models from five of the seven evaluated providers exhibiting error detection bias---including two \emph{from the same provider} as the calibrated model---we conclude that this is the \emph{default} LLM behavior for verification tasks.
 Flagging everything as suspicious is the ``safe'' response when asked to look for errors, and calibrated behavior is the \emph{exception}.
 The key capability that Claude Sonnet 4 uniquely demonstrates is \emph{tolerance for expected imprecision}---the ability to recognize that financial statements reported in millions of dollars will have minor rounding discrepancies that do not constitute genuine errors.
@@ -926,14 +937,14 @@ Cohen's $\kappa = 0.051$ between the two models' predictions reflects near-zero 
 
 \paragraph{Pairwise analysis across all models.}
 Extending McNemar's test to all $\binom{9}{2} = 36$ model pairs (with Bonferroni-corrected $\alpha = 0.05/36 = 0.0014$) reveals a stark pattern: \textbf{Claude Sonnet 4 significantly outperforms every other model} ($p < 10^{-4}$ in all 8 comparisons), while \textbf{no other pairwise comparison reaches significance} after correction.
-This confirms that the calibrated model's advantage is statistically robust and that the remaining eight models---despite spanning seven providers and four behavioral archetypes---are statistically indistinguishable from each other in overall accuracy.
+This confirms that the calibrated model's advantage is statistically robust and that the remaining ten models---despite spanning seven providers---are statistically indistinguishable from each other in overall accuracy.
 
 Inter-rater agreement further clarifies the landscape.
 Three models (Claude Opus 4.6, Sonnet 4.6, and DeepSeek V3.2) produce \emph{identical} predictions on all 108 instances ($\kappa = 1.0$), all flagging every instance as erroneous; MiniMax M2.5 exhibits the same behavior on its 90 evaluated instances.
-Fleiss' $\kappa$ across all nine models' raw predictions is $-0.005$ (no agreement beyond chance), reflecting the fundamental disagreement: models do not agree on \emph{which} instances contain errors, despite similar aggregate accuracy.
+Fleiss' $\kappa$ across all eleven models' raw predictions is $-0.005$ (no agreement beyond chance), reflecting the fundamental disagreement: models do not agree on \emph{which} instances contain errors, despite similar aggregate accuracy.
 Fleiss' $\kappa$ on correctness (whether each model's prediction matches the ground truth) is $0.448$ (moderate agreement), indicating that models tend to agree on which instances are easy versus hard---but differ in how they resolve the hard ones.
 
-Instance-level analysis reveals that 22 of 108 instances are \emph{universally correct} (all nine models answer correctly), while zero instances are universally wrong.
+Instance-level analysis reveals that 22 of 108 instances are \emph{universally correct} (all eleven models answer correctly), while zero instances are universally wrong.
 Thirteen instances are correctly classified \emph{only} by Claude Sonnet 4; all 13 are clean (no-error) instances, confirming that the calibrated model's advantage lies entirely in clean-instance specificity rather than superior error detection.
 
 \subsection{Anatomy of False Positives: Why Models Miscalibrate}
@@ -1057,8 +1068,8 @@ Our results show that Claude Sonnet 4 achieves \textbf{100\% detection at magnit
 This has direct implications for AI-assisted auditing: a sufficiently capable LLM could serve as a pre-screening tool to flag potential misstatements before human auditor review, potentially catching errors that would otherwise be dismissed as immaterial.
 
 \paragraph{The calibration challenge.}
-The contrast across all nine LLMs reveals that the key challenge in LLM-based verification is not error detection per se (eight of nine achieve $\geq$93.8\% recall) but \emph{calibration}---the ability to distinguish genuine errors from expected discrepancies in real financial data.
-Claude Sonnet 4's 0\% false positive rate demonstrates that this calibration is achievable, while the 95--100\% FPR exhibited by six of nine models---from seven independent providers---shows it is the exception rather than the rule among current frontier models.
+The contrast across all eleven LLMs reveals that the key challenge in LLM-based verification is not error detection per se (eight of eleven achieve $\geq$86\% recall) but \emph{calibration}---the ability to distinguish genuine errors from expected discrepancies in real financial data.
+Claude Sonnet 4's 0\% false positive rate demonstrates that this calibration is achievable, while the 95--100\% FPR exhibited by six of eleven models---from seven independent providers---shows it is the exception rather than the rule among current frontier models.
 This finding aligns with recent work on neuro-symbolic approaches~\citep{venra2026} that argues for constraining LLM arithmetic responsibility, though our results suggest that \emph{some} models can already perform calibrated numerical verification without explicit symbolic scaffolding.
 The question of \emph{why} Claude uniquely achieves calibration---whether through training data composition, RLHF alignment, or architectural factors---remains an important open question.
 
@@ -1100,9 +1111,9 @@ Future benchmark versions should round injected errors to the statement's report
 We also present financial statements as formatted text rather than the complex layouts (PDFs with tables, footnotes, charts) used in actual filings.
 
 \paragraph{External validity.}
-We evaluate nine frontier LLMs from seven providers (Anthropic, OpenAI, DeepSeek, Qwen/Alibaba, Meta, Google, MiniMax), including both closed-source and open-weight models and three model generations within Anthropic's family.
+We evaluate eleven frontier LLMs from seven providers (Anthropic, OpenAI, DeepSeek, Qwen/Alibaba, Meta, Google, MiniMax), including both closed-source and open-weight models, and multiple model generations within three providers' families (Anthropic, Meta, DeepSeek).
 This provides broader coverage than prior work, but results may not generalize to future releases.
-Eight of nine models are evaluated under identical CoT prompting on the same sample, enabling direct comparison; MiniMax was evaluated under zero-shot prompting.
+Ten of eleven models are evaluated under identical CoT prompting on the same sample, enabling direct comparison; MiniMax was evaluated under zero-shot prompting.
 In supplementary experiments, we also evaluated MiniMax under all three prompting strategies (zero-shot, few-shot, and CoT, each $n=108$); all three produced identical 100\% FPR, confirming that MiniMax's error detection bias is intrinsic rather than prompt-dependent.
 Gemini's 37\% API error rate limits the effective sample size to 68 instances.
 We additionally attempted evaluation of DeepSeek R1, but encountered high API error rates (89\%), preventing reliable evaluation.
@@ -1122,7 +1133,7 @@ Our benchmark design partially mitigates this: error injection modifies the orig
 Nevertheless, we cannot definitively distinguish memorization from reasoning without controlled experiments using synthetic companies or post-training-cutoff filings, which we leave to future work.
 
 \paragraph{Robustness across these limitations.}
-Despite the caveats above, our core finding---that error detection bias is the dominant LLM failure mode in verification tasks, observed in six of nine models from seven independent providers---is robust to most of these threats.
+Despite the caveats above, our core finding---that error detection bias is the dominant LLM failure mode in verification tasks, observed in six of eleven models from seven independent providers---is robust to most of these threats.
 The McNemar's test ($p < 10^{-9}$) confirms that the performance gap between models is statistically significant, and the false positive analysis (\Cref{sec:analysis:fp}) provides a mechanistic explanation (treating simplified statements as complete) that is consistent across the biased models.
 The rounding ablation provides an honest assessment of construct validity.
 The most important limitation is the sample size (108 instances, 43 clean), which future work should address with larger-scale evaluations.
@@ -1144,6 +1155,22 @@ Several extensions would strengthen this line of research:
     \item \textbf{Cross-version stability}: Systematic evaluation of how verification calibration varies across model checkpoints within a provider, to understand whether calibrated behavior is stable or ephemeral.
 \end{itemize}
 
+\subsection{Ethical Considerations}
+\label{sec:ethics}
+
+\paragraph{Dual-use risk.}
+Our error taxonomy and injection methodology could, in principle, inform adversarial manipulation of financial statements by revealing which error types and magnitudes are hardest for automated systems to detect.
+We believe this risk is mitigated by two factors: (1)~the error types we inject (arithmetic violations, cross-statement linkage breaks) are well-known to auditors and are routinely checked in standard audit procedures; and (2)~real financial fraud typically involves \emph{coordinated} multi-statement manipulation designed to maintain apparent consistency---the opposite of our single-error injection approach.
+Publishing this work enables the research community to develop more robust verification tools, which we believe outweighs the marginal dual-use risk.
+
+\paragraph{Data and privacy.}
+All financial data used in \benchmark{} is sourced from publicly available SEC EDGAR filings.
+No private or non-public financial information is used.
+Company names are included because they are necessary for reproducibility and the data is already public.
+
+\paragraph{Environmental impact.}
+Our evaluation requires approximately 10--15 minutes of API inference per model ($\sim$3 hours total across eleven models), representing modest computational cost relative to model training.
+
 % ==============================================================================
 \section{Conclusion}
 \label{sec:conclusion}
@@ -1156,7 +1183,7 @@ Our key contributions and findings include:
 (1)~the formalization of financial statement verification as a distinct NLP task separate from question answering;
 (2)~a structured error taxonomy grounded in auditing practice;
 (3)~a reproducible benchmark construction methodology using the SEC EDGAR XBRL API;
-(4)~the first systematic evaluation of nine frontier LLMs spanning seven providers on numerical consistency verification, revealing a calibration spectrum with four behavioral archetypes: full calibration (0\% FPR), partial calibration (74\% FPR), moderate recall-specificity tradeoff (51\% FPR), and error detection bias (95--100\% FPR in six models);
+(4)~the first systematic evaluation of eleven frontier LLMs spanning seven providers on numerical consistency verification, revealing a calibration spectrum with a calibration spectrum ranging from full calibration (0\% FPR), through conservative verification (21\% FPR), moderate recall-specificity tradeoff (51\% FPR), and partial calibration (74--84\% FPR), to error detection bias (95--100\% FPR in six models);
 and (5)~the identification of a \emph{verification noise floor} in real financial data that most frontier models cannot navigate, demonstrating that calibrated verification is achievable but is the exception rather than the rule among current LLMs.
 
 Critically, our rounding ablation reveals that 21.5 percentage points of Claude's recall depend on detecting format anomalies rather than genuine arithmetic verification; our cross-model comparison establishes that the central challenge in financial verification is not detection (which all models achieve) but \emph{calibration}---the ability to distinguish real errors from expected imprecision; and our intra-family analysis shows that calibration does not persist across model generations, even within the same provider.
