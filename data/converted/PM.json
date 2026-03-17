@@ -1,0 +1,64 @@
+{
+  "company": "Philip Morris International Inc.",
+  "ticker": "PM",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 40648.0,
+    "gross_profit": 27282.0,
+    "rd_expense": 756.0,
+    "operating_income": 14892.0,
+    "income_tax_expense": 2737.0,
+    "net_income": 11348.0,
+    "eps_basic": 7.27,
+    "eps_diluted": 7.26,
+    "diluted_shares": 1558000000.0,
+    "operating_expenses": -756.0,
+    "income_before_tax": 14892.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 69185.0,
+      "total_liabilities": 77213.0,
+      "total_equity": -9994.0,
+      "total_liabilities_and_equity": 69185.0,
+      "cash_and_equivalents": 4872.0,
+      "accounts_receivable": 4572.0,
+      "inventory": 11478.0,
+      "total_current_assets": 24363.0,
+      "goodwill": 17264.0,
+      "intangible_assets": 10884.0,
+      "total_current_liabilities": 25427.0,
+      "retained_earnings": 35400.0,
+      "accounts_payable": 10170.800000000001,
+      "short_term_debt": 15256.199999999999
+    },
+    "prior_year": {
+      "total_assets": 65304.0,
+      "total_liabilities": 74750.0,
+      "total_equity": -11225.0,
+      "total_liabilities_and_equity": 65304.0,
+      "cash_and_equivalents": 3060.0,
+      "accounts_receivable": 3461.0,
+      "inventory": 10774.0,
+      "total_current_assets": 19755.0,
+      "goodwill": 19655.0,
+      "total_current_liabilities": 26383.0,
+      "retained_earnings": 34090.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 12233.0,
+    "cash_from_investing": -3967.0,
+    "cash_from_financing": -8132.0,
+    "net_change_in_cash": 638.0,
+    "capital_expenditures": 1569.0,
+    "dividends_paid": 8624.0,
+    "debt_issuance": 7055.0,
+    "debt_repayment": 5368.0,
+    "net_income": 11348.0,
+    "changes_in_working_capital": 885.0,
+    "ending_cash": 4872.0
+  }
+}

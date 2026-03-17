@@ -1,0 +1,56 @@
+{
+  "company": "GENERAL ELECTRIC CAPITAL CORP",
+  "ticker": "GE",
+  "period": "FY2014",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 10535.0,
+    "cost_of_goods_sold": 104.0,
+    "operating_expenses": 12182.0,
+    "operating_income": 6338.0,
+    "interest_expense": 7318.0,
+    "income_tax_expense": 81.0,
+    "net_income": 7234.0,
+    "gross_profit": 10431.0,
+    "income_before_tax": 13656.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 501405.0,
+      "total_liabilities": 411007.0,
+      "total_equity": 87499.0,
+      "total_liabilities_and_equity": 501405.0,
+      "inventory": 50.0,
+      "property_plant_equipment": 49429.0,
+      "goodwill": 24489.0,
+      "intangible_assets": 1067.0,
+      "retained_earnings": 55077.0,
+      "shares_outstanding": 1000.0
+    },
+    "prior_year": {
+      "total_assets": 584643.0,
+      "total_liabilities": 456754.0,
+      "total_equity": 68984.0,
+      "total_liabilities_and_equity": 539351.0,
+      "inventory": 79.0,
+      "property_plant_equipment": 52967.0,
+      "goodwill": 26902.0,
+      "intangible_assets": 1287.0,
+      "retained_earnings": 45068.0,
+      "shares_outstanding": 1000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 17945.0,
+    "cash_from_investing": -1104.0,
+    "cash_from_financing": -13665.0,
+    "depreciation_amortization": 6533.0,
+    "capital_expenditures": 10410.0,
+    "dividends_paid": 3322.0,
+    "debt_issuance": 33820.0,
+    "debt_repayment": 4740.0,
+    "net_income": 7234.0,
+    "changes_in_working_capital": 4178.0
+  }
+}

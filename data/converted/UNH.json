@@ -1,0 +1,73 @@
+{
+  "company": "UNITEDHEALTH GROUP INCORPORATED",
+  "ticker": "UNH",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 447567.0,
+    "sga_expense": 59592.0,
+    "operating_income": 18964.0,
+    "interest_expense": 4002.0,
+    "income_tax_expense": 1890.0,
+    "net_income": 12056.0,
+    "eps_basic": 13.28,
+    "eps_diluted": 13.23,
+    "diluted_shares": 911000000.0,
+    "operating_expenses": -59592.0,
+    "income_before_tax": 22966.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 309581.0,
+      "total_liabilities": 207883.0,
+      "total_liabilities_and_equity": 309581.0,
+      "cash_and_equivalents": 24365.0,
+      "short_term_investments": 3756.0,
+      "accounts_receivable": 23018.0,
+      "inventory": 3300.0,
+      "total_current_assets": 90582.0,
+      "property_plant_equipment": 10762.0,
+      "goodwill": 110499.0,
+      "intangible_assets": 20474.0,
+      "total_current_liabilities": 114897.0,
+      "long_term_debt": 72320.0,
+      "retained_earnings": 95603.0,
+      "shares_outstanding": 906000000.0,
+      "accounts_payable": 45958.8,
+      "short_term_debt": 68938.2
+    },
+    "prior_year": {
+      "total_assets": 245705.0,
+      "total_liabilities": 174801.0,
+      "total_liabilities_and_equity": 273720.0,
+      "cash_and_equivalents": 25427.0,
+      "short_term_investments": 4201.0,
+      "accounts_receivable": 21276.0,
+      "inventory": 2800.0,
+      "total_current_assets": 78437.0,
+      "property_plant_equipment": 11450.0,
+      "goodwill": 93352.0,
+      "intangible_assets": 15194.0,
+      "total_current_liabilities": 99054.0,
+      "long_term_debt": 58263.0,
+      "retained_earnings": 95774.0,
+      "shares_outstanding": 924000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 19697.0,
+    "cash_from_investing": -8685.0,
+    "cash_from_financing": -11644.0,
+    "net_change_in_cash": -947.0,
+    "depreciation_amortization": 4361.0,
+    "capital_expenditures": 3622.0,
+    "dividends_paid": 2002.0,
+    "share_repurchases": 5545.0,
+    "debt_issuance": 2969.0,
+    "debt_repayment": 3050.0,
+    "net_income": 12056.0,
+    "changes_in_working_capital": 3280.0,
+    "ending_cash": 24365.0
+  }
+}

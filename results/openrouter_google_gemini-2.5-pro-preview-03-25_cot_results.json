@@ -1,0 +1,1369 @@
+{
+  "model": "Gemini 2.5 Pro",
+  "model_id": "google/gemini-2.5-pro-preview-03-25",
+  "strategy": "cot",
+  "backend": "openrouter",
+  "partial": false,
+  "per_cell": 2,
+  "metrics": {
+    "overall": {
+      "accuracy": 50.9,
+      "precision": 58.8,
+      "recall": 61.5,
+      "f1": 60.2,
+      "fpr": 65.1,
+      "tp": 40,
+      "fp": 28,
+      "tn": 15,
+      "fn": 25,
+      "total": 108
+    },
+    "localization": {
+      "correct": 34,
+      "total": 40,
+      "accuracy": 85.0
+    },
+    "by_category": {
+      "AE": {
+        "detection_rate": 62.5,
+        "tp": 10,
+        "fp": 0,
+        "tn": 0,
+        "fn": 6
+      },
+      "CL": {
+        "detection_rate": 58.3,
+        "tp": 14,
+        "fp": 0,
+        "tn": 0,
+        "fn": 10
+      },
+      "MR": {
+        "detection_rate": 66.7,
+        "tp": 6,
+        "fp": 0,
+        "tn": 0,
+        "fn": 3
+      },
+      "YOY": {
+        "detection_rate": 62.5,
+        "tp": 10,
+        "fp": 0,
+        "tn": 0,
+        "fn": 6
+      },
+      "clean": {
+        "detection_rate": 0,
+        "tp": 0,
+        "fp": 28,
+        "tn": 15,
+        "fn": 0
+      }
+    },
+    "by_magnitude": {
+      "1-5%": {
+        "detection_rate": 56.2,
+        "tp": 9,
+        "fp": 0,
+        "tn": 0,
+        "fn": 7
+      },
+      "5-20%": {
+        "detection_rate": 68.8,
+        "tp": 11,
+        "fp": 0,
+        "tn": 0,
+        "fn": 5
+      },
+      "<1%": {
+        "detection_rate": 58.8,
+        "tp": 10,
+        "fp": 0,
+        "tn": 0,
+        "fn": 7
+      },
+      ">20%": {
+        "detection_rate": 62.5,
+        "tp": 10,
+        "fp": 0,
+        "tn": 0,
+        "fn": 6
+      }
+    },
+    "by_type": {
+      "AE_COLUMN_SUM": {
+        "detection_rate": 50.0,
+        "tp": 4,
+        "fn": 4
+      },
+      "AE_ROW_SUM": {
+        "detection_rate": 75.0,
+        "tp": 6,
+        "fn": 2
+      },
+      "CL_ENDING_CASH": {
+        "detection_rate": 87.5,
+        "tp": 7,
+        "fn": 1
+      },
+      "CL_NET_INCOME_TO_CFS": {
+        "detection_rate": 37.5,
+        "tp": 3,
+        "fn": 5
+      },
+      "CL_NET_INCOME_TO_RE": {
+        "detection_rate": 50.0,
+        "tp": 4,
+        "fn": 4
+      },
+      "MR_EXTREME": {
+        "detection_rate": 100.0,
+        "tp": 2,
+        "fn": 0
+      },
+      "MR_MINOR": {
+        "detection_rate": 50.0,
+        "tp": 1,
+        "fn": 1
+      },
+      "MR_MODERATE": {
+        "detection_rate": 33.3,
+        "tp": 1,
+        "fn": 2
+      },
+      "MR_SIGNIFICANT": {
+        "detection_rate": 100.0,
+        "tp": 2,
+        "fn": 0
+      },
+      "YOY_COMPUTED_CHANGE": {
+        "detection_rate": 50.0,
+        "tp": 4,
+        "fn": 4
+      },
+      "YOY_OPENING_BALANCE": {
+        "detection_rate": 75.0,
+        "tp": 6,
+        "fn": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "instance_id": "general_electric_capital_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The Income Statement arithmetic is incorrect. Gross Profit (10,431) minus Operating Expenses (12,182) should result in an Operating Income of -1,751. However, the reported Operating Income is 6,338. This is a significant discrepancy that is not due to rounding.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 374
+    },
+    {
+      "instance_id": "bank_of_america_corporation__AE_COLUMN_SUM_1.0pct_7",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 1.0,
+      "detected": true,
+      "error_location": "balance_sheet.total_liabilities_and_equity",
+      "explanation": "The fundamental accounting equation is not balanced. The sum of Total Liabilities (3,139,579.95) and Total Equity (303,243) is 3,442,822.95, which does not match the reported Total Liabilities & Equity of 3,411,738. The discrepancy of 31,084.95 is a material error, not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 414
+    },
+    {
+      "instance_id": "abbott_laboratories__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The change in Retained Earnings on the Balance Sheet does not reconcile with Net Income and Dividends. The roll-forward calculation is: Prior Retained Earnings (37,554) + Net Income (6,524) - Dividends Paid (4,116) = 39,962. However, the reported current Retained Earnings is 49,781, a discrepancy of 9,819.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 418
+    },
+    {
+      "instance_id": "salesforce,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Net Income is calculated incorrectly. Income Before Tax (8,331) minus Income Tax Expense (2,063) should be 6,268, but it is reported as 7,457.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 249
+    },
+    {
+      "instance_id": "thermo_fisher_scientific_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The Retained Earnings roll-forward is incorrect. The expected value for current year Retained Earnings is the prior year's Retained Earnings plus Net Income, minus any Dividends Paid. Calculation: 47,364 (Prior RE) + 6,704 (Net Income) - 636 (Dividends) = 53,432. The reported value is 59,156, which creates an unexplained discrepancy of 5,724.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 455
+    },
+    {
+      "instance_id": "lowes_companies_inc__MR_SIGNIFICANT_10.0pct_50",
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_magnitude_pct": -10.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income calculation is incorrect. Based on the provided figures, Income Before Tax (10,466) minus Income Tax Expense (2,196) should result in a Net Income of 8,270. However, the reported Net Income is 6,957, a discrepancy of 1,313 which is not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 380
+    },
+    {
+      "instance_id": "honeywell_international_inc__CL_ENDING_CASH_20.0pct_29",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The reported Gross Profit is 3,470. However, the calculation based on the provided Revenue (9,758) and Cost of Goods Sold (23,613) is 9,758 - 23,613 = -13,855. The reported Gross Profit does not reconcile with its components.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 334
+    },
+    {
+      "instance_id": "united_parcel_service,_inc__YOY_COMPUTED_CHANGE_10.0pct_46",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 10.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (7,867) minus Income Tax Expense (1,592) should be 6,275, but Net Income is reported as 5,572.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 264
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__AE_ROW_SUM_5.0pct_3",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -5.0,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_change_in_cash",
+      "explanation": "The sum of cash from operations, investing, and financing does not equal the reported Net Change in Cash. The calculation is: 16,472 (Operations) - 13,741 (Investing) - 1,922 (Financing) = 809. The reported Net Change in Cash is 1,372, which is a clear arithmetic error.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 388
+    },
+    {
+      "instance_id": "visa_inc__AE_COLUMN_SUM_2.0pct_8",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 2.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The reported Net Income is inconsistent with the Income Before Tax and Income Tax Expense. The calculation should be: Income Before Tax (23,994) - Income Tax Expense (4,136) = 19,858. The reported Net Income is 20,058, which is a discrepancy of 200 and not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 386
+    },
+    {
+      "instance_id": "coca_cola_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The Operating Income is calculated incorrectly. Gross Profit (29,544) minus Operating Expenses (14,521) should be 15,023. The reported Operating Income is 13,762, which is a discrepancy of 1,261.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 308
+    },
+    {
+      "instance_id": "adobe_inc__YOY_OPENING_BALANCE_2.0pct_38",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -2.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement calculation for Net Income is incorrect. Income Before Tax (8,706) minus Income Tax Expense (1,604) should be 7,102, but Net Income is reported as 7,130. This is a discrepancy of 28, which is outside the acceptable rounding tolerance.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 362
+    },
+    {
+      "instance_id": "cisco_systems,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Income Before Tax (11,760) minus Income Tax Expense (920) should equal 10,840. The reported Net Income is 10,180, which is a discrepancy of 660 and not attributable to rounding.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 284
+    },
+    {
+      "instance_id": "philip_morris_international_inc__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": -2.0,
+      "detected": true,
+      "error_location": "income_statement.Operating_Income",
+      "explanation": "The calculation for Operating Income is incorrect. Gross Profit (27,282) plus Operating Expenses (-756, interpreted as a subtraction) should be 26,526. However, the reported Operating Income is 14,892, a discrepancy of 11,634.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 339
+    },
+    {
+      "instance_id": "adobe_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (8,706) minus Income Tax Expense (1,604) equals 7,102, but the reported Net Income is 7,130.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 262
+    },
+    {
+      "instance_id": "boeing_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement has an arithmetic error. Income Before Tax (4,281) minus Income Tax Expense (397) should equal 3,884. However, the reported Net Income is 2,235. This discrepancy of 1,649 is a material error and not due to rounding.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 343
+    },
+    {
+      "instance_id": "intel_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income figure is calculated incorrectly. Based on the provided numbers, Income Before Tax (-2,214) minus Income Tax Expense (1,531) should equal -3,745. However, the reported Net Income is -267.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 309
+    },
+    {
+      "instance_id": "adobe_inc__AE_ROW_SUM_0.5pct_0",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (8,706) minus Income Tax Expense (1,604) equals 7,102. The reported Net Income is 7,130, a discrepancy of 28, which is not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 315
+    },
+    {
+      "instance_id": "nvidia_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (130,387) minus Income Tax Expense (21,383) should be 109,004. The reported Net Income is 120,067, which creates a discrepancy of 11,063.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 307
+    },
+    {
+      "instance_id": "berkshire_hathaway_inc__AE_COLUMN_SUM_20.0pct_11",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": true,
+      "error_location": "balance_sheet.total_liabilities_and_equity",
+      "explanation": "The sum of Total Liabilities and Total Equity does not equal the reported Total Liabilities & Equity. Calculation: 602,967.60 (Total Liabilities) + 717,419 (Total Equity) = 1,320,386.60. This does not match the reported Total Liabilities & Equity of 1,222,176. The components do not add up to the reported total.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 434
+    },
+    {
+      "instance_id": "exxon_mobil_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The change in Retained Earnings on the Balance Sheet does not reconcile with the Net Income and Dividends Paid. The calculated change should be Net Income (28,844) - Dividends Paid (17,231) = 11,613. However, the change shown on the balance sheet is Prior RE (453,927) to Current RE (482,494), which is a difference of 28,567. The figures do not articulate correctly.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 478
+    },
+    {
+      "instance_id": "abbott_laboratories__CL_ENDING_CASH_10.0pct_28",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The calculation for Operating Income is incorrect. Revenue (44,328) minus Operating Expenses (15,274) equals 29,054, not the reported 8,053.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 253
+    },
+    {
+      "instance_id": "chevron_corp__CL_NET_INCOME_TO_RE_2.0pct_14",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (75,264) minus Income Tax Expense (7,258) should equal 68,006. However, the reported Net Income is 12,053.02, which is a significant and clear arithmetic error.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 330
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__MR_EXTREME_25.0pct_51",
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_magnitude_pct": -25.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (22,966) minus Income Tax Expense (1,890) should equal 21,076, but Net Income is reported as 12,056.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 270
+    },
+    {
+      "instance_id": "texas_instruments_inc__AE_ROW_SUM_10.0pct_4",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -10.0,
+      "detected": true,
+      "error_location": "balance_sheet.total_current_assets",
+      "explanation": "The sum of the individual current asset line items does not equal the reported 'Total Current Assets'. The calculation is: Cash and Equivalents (3,225) + Accounts Receivable (1,963) + Inventory (4,804) = 9,992. The reported total is 13,750, a discrepancy of 3,758. This indicates a material calculation error or that other unlisted current assets have been included in the total without being itemized.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 516
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__CL_ENDING_CASH_1.0pct_25",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -1.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The Operating Income is incorrectly calculated. Revenue (447,567) minus Operating Expenses (59,592) should be 387,975, but the reported Operating Income is 18,964.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 276
+    },
+    {
+      "instance_id": "boeing_co__AE_ROW_SUM_1.0pct_1",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 1.0,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_change_in_cash",
+      "explanation": "The sum of cash from operations, investing, and financing does not equal the reported Net Change in Cash. The calculation is 1,065 (Operations) + 499 (Investing) - 3,763 (Financing) = -2,199. The reported value is -2,159, a discrepancy of 40.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 360
+    },
+    {
+      "instance_id": "adobe_inc__MR_MINOR_0.5pct_48",
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_magnitude_pct": -0.5,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The change in Retained Earnings on the Balance Sheet does not reconcile with the Net Income reported on the Income Statement. Calculation: Prior Retained Earnings (33,346) + Net Income (7,130) = 40,476. This calculated ending retained earnings figure does not match the reported Ending Retained Earnings of 45,354. The discrepancy of 4,878 is significant and unexplained by other items like dividends, indicating a fundamental error in how the statements articulate.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 577
+    },
+    {
+      "instance_id": "chevron_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (75,264) minus Income Tax Expense (7,258) should be 68,006, but Net Income is reported as 12,299.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 267
+    },
+    {
+      "instance_id": "exxon_mobil_corporation__YOY_OPENING_BALANCE_1.0pct_37",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -1.0,
+      "detected": true,
+      "error_location": "balance_sheet.total_liabilities_and_equity",
+      "explanation": "The sum of Total Liabilities and Total Equity does not equal the reported Total Liabilities & Equity. Calculation: 182,354 (Total Liabilities) + 259,386 (Total Equity) = 441,740. The reported value is 448,980. The balance sheet is internally inconsistent.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 377
+    },
+    {
+      "instance_id": "microsoft_corporation__CL_NET_INCOME_TO_CFS_2.0pct_20",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 2.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income calculation is incorrect. Income Before Tax (128,528) minus Income Tax Expense (21,795) equals 106,733, not the reported 101,832.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 251
+    },
+    {
+      "instance_id": "broadcom_ltd__MR_SIGNIFICANT_10.0pct_50",
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_magnitude_pct": 10.0,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The Gross Profit calculation is incorrect. Revenue (4,844) minus Cost of Goods Sold (9,127) should be -4,283, but the reported Gross Profit is 2,383. The figures do not reconcile.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 288
+    },
+    {
+      "instance_id": "visa_inc__CL_ENDING_CASH_0.5pct_24",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The change in Retained Earnings on the Balance Sheet does not reconcile with Net Income and Dividends. Beginning Retained Earnings (18,040) + Net Income (20,058) - Dividends Paid (4,634) should equal 33,464, but the reported Ending Retained Earnings is 15,106.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 371
+    },
+    {
+      "instance_id": "broadcom_ltd__YOY_OPENING_BALANCE_0.5pct_36",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -0.5001,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The Gross Profit calculation is incorrect. Based on the provided figures, Revenue (4,844) minus Cost of Goods Sold (9,127) should result in a Gross Loss of -4,283. The reported Gross Profit is 2,383, which does not reconcile with the source numbers.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 358
+    },
+    {
+      "instance_id": "apple_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement has an arithmetic error. Income Before Tax (133,050) minus Income Tax Expense (20,719) should equal 112,331. However, the reported Net Income is 112,010. The difference of 321 is significant and not a rounding discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 350
+    },
+    {
+      "instance_id": "eli_lilly_and_company__YOY_COMPUTED_CHANGE_0.5pct_42",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_change_in_cash",
+      "explanation": "The sum of cash from operations, investing, and financing does not equal the reported Net Change in Cash. The calculated sum is 3,628 (16,813 - 10,972 - 2,213), but the reported Net Change in Cash is 4,000. The difference of 372 is a material error and not due to rounding.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 391
+    },
+    {
+      "instance_id": "oracle_corporation__CL_ENDING_CASH_20.0pct_29",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": true,
+      "error_location": "cash_flow_statement.ending_cash",
+      "explanation": "The Ending Cash on the Cash Flow Statement (12,943.20) does not match the Cash and Equivalents on the current year's Balance Sheet (10,786). These two figures must be identical as they represent the same value at the same point in time.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 347
+    },
+    {
+      "instance_id": "broadcom_ltd__CL_NET_INCOME_TO_RE_0.5pct_12",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "Gross Profit is incorrectly calculated. Based on the standard formula, Revenue (4,844) - Cost of Goods Sold (9,127) should equal -4,283. The reported Gross Profit is 2,383, which is a significant discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 317
+    },
+    {
+      "instance_id": "united_parcel_service,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_change_in_cash",
+      "explanation": "The sum of cash flow subtotals does not equal the reported Net Change in Cash. Cash from Operations (8,450) + Cash from Investing (-4,735) + Cash from Financing (-4,141) equals -426. The reported Net Change in Cash is -225, which is an arithmetic error of 201.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 378
+    },
+    {
+      "instance_id": "lowes_companies_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (10,466) minus Income Tax Expense (2,196) should equal 8,270. The reported Net Income is 6,957, which is a significant discrepancy of 1,313 and not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 340
+    },
+    {
+      "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Income Before Tax (4,281) minus Income Tax Expense (397) should equal 3,884, but Net Income is reported as 2,011.50. This is a significant arithmetic error.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 263
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The calculation for Operating Income is incorrect. Based on the provided figures, Revenue (447,567) minus Operating Expenses (59,592) should be 388,975. The reported Operating Income is 18,964, which is a significant discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 342
+    },
+    {
+      "instance_id": "abbott_laboratories__AE_ROW_SUM_0.5pct_0",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -0.5,
+      "detected": true,
+      "error_location": "balance_sheet.retained_earnings",
+      "explanation": "The change in Retained Earnings on the balance sheet does not reconcile with the Net Income and Dividends Paid from the other statements. The calculated change should be Net Income minus Dividends, but the numbers do not align. Calculation: Beginning Retained Earnings (37,554) + Net Income (6,524) - Dividends Paid (4,116) = 39,962. The reported Ending Retained Earnings is 49,781, a discrepancy of 9,819.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 517
+    },
+    {
+      "instance_id": "costco_wholesale_corp_/new__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "balance_sheet.total_liabilities_and_equity",
+      "explanation": "The prior year's balance sheet is unbalanced. The fundamental accounting equation (Assets = Liabilities + Equity) is violated. Prior year Total Assets are 64,166, but prior year Total Liabilities & Equity are reported as 68,994. These two figures must be equal.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 383
+    },
+    {
+      "instance_id": "coca_cola_co__MR_EXTREME_25.0pct_51",
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_magnitude_pct": 25.0,
+      "detected": true,
+      "error_location": "income_statement.income_before_tax",
+      "explanation": "The calculation for Income Before Tax is incorrect. Operating Income (13,762) minus Interest Expense (1,654) should result in 12,108. However, the reported Income Before Tax is 15,416. The reported figure is mathematically impossible as it is higher than the starting Operating Income after an expense has been subtracted.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 439
+    },
+    {
+      "instance_id": "visa_inc__YOY_COMPUTED_CHANGE_5.0pct_45",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 5.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement arithmetic is incorrect. Income Before Tax (23,994) minus Income Tax Expense (4,136) should equal 19,858. However, the reported Net Income is 20,058. The difference of 200 is a material error, not a rounding discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 348
+    },
+    {
+      "instance_id": "lowes_companies_inc__CL_NET_INCOME_TO_RE_0.5pct_12",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -0.4999,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income on the Income Statement is calculated incorrectly. Based on the provided figures, Income Before Tax (10,466) minus Income Tax Expense (2,196) should result in a Net Income of 8,270. However, the reported Net Income is 6,922.22, a significant discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 376
+    },
+    {
+      "instance_id": "amgen_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The calculation for Operating Income is incorrect. Gross Profit (36,751 - 12,037 = 24,714) minus Operating Expenses (7,050) should result in an Operating Income of 17,664. The reported Operating Income is 9,080, which represents a discrepancy of 8,584.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 365
+    },
+    {
+      "instance_id": "broadcom_ltd__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The Gross Profit calculation is incorrect. Revenue (4,844) minus Cost of Goods Sold (9,127) should be -4,283, not the reported 2,383. The reported figure does not reconcile with its components.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 302
+    },
+    {
+      "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_10.0pct_22",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 10.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (21,526) minus Income Tax Expense (4,600) should equal 16,926. However, the reported Net Income is 14,806, a discrepancy of 2,120 which is not a rounding error.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 330
+    },
+    {
+      "instance_id": "pepsico,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income calculation is incorrect. Income Before Tax (12,619) minus Income Tax Expense (1,949) should be 10,670. The reported Net Income is 8,240, which is a discrepancy of 2,430.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 292
+    },
+    {
+      "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_20.0pct_23",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (21,526) minus Income Tax Expense (4,600) should equal 16,926, but the reported Net Income is 14,806. This is a significant discrepancy and not a rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 336
+    },
+    {
+      "instance_id": "walt_disney_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income figure is calculated incorrectly. Based on the provided Income Before Tax (15,739) and Income Tax Expense (-1,428), the Net Income should be 14,311 (15,739 - 1,428). The reported Net Income of 12,404 is incorrect by 1,907.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 344
+    },
+    {
+      "instance_id": "eli_lilly_and_company__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_change_in_cash",
+      "explanation": "The sum of cash flows from operations, investing, and financing does not equal the reported Net Change in Cash. The calculated net change is 3,628 (16,813 - 10,972 - 2,213), but the reported value is 4,000.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 324
+    },
+    {
+      "instance_id": "mcdonald\u2019s\u00a0corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.income_before_tax",
+      "explanation": "The Income Statement has an arithmetic error. Operating Income (12,393) minus Interest Expense (1,582) should result in an Income Before Tax of 10,811. However, the statement reports 13,975. The calculation is 12,393 - 1,582 = 10,811, not 13,975.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 360
+    },
+    {
+      "instance_id": "broadcom_ltd__AE_ROW_SUM_20.0pct_5",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The Gross Profit calculation is incorrect. Revenue (4,844) minus Cost of Goods Sold (9,127) should be -4,283. The reported Gross Profit is 2,383, which is arithmetically incorrect.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 289
+    },
+    {
+      "instance_id": "apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_21",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -5.0,
+      "detected": false,
+      "error": "Error code: 500 - {'error': {'message': 'Internal Server Error', 'code': 500}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "texas_instruments_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Income Before Tax (6,023) minus Income Tax Expense (709) should equal 5,314. However, the reported Net Income is 5,001, which is a discrepancy of 313.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 257
+    },
+    {
+      "instance_id": "walmart_inc__CL_ENDING_CASH_10.0pct_28",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 10.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Income Before Tax (29,825) minus Income Tax Expense (7,199) should be 22,626, but Net Income is reported as 21,893.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 222
+    },
+    {
+      "instance_id": "alphabet_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The reported Net Income is arithmetically incorrect. Based on the figures provided, Income Before Tax (129,039) minus Income Tax Expense (26,656) should equal 102,383. The reported Net Income is 132,170, which is a discrepancy of 29,787.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 344
+    },
+    {
+      "instance_id": "comcast_corporation__CL_NET_INCOME_TO_RE_2.0pct_14",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error": "Error code: 500 - {'error': {'message': 'Internal Server Error', 'code': 500}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "lowes_companies_inc__YOY_OPENING_BALANCE_20.0pct_41",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (10,466) minus Income Tax Expense (2,196) should equal 8,270. However, the reported Net Income is 6,957.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 274
+    },
+    {
+      "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_10.0pct_40",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 10.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The calculation for Operating Income is incorrect. Based on the figures provided, Revenue (94,425) minus Operating Expenses (16,501) should be 77,924. The reported Operating Income is 17,551, which is a significant discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 340
+    },
+    {
+      "instance_id": "thermo_fisher_scientific_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -0.5,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement calculation is incorrect. Income Before Tax (7,746) minus Income Tax Expense (547) should result in a Net Income of 7,199. The reported Net Income is 6,704, a discrepancy of 495.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 306
+    },
+    {
+      "instance_id": "home_depot,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Based on the provided figures, Income Before Tax (21,526) minus Income Tax Expense (4,600) should be 16,926. The reported Net Income is 14,806, which is a significant discrepancy and not a rounding error.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 356
+    },
+    {
+      "instance_id": "pfizer_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.income_before_tax",
+      "explanation": "The calculation for Income Before Tax is incorrect. Operating Income (32,718) minus Interest Expense (2,671) should be 30,047. However, the statement reports 35,389, which appears to be the result of incorrectly adding the Interest Expense to Operating Income.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 374
+    },
+    {
+      "instance_id": "honeywell_international_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "The Gross Profit calculation is incorrect. Revenue (9,758) minus Cost of Goods Sold (23,613) equals -13,855, but the reported Gross Profit is 3,470.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 257
+    },
+    {
+      "instance_id": "boeing_co__YOY_OPENING_BALANCE_20.0pct_41",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The calculation for Net Income is incorrect. Income Before Tax (4,281) minus Income Tax Expense (397) should equal 3,884, but Net Income is reported as 2,235.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 265
+    },
+    {
+      "instance_id": "boeing_co__AE_COLUMN_SUM_20.0pct_11",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Net Income calculation is incorrect. Income Before Tax (4,281) minus Income Tax Expense (397) should be 3,884. However, the reported Net Income is 2,235, which is a material discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 297
+    },
+    {
+      "instance_id": "alphabet_inc__CL_ENDING_CASH_0.5pct_24",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "The Income Statement has an arithmetic error. Income Before Tax (129,039) minus Income Tax Expense (26,656) should result in a Net Income of 102,383. However, the reported Net Income is 132,170. The figures do not reconcile.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 331
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_CFS_20.0pct_23",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__YOY_COMPUTED_CHANGE_2.0pct_44",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__CL_NET_INCOME_TO_CFS_0.5pct_18",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "berkshire_hathaway_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "amazon_com_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__AE_ROW_SUM_1.0pct_1",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "visa_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "amazon_com_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "nike,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "bank_of_america_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walmart_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "microsoft_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "costco_wholesale_corp_/new__CL_NET_INCOME_TO_CFS_0.5pct_18",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -0.4999,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "cisco_systems,_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__AE_COLUMN_SUM_0.5pct_6",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__CL_ENDING_CASH_2.0pct_26",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__YOY_OPENING_BALANCE_10.0pct_40",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "oracle_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "texas_instruments_inc__CL_NET_INCOME_TO_CFS_2.0pct_20",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_0.5pct_36",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "comcast_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "coca_cola_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "nvidia_corp__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": 0.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "procter_&_gamble_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "alphabet_inc__MR_MINOR_0.5pct_48",
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "meta_platforms,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "abbott_laboratories__AE_COLUMN_SUM_10.0pct_10",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "general_electric_capital_corp__AE_COLUMN_SUM_0.5pct_6",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "johnson_&_johnson__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "home_depot,_inc__AE_COLUMN_SUM_10.0pct_10",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "chevron_corp__AE_ROW_SUM_20.0pct_5",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3428. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2xlJzerrGy6UxUOphhxKjVTWofx'}",
+      "parse_method": "error"
+    }
+  ]
+}

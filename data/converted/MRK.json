@@ -1,0 +1,67 @@
+{
+  "company": "Merck\u00a0& Co., Inc.",
+  "ticker": "MRK",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 65011.0,
+    "sga_expense": 10733.0,
+    "rd_expense": 15789.0,
+    "income_tax_expense": 2804.0,
+    "net_income": 18254.0,
+    "eps_basic": 7.3,
+    "eps_diluted": 7.28,
+    "diluted_shares": 2507000000.0,
+    "operating_expenses": -26522.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 136866.0,
+      "total_equity": 52606.0,
+      "total_liabilities_and_equity": 136866.0,
+      "cash_and_equivalents": 14565.0,
+      "accounts_receivable": 11775.0,
+      "inventory": 6658.0,
+      "total_current_assets": 43516.0,
+      "property_plant_equipment": 25316.0,
+      "goodwill": 21579.0,
+      "intangible_assets": 26681.0,
+      "total_current_liabilities": 28327.0,
+      "long_term_debt": 46750.0,
+      "retained_earnings": 73075.0,
+      "total_liabilities": 84260.0,
+      "accounts_payable": 11330.800000000001,
+      "short_term_debt": 16996.199999999997
+    },
+    "prior_year": {
+      "total_assets": 106675.0,
+      "total_equity": 37581.0,
+      "total_liabilities_and_equity": 106675.0,
+      "cash_and_equivalents": 6841.0,
+      "accounts_receivable": 10349.0,
+      "inventory": 6358.0,
+      "total_current_assets": 32168.0,
+      "property_plant_equipment": 21422.0,
+      "goodwill": 21204.0,
+      "intangible_assets": 18011.0,
+      "total_current_liabilities": 25694.0,
+      "long_term_debt": 33683.0,
+      "retained_earnings": 53895.0,
+      "total_liabilities": 69094.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 16472.0,
+    "cash_from_investing": -13741.0,
+    "cash_from_financing": -1922.0,
+    "net_change_in_cash": 1372.0,
+    "capital_expenditures": 4112.0,
+    "dividends_paid": 8176.0,
+    "share_repurchases": 5084.0,
+    "debt_repayment": 2503.0,
+    "net_income": 18254.0,
+    "changes_in_working_capital": -1782.0,
+    "ending_cash": 14565.0
+  }
+}

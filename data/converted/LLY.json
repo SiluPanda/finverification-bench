@@ -1,0 +1,68 @@
+{
+  "company": "ELI LILLY AND COMPANY",
+  "ticker": "LLY",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 65179.0,
+    "sga_expense": 11094.0,
+    "income_tax_expense": 5091.0,
+    "net_income": 20640.0,
+    "eps_basic": 23.0,
+    "eps_diluted": 22.95,
+    "diluted_shares": 899300000.0,
+    "operating_expenses": -11094.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 112476.0,
+      "total_equity": 26535.0,
+      "total_liabilities_and_equity": 112476.0,
+      "cash_and_equivalents": 7268.0,
+      "accounts_receivable": 17760.0,
+      "inventory": 13744.0,
+      "total_current_assets": 55629.0,
+      "property_plant_equipment": 24675.0,
+      "goodwill": 5898.0,
+      "intangible_assets": 6521.0,
+      "total_current_liabilities": 35228.0,
+      "long_term_debt": 40868.0,
+      "retained_earnings": 24470.0,
+      "total_liabilities": 85941.0,
+      "accounts_payable": 14091.2,
+      "short_term_debt": 21136.8
+    },
+    "prior_year": {
+      "total_assets": 64006.3,
+      "total_equity": 10771.9,
+      "total_liabilities_and_equity": 64006.3,
+      "cash_and_equivalents": 2818.6,
+      "short_term_investments": 154.8,
+      "accounts_receivable": 9090.5,
+      "inventory": 5772.8,
+      "total_current_assets": 25727.0,
+      "property_plant_equipment": 12913.6,
+      "goodwill": 4939.7,
+      "intangible_assets": 6906.6,
+      "total_current_liabilities": 27293.2,
+      "long_term_debt": 29474.0,
+      "retained_earnings": 10312.3,
+      "total_liabilities": 53234.4
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 16813.0,
+    "cash_from_investing": -10972.0,
+    "cash_from_financing": -2213.0,
+    "net_change_in_cash": 4000.0,
+    "depreciation_amortization": 1997.0,
+    "dividends_paid": 5384.0,
+    "share_repurchases": 4108.0,
+    "debt_issuance": 13167.0,
+    "debt_repayment": 778.0,
+    "net_income": 20640.0,
+    "changes_in_working_capital": -5824.0,
+    "ending_cash": 7268.0
+  }
+}

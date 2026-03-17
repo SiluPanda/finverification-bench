@@ -1,0 +1,1446 @@
+{
+  "metadata": {
+    "analysis": "threshold_sensitivity",
+    "thresholds_tested": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      20.0,
+      50.0
+    ],
+    "num_instances": 1985,
+    "timestamp": "2026-03-15T20:46:20Z"
+  },
+  "optimal_threshold": {
+    "optimal_threshold_pct": 0.01,
+    "f1": 0.6914,
+    "precision": 1.0,
+    "recall": 0.5283,
+    "accuracy": 0.5385,
+    "fpr": 0.0
+  },
+  "zero_fpr_threshold": {
+    "threshold_pct": 0.01,
+    "f1": 0.6914,
+    "recall": 0.5283,
+    "precision": 1.0,
+    "accuracy": 0.5385,
+    "fpr": 0.0
+  },
+  "noise_floor": {
+    "num_clean_instances": 43,
+    "max_clean_discrepancy_pct": 0.0,
+    "per_check_summary": {
+      "BS: AP + ST Debt = Current Liabilities": {
+        "num_instances": 39,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      },
+      "BS: Total Assets = Total L&E (identity)": {
+        "num_instances": 43,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      },
+      "CFS: NI + D&A + WC Changes = Cash from Operations": {
+        "num_instances": 30,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      },
+      "Cross: CFS Ending Cash = BS Cash": {
+        "num_instances": 37,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      },
+      "Cross: IS Net Income = CFS Net Income": {
+        "num_instances": 43,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      },
+      "IS: Operating Income + Interest Expense = Income Before Tax": {
+        "num_instances": 10,
+        "num_nonzero": 0,
+        "max_discrepancy_pct": 0.0,
+        "mean_discrepancy_pct": 0.0,
+        "mean_nonzero_pct": 0.0
+      }
+    },
+    "failing_instances_at_zero_threshold": []
+  },
+  "sweep_results": [
+    {
+      "threshold_pct": 0.01,
+      "overall": {
+        "accuracy": 0.5385,
+        "precision": 1.0,
+        "recall": 0.5283,
+        "f1": 0.6914,
+        "fpr": 0.0,
+        "tp": 1026,
+        "fp": 0,
+        "tn": 43,
+        "fn": 916,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.3101,
+          "precision": 1.0,
+          "recall": 0.3101,
+          "f1": 0.4734,
+          "fpr": 0.0,
+          "tp": 160,
+          "fp": 0,
+          "tn": 0,
+          "fn": 356,
+          "total": 516,
+          "detection_rate": 0.3101
+        },
+        "CL": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fpr": 0.0,
+          "tp": 738,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0,
+          "total": 738,
+          "detection_rate": 1.0
+        },
+        "MR": {
+          "accuracy": 0.3198,
+          "precision": 1.0,
+          "recall": 0.3198,
+          "f1": 0.4846,
+          "fpr": 0.0,
+          "tp": 55,
+          "fp": 0,
+          "tn": 0,
+          "fn": 117,
+          "total": 172,
+          "detection_rate": 0.3198
+        },
+        "YOY": {
+          "accuracy": 0.1415,
+          "precision": 1.0,
+          "recall": 0.1415,
+          "f1": 0.2479,
+          "fpr": 0.0,
+          "tp": 73,
+          "fp": 0,
+          "tn": 0,
+          "fn": 443,
+          "total": 516,
+          "detection_rate": 0.1415
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.5441,
+          "precision": 1.0,
+          "recall": 0.5441,
+          "f1": 0.7048,
+          "fpr": 0.0,
+          "tp": 185,
+          "fp": 0,
+          "tn": 0,
+          "fn": 155,
+          "total": 340,
+          "detection_rate": 0.5441
+        },
+        "1-5%": {
+          "accuracy": 0.5214,
+          "precision": 1.0,
+          "recall": 0.5214,
+          "f1": 0.6854,
+          "fpr": 0.0,
+          "tp": 329,
+          "fp": 0,
+          "tn": 0,
+          "fn": 302,
+          "total": 631,
+          "detection_rate": 0.5214
+        },
+        "5-10%": {
+          "accuracy": 0.5507,
+          "precision": 1.0,
+          "recall": 0.5507,
+          "f1": 0.7102,
+          "fpr": 0.0,
+          "tp": 163,
+          "fp": 0,
+          "tn": 0,
+          "fn": 133,
+          "total": 296,
+          "detection_rate": 0.5507
+        },
+        "10-20%": {
+          "accuracy": 0.4926,
+          "precision": 1.0,
+          "recall": 0.4926,
+          "f1": 0.66,
+          "fpr": 0.0,
+          "tp": 166,
+          "fp": 0,
+          "tn": 0,
+          "fn": 171,
+          "total": 337,
+          "detection_rate": 0.4926
+        },
+        ">20%": {
+          "accuracy": 0.5414,
+          "precision": 1.0,
+          "recall": 0.5414,
+          "f1": 0.7025,
+          "fpr": 0.0,
+          "tp": 183,
+          "fp": 0,
+          "tn": 0,
+          "fn": 155,
+          "total": 338,
+          "detection_rate": 0.5414
+        }
+      }
+    },
+    {
+      "threshold_pct": 0.05,
+      "overall": {
+        "accuracy": 0.536,
+        "precision": 1.0,
+        "recall": 0.5257,
+        "f1": 0.6892,
+        "fpr": 0.0,
+        "tp": 1021,
+        "fp": 0,
+        "tn": 43,
+        "fn": 921,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.3043,
+          "precision": 1.0,
+          "recall": 0.3043,
+          "f1": 0.4666,
+          "fpr": 0.0,
+          "tp": 157,
+          "fp": 0,
+          "tn": 0,
+          "fn": 359,
+          "total": 516,
+          "detection_rate": 0.3043
+        },
+        "CL": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fpr": 0.0,
+          "tp": 738,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0,
+          "total": 738,
+          "detection_rate": 1.0
+        },
+        "MR": {
+          "accuracy": 0.3081,
+          "precision": 1.0,
+          "recall": 0.3081,
+          "f1": 0.4711,
+          "fpr": 0.0,
+          "tp": 53,
+          "fp": 0,
+          "tn": 0,
+          "fn": 119,
+          "total": 172,
+          "detection_rate": 0.3081
+        },
+        "YOY": {
+          "accuracy": 0.1415,
+          "precision": 1.0,
+          "recall": 0.1415,
+          "f1": 0.2479,
+          "fpr": 0.0,
+          "tp": 73,
+          "fp": 0,
+          "tn": 0,
+          "fn": 443,
+          "total": 516,
+          "detection_rate": 0.1415
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.5353,
+          "precision": 1.0,
+          "recall": 0.5353,
+          "f1": 0.6973,
+          "fpr": 0.0,
+          "tp": 182,
+          "fp": 0,
+          "tn": 0,
+          "fn": 158,
+          "total": 340,
+          "detection_rate": 0.5353
+        },
+        "1-5%": {
+          "accuracy": 0.5182,
+          "precision": 1.0,
+          "recall": 0.5182,
+          "f1": 0.6827,
+          "fpr": 0.0,
+          "tp": 327,
+          "fp": 0,
+          "tn": 0,
+          "fn": 304,
+          "total": 631,
+          "detection_rate": 0.5182
+        },
+        "5-10%": {
+          "accuracy": 0.5507,
+          "precision": 1.0,
+          "recall": 0.5507,
+          "f1": 0.7102,
+          "fpr": 0.0,
+          "tp": 163,
+          "fp": 0,
+          "tn": 0,
+          "fn": 133,
+          "total": 296,
+          "detection_rate": 0.5507
+        },
+        "10-20%": {
+          "accuracy": 0.4926,
+          "precision": 1.0,
+          "recall": 0.4926,
+          "f1": 0.66,
+          "fpr": 0.0,
+          "tp": 166,
+          "fp": 0,
+          "tn": 0,
+          "fn": 171,
+          "total": 337,
+          "detection_rate": 0.4926
+        },
+        ">20%": {
+          "accuracy": 0.5414,
+          "precision": 1.0,
+          "recall": 0.5414,
+          "f1": 0.7025,
+          "fpr": 0.0,
+          "tp": 183,
+          "fp": 0,
+          "tn": 0,
+          "fn": 155,
+          "total": 338,
+          "detection_rate": 0.5414
+        }
+      }
+    },
+    {
+      "threshold_pct": 0.1,
+      "overall": {
+        "accuracy": 0.535,
+        "precision": 1.0,
+        "recall": 0.5247,
+        "f1": 0.6883,
+        "fpr": 0.0,
+        "tp": 1019,
+        "fp": 0,
+        "tn": 43,
+        "fn": 923,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.3004,
+          "precision": 1.0,
+          "recall": 0.3004,
+          "f1": 0.462,
+          "fpr": 0.0,
+          "tp": 155,
+          "fp": 0,
+          "tn": 0,
+          "fn": 361,
+          "total": 516,
+          "detection_rate": 0.3004
+        },
+        "CL": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fpr": 0.0,
+          "tp": 738,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0,
+          "total": 738,
+          "detection_rate": 1.0
+        },
+        "MR": {
+          "accuracy": 0.3081,
+          "precision": 1.0,
+          "recall": 0.3081,
+          "f1": 0.4711,
+          "fpr": 0.0,
+          "tp": 53,
+          "fp": 0,
+          "tn": 0,
+          "fn": 119,
+          "total": 172,
+          "detection_rate": 0.3081
+        },
+        "YOY": {
+          "accuracy": 0.1415,
+          "precision": 1.0,
+          "recall": 0.1415,
+          "f1": 0.2479,
+          "fpr": 0.0,
+          "tp": 73,
+          "fp": 0,
+          "tn": 0,
+          "fn": 443,
+          "total": 516,
+          "detection_rate": 0.1415
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.5353,
+          "precision": 1.0,
+          "recall": 0.5353,
+          "f1": 0.6973,
+          "fpr": 0.0,
+          "tp": 182,
+          "fp": 0,
+          "tn": 0,
+          "fn": 158,
+          "total": 340,
+          "detection_rate": 0.5353
+        },
+        "1-5%": {
+          "accuracy": 0.5151,
+          "precision": 1.0,
+          "recall": 0.5151,
+          "f1": 0.6799,
+          "fpr": 0.0,
+          "tp": 325,
+          "fp": 0,
+          "tn": 0,
+          "fn": 306,
+          "total": 631,
+          "detection_rate": 0.5151
+        },
+        "5-10%": {
+          "accuracy": 0.5507,
+          "precision": 1.0,
+          "recall": 0.5507,
+          "f1": 0.7102,
+          "fpr": 0.0,
+          "tp": 163,
+          "fp": 0,
+          "tn": 0,
+          "fn": 133,
+          "total": 296,
+          "detection_rate": 0.5507
+        },
+        "10-20%": {
+          "accuracy": 0.4926,
+          "precision": 1.0,
+          "recall": 0.4926,
+          "f1": 0.66,
+          "fpr": 0.0,
+          "tp": 166,
+          "fp": 0,
+          "tn": 0,
+          "fn": 171,
+          "total": 337,
+          "detection_rate": 0.4926
+        },
+        ">20%": {
+          "accuracy": 0.5414,
+          "precision": 1.0,
+          "recall": 0.5414,
+          "f1": 0.7025,
+          "fpr": 0.0,
+          "tp": 183,
+          "fp": 0,
+          "tn": 0,
+          "fn": 155,
+          "total": 338,
+          "detection_rate": 0.5414
+        }
+      }
+    },
+    {
+      "threshold_pct": 0.5,
+      "overall": {
+        "accuracy": 0.4907,
+        "precision": 1.0,
+        "recall": 0.4794,
+        "f1": 0.6481,
+        "fpr": 0.0,
+        "tp": 931,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1011,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.2558,
+          "precision": 1.0,
+          "recall": 0.2558,
+          "f1": 0.4074,
+          "fpr": 0.0,
+          "tp": 132,
+          "fp": 0,
+          "tn": 0,
+          "fn": 384,
+          "total": 516,
+          "detection_rate": 0.2558
+        },
+        "CL": {
+          "accuracy": 0.9363,
+          "precision": 1.0,
+          "recall": 0.9363,
+          "f1": 0.9671,
+          "fpr": 0.0,
+          "tp": 691,
+          "fp": 0,
+          "tn": 0,
+          "fn": 47,
+          "total": 738,
+          "detection_rate": 0.9363
+        },
+        "MR": {
+          "accuracy": 0.2442,
+          "precision": 1.0,
+          "recall": 0.2442,
+          "f1": 0.3925,
+          "fpr": 0.0,
+          "tp": 42,
+          "fp": 0,
+          "tn": 0,
+          "fn": 130,
+          "total": 172,
+          "detection_rate": 0.2442
+        },
+        "YOY": {
+          "accuracy": 0.1279,
+          "precision": 1.0,
+          "recall": 0.1279,
+          "f1": 0.2268,
+          "fpr": 0.0,
+          "tp": 66,
+          "fp": 0,
+          "tn": 0,
+          "fn": 450,
+          "total": 516,
+          "detection_rate": 0.1279
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.2882,
+          "precision": 1.0,
+          "recall": 0.2882,
+          "f1": 0.4475,
+          "fpr": 0.0,
+          "tp": 98,
+          "fp": 0,
+          "tn": 0,
+          "fn": 242,
+          "total": 340,
+          "detection_rate": 0.2882
+        },
+        "1-5%": {
+          "accuracy": 0.5103,
+          "precision": 1.0,
+          "recall": 0.5103,
+          "f1": 0.6758,
+          "fpr": 0.0,
+          "tp": 322,
+          "fp": 0,
+          "tn": 0,
+          "fn": 309,
+          "total": 631,
+          "detection_rate": 0.5103
+        },
+        "5-10%": {
+          "accuracy": 0.5507,
+          "precision": 1.0,
+          "recall": 0.5507,
+          "f1": 0.7102,
+          "fpr": 0.0,
+          "tp": 163,
+          "fp": 0,
+          "tn": 0,
+          "fn": 133,
+          "total": 296,
+          "detection_rate": 0.5507
+        },
+        "10-20%": {
+          "accuracy": 0.4896,
+          "precision": 1.0,
+          "recall": 0.4896,
+          "f1": 0.6574,
+          "fpr": 0.0,
+          "tp": 165,
+          "fp": 0,
+          "tn": 0,
+          "fn": 172,
+          "total": 337,
+          "detection_rate": 0.4896
+        },
+        ">20%": {
+          "accuracy": 0.5414,
+          "precision": 1.0,
+          "recall": 0.5414,
+          "f1": 0.7025,
+          "fpr": 0.0,
+          "tp": 183,
+          "fp": 0,
+          "tn": 0,
+          "fn": 155,
+          "total": 338,
+          "detection_rate": 0.5414
+        }
+      }
+    },
+    {
+      "threshold_pct": 1.0,
+      "overall": {
+        "accuracy": 0.3995,
+        "precision": 1.0,
+        "recall": 0.3862,
+        "f1": 0.5572,
+        "fpr": 0.0,
+        "tp": 750,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1192,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.2016,
+          "precision": 1.0,
+          "recall": 0.2016,
+          "f1": 0.3355,
+          "fpr": 0.0,
+          "tp": 104,
+          "fp": 0,
+          "tn": 0,
+          "fn": 412,
+          "total": 516,
+          "detection_rate": 0.2016
+        },
+        "CL": {
+          "accuracy": 0.7534,
+          "precision": 1.0,
+          "recall": 0.7534,
+          "f1": 0.8594,
+          "fpr": 0.0,
+          "tp": 556,
+          "fp": 0,
+          "tn": 0,
+          "fn": 182,
+          "total": 738,
+          "detection_rate": 0.7534
+        },
+        "MR": {
+          "accuracy": 0.2093,
+          "precision": 1.0,
+          "recall": 0.2093,
+          "f1": 0.3462,
+          "fpr": 0.0,
+          "tp": 36,
+          "fp": 0,
+          "tn": 0,
+          "fn": 136,
+          "total": 172,
+          "detection_rate": 0.2093
+        },
+        "YOY": {
+          "accuracy": 0.1047,
+          "precision": 1.0,
+          "recall": 0.1047,
+          "f1": 0.1895,
+          "fpr": 0.0,
+          "tp": 54,
+          "fp": 0,
+          "tn": 0,
+          "fn": 462,
+          "total": 516,
+          "detection_rate": 0.1047
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0059,
+          "precision": 1.0,
+          "recall": 0.0059,
+          "f1": 0.0117,
+          "fpr": 0.0,
+          "tp": 2,
+          "fp": 0,
+          "tn": 0,
+          "fn": 338,
+          "total": 340,
+          "detection_rate": 0.0059
+        },
+        "1-5%": {
+          "accuracy": 0.3819,
+          "precision": 1.0,
+          "recall": 0.3819,
+          "f1": 0.5528,
+          "fpr": 0.0,
+          "tp": 241,
+          "fp": 0,
+          "tn": 0,
+          "fn": 390,
+          "total": 631,
+          "detection_rate": 0.3819
+        },
+        "5-10%": {
+          "accuracy": 0.5473,
+          "precision": 1.0,
+          "recall": 0.5473,
+          "f1": 0.7074,
+          "fpr": 0.0,
+          "tp": 162,
+          "fp": 0,
+          "tn": 0,
+          "fn": 134,
+          "total": 296,
+          "detection_rate": 0.5473
+        },
+        "10-20%": {
+          "accuracy": 0.4896,
+          "precision": 1.0,
+          "recall": 0.4896,
+          "f1": 0.6574,
+          "fpr": 0.0,
+          "tp": 165,
+          "fp": 0,
+          "tn": 0,
+          "fn": 172,
+          "total": 337,
+          "detection_rate": 0.4896
+        },
+        ">20%": {
+          "accuracy": 0.5325,
+          "precision": 1.0,
+          "recall": 0.5325,
+          "f1": 0.695,
+          "fpr": 0.0,
+          "tp": 180,
+          "fp": 0,
+          "tn": 0,
+          "fn": 158,
+          "total": 338,
+          "detection_rate": 0.5325
+        }
+      }
+    },
+    {
+      "threshold_pct": 2.0,
+      "overall": {
+        "accuracy": 0.3159,
+        "precision": 1.0,
+        "recall": 0.3007,
+        "f1": 0.4624,
+        "fpr": 0.0,
+        "tp": 584,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1358,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.155,
+          "precision": 1.0,
+          "recall": 0.155,
+          "f1": 0.2685,
+          "fpr": 0.0,
+          "tp": 80,
+          "fp": 0,
+          "tn": 0,
+          "fn": 436,
+          "total": 516,
+          "detection_rate": 0.155
+        },
+        "CL": {
+          "accuracy": 0.5867,
+          "precision": 1.0,
+          "recall": 0.5867,
+          "f1": 0.7395,
+          "fpr": 0.0,
+          "tp": 433,
+          "fp": 0,
+          "tn": 0,
+          "fn": 305,
+          "total": 738,
+          "detection_rate": 0.5867
+        },
+        "MR": {
+          "accuracy": 0.1802,
+          "precision": 1.0,
+          "recall": 0.1802,
+          "f1": 0.3054,
+          "fpr": 0.0,
+          "tp": 31,
+          "fp": 0,
+          "tn": 0,
+          "fn": 141,
+          "total": 172,
+          "detection_rate": 0.1802
+        },
+        "YOY": {
+          "accuracy": 0.0775,
+          "precision": 1.0,
+          "recall": 0.0775,
+          "f1": 0.1439,
+          "fpr": 0.0,
+          "tp": 40,
+          "fp": 0,
+          "tn": 0,
+          "fn": 476,
+          "total": 516,
+          "detection_rate": 0.0775
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 340,
+          "total": 340,
+          "detection_rate": 0.0
+        },
+        "1-5%": {
+          "accuracy": 0.1315,
+          "precision": 1.0,
+          "recall": 0.1315,
+          "f1": 0.2325,
+          "fpr": 0.0,
+          "tp": 83,
+          "fp": 0,
+          "tn": 0,
+          "fn": 548,
+          "total": 631,
+          "detection_rate": 0.1315
+        },
+        "5-10%": {
+          "accuracy": 0.5372,
+          "precision": 1.0,
+          "recall": 0.5372,
+          "f1": 0.6989,
+          "fpr": 0.0,
+          "tp": 159,
+          "fp": 0,
+          "tn": 0,
+          "fn": 137,
+          "total": 296,
+          "detection_rate": 0.5372
+        },
+        "10-20%": {
+          "accuracy": 0.4866,
+          "precision": 1.0,
+          "recall": 0.4866,
+          "f1": 0.6547,
+          "fpr": 0.0,
+          "tp": 164,
+          "fp": 0,
+          "tn": 0,
+          "fn": 173,
+          "total": 337,
+          "detection_rate": 0.4866
+        },
+        ">20%": {
+          "accuracy": 0.5266,
+          "precision": 1.0,
+          "recall": 0.5266,
+          "f1": 0.6899,
+          "fpr": 0.0,
+          "tp": 178,
+          "fp": 0,
+          "tn": 0,
+          "fn": 160,
+          "total": 338,
+          "detection_rate": 0.5266
+        }
+      }
+    },
+    {
+      "threshold_pct": 5.0,
+      "overall": {
+        "accuracy": 0.2322,
+        "precision": 1.0,
+        "recall": 0.2152,
+        "f1": 0.3542,
+        "fpr": 0.0,
+        "tp": 418,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1524,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.1143,
+          "precision": 1.0,
+          "recall": 0.1143,
+          "f1": 0.2052,
+          "fpr": 0.0,
+          "tp": 59,
+          "fp": 0,
+          "tn": 0,
+          "fn": 457,
+          "total": 516,
+          "detection_rate": 0.1143
+        },
+        "CL": {
+          "accuracy": 0.4173,
+          "precision": 1.0,
+          "recall": 0.4173,
+          "f1": 0.5889,
+          "fpr": 0.0,
+          "tp": 308,
+          "fp": 0,
+          "tn": 0,
+          "fn": 430,
+          "total": 738,
+          "detection_rate": 0.4173
+        },
+        "MR": {
+          "accuracy": 0.1512,
+          "precision": 1.0,
+          "recall": 0.1512,
+          "f1": 0.2626,
+          "fpr": 0.0,
+          "tp": 26,
+          "fp": 0,
+          "tn": 0,
+          "fn": 146,
+          "total": 172,
+          "detection_rate": 0.1512
+        },
+        "YOY": {
+          "accuracy": 0.0484,
+          "precision": 1.0,
+          "recall": 0.0484,
+          "f1": 0.0924,
+          "fpr": 0.0,
+          "tp": 25,
+          "fp": 0,
+          "tn": 0,
+          "fn": 491,
+          "total": 516,
+          "detection_rate": 0.0484
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 340,
+          "total": 340,
+          "detection_rate": 0.0
+        },
+        "1-5%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 631,
+          "total": 631,
+          "detection_rate": 0.0
+        },
+        "5-10%": {
+          "accuracy": 0.2703,
+          "precision": 1.0,
+          "recall": 0.2703,
+          "f1": 0.4255,
+          "fpr": 0.0,
+          "tp": 80,
+          "fp": 0,
+          "tn": 0,
+          "fn": 216,
+          "total": 296,
+          "detection_rate": 0.2703
+        },
+        "10-20%": {
+          "accuracy": 0.4807,
+          "precision": 1.0,
+          "recall": 0.4807,
+          "f1": 0.6493,
+          "fpr": 0.0,
+          "tp": 162,
+          "fp": 0,
+          "tn": 0,
+          "fn": 175,
+          "total": 337,
+          "detection_rate": 0.4807
+        },
+        ">20%": {
+          "accuracy": 0.5207,
+          "precision": 1.0,
+          "recall": 0.5207,
+          "f1": 0.6848,
+          "fpr": 0.0,
+          "tp": 176,
+          "fp": 0,
+          "tn": 0,
+          "fn": 162,
+          "total": 338,
+          "detection_rate": 0.5207
+        }
+      }
+    },
+    {
+      "threshold_pct": 10.0,
+      "overall": {
+        "accuracy": 0.1486,
+        "precision": 1.0,
+        "recall": 0.1298,
+        "f1": 0.2297,
+        "fpr": 0.0,
+        "tp": 252,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1690,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.064,
+          "precision": 1.0,
+          "recall": 0.064,
+          "f1": 0.1202,
+          "fpr": 0.0,
+          "tp": 33,
+          "fp": 0,
+          "tn": 0,
+          "fn": 483,
+          "total": 516,
+          "detection_rate": 0.064
+        },
+        "CL": {
+          "accuracy": 0.248,
+          "precision": 1.0,
+          "recall": 0.248,
+          "f1": 0.3974,
+          "fpr": 0.0,
+          "tp": 183,
+          "fp": 0,
+          "tn": 0,
+          "fn": 555,
+          "total": 738,
+          "detection_rate": 0.248
+        },
+        "MR": {
+          "accuracy": 0.1221,
+          "precision": 1.0,
+          "recall": 0.1221,
+          "f1": 0.2176,
+          "fpr": 0.0,
+          "tp": 21,
+          "fp": 0,
+          "tn": 0,
+          "fn": 151,
+          "total": 172,
+          "detection_rate": 0.1221
+        },
+        "YOY": {
+          "accuracy": 0.0291,
+          "precision": 1.0,
+          "recall": 0.0291,
+          "f1": 0.0565,
+          "fpr": 0.0,
+          "tp": 15,
+          "fp": 0,
+          "tn": 0,
+          "fn": 501,
+          "total": 516,
+          "detection_rate": 0.0291
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 340,
+          "total": 340,
+          "detection_rate": 0.0
+        },
+        "1-5%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 631,
+          "total": 631,
+          "detection_rate": 0.0
+        },
+        "5-10%": {
+          "accuracy": 0.0068,
+          "precision": 1.0,
+          "recall": 0.0068,
+          "f1": 0.0134,
+          "fpr": 0.0,
+          "tp": 2,
+          "fp": 0,
+          "tn": 0,
+          "fn": 294,
+          "total": 296,
+          "detection_rate": 0.0068
+        },
+        "10-20%": {
+          "accuracy": 0.2344,
+          "precision": 1.0,
+          "recall": 0.2344,
+          "f1": 0.3798,
+          "fpr": 0.0,
+          "tp": 79,
+          "fp": 0,
+          "tn": 0,
+          "fn": 258,
+          "total": 337,
+          "detection_rate": 0.2344
+        },
+        ">20%": {
+          "accuracy": 0.5059,
+          "precision": 1.0,
+          "recall": 0.5059,
+          "f1": 0.6719,
+          "fpr": 0.0,
+          "tp": 171,
+          "fp": 0,
+          "tn": 0,
+          "fn": 167,
+          "total": 338,
+          "detection_rate": 0.5059
+        }
+      }
+    },
+    {
+      "threshold_pct": 20.0,
+      "overall": {
+        "accuracy": 0.0579,
+        "precision": 1.0,
+        "recall": 0.0371,
+        "f1": 0.0715,
+        "fpr": 0.0,
+        "tp": 72,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1870,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.0155,
+          "precision": 1.0,
+          "recall": 0.0155,
+          "f1": 0.0305,
+          "fpr": 0.0,
+          "tp": 8,
+          "fp": 0,
+          "tn": 0,
+          "fn": 508,
+          "total": 516,
+          "detection_rate": 0.0155
+        },
+        "CL": {
+          "accuracy": 0.065,
+          "precision": 1.0,
+          "recall": 0.065,
+          "f1": 0.1221,
+          "fpr": 0.0,
+          "tp": 48,
+          "fp": 0,
+          "tn": 0,
+          "fn": 690,
+          "total": 738,
+          "detection_rate": 0.065
+        },
+        "MR": {
+          "accuracy": 0.064,
+          "precision": 1.0,
+          "recall": 0.064,
+          "f1": 0.1202,
+          "fpr": 0.0,
+          "tp": 11,
+          "fp": 0,
+          "tn": 0,
+          "fn": 161,
+          "total": 172,
+          "detection_rate": 0.064
+        },
+        "YOY": {
+          "accuracy": 0.0097,
+          "precision": 1.0,
+          "recall": 0.0097,
+          "f1": 0.0192,
+          "fpr": 0.0,
+          "tp": 5,
+          "fp": 0,
+          "tn": 0,
+          "fn": 511,
+          "total": 516,
+          "detection_rate": 0.0097
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 340,
+          "total": 340,
+          "detection_rate": 0.0
+        },
+        "1-5%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 631,
+          "total": 631,
+          "detection_rate": 0.0
+        },
+        "5-10%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 296,
+          "total": 296,
+          "detection_rate": 0.0
+        },
+        "10-20%": {
+          "accuracy": 0.0089,
+          "precision": 1.0,
+          "recall": 0.0089,
+          "f1": 0.0176,
+          "fpr": 0.0,
+          "tp": 3,
+          "fp": 0,
+          "tn": 0,
+          "fn": 334,
+          "total": 337,
+          "detection_rate": 0.0089
+        },
+        ">20%": {
+          "accuracy": 0.2041,
+          "precision": 1.0,
+          "recall": 0.2041,
+          "f1": 0.3391,
+          "fpr": 0.0,
+          "tp": 69,
+          "fp": 0,
+          "tn": 0,
+          "fn": 269,
+          "total": 338,
+          "detection_rate": 0.2041
+        }
+      }
+    },
+    {
+      "threshold_pct": 50.0,
+      "overall": {
+        "accuracy": 0.0227,
+        "precision": 1.0,
+        "recall": 0.001,
+        "f1": 0.0021,
+        "fpr": 0.0,
+        "tp": 2,
+        "fp": 0,
+        "tn": 43,
+        "fn": 1940,
+        "total": 1985
+      },
+      "by_category": {
+        "AE": {
+          "accuracy": 0.0019,
+          "precision": 1.0,
+          "recall": 0.0019,
+          "f1": 0.0039,
+          "fpr": 0.0,
+          "tp": 1,
+          "fp": 0,
+          "tn": 0,
+          "fn": 515,
+          "total": 516,
+          "detection_rate": 0.0019
+        },
+        "CL": {
+          "accuracy": 0.0014,
+          "precision": 1.0,
+          "recall": 0.0014,
+          "f1": 0.0027,
+          "fpr": 0.0,
+          "tp": 1,
+          "fp": 0,
+          "tn": 0,
+          "fn": 737,
+          "total": 738,
+          "detection_rate": 0.0014
+        },
+        "MR": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 172,
+          "total": 172,
+          "detection_rate": 0.0
+        },
+        "YOY": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 516,
+          "total": 516,
+          "detection_rate": 0.0
+        }
+      },
+      "by_magnitude": {
+        "<1%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 340,
+          "total": 340,
+          "detection_rate": 0.0
+        },
+        "1-5%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 631,
+          "total": 631,
+          "detection_rate": 0.0
+        },
+        "5-10%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 296,
+          "total": 296,
+          "detection_rate": 0.0
+        },
+        "10-20%": {
+          "accuracy": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 337,
+          "total": 337,
+          "detection_rate": 0.0
+        },
+        ">20%": {
+          "accuracy": 0.0059,
+          "precision": 1.0,
+          "recall": 0.0059,
+          "f1": 0.0118,
+          "fpr": 0.0,
+          "tp": 2,
+          "fp": 0,
+          "tn": 0,
+          "fn": 336,
+          "total": 338,
+          "detection_rate": 0.0059
+        }
+      }
+    }
+  ]
+}

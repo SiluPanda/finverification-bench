@@ -1,0 +1,105 @@
+{
+  "instance_id": "microsoft_corporation__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0",
+  "company": "MICROSOFT CORPORATION",
+  "period": "FY2025",
+  "formatted_statements": "MICROSOFT CORPORATION — Financial Statements (in millions of USD)\nPeriod: FY2025\n\nINCOME STATEMENT\n==========================================================\n  Revenue                                          281,724\n  Cost of Goods Sold                                87,831\n  Gross Profit                                     193,893\n  --------------------------------------------------------\n  Operating Expenses                                65,365\n  Operating Income                                 128,528\n  --------------------------------------------------------\n  Income Before Tax                                128,528\n  --------------------------------------------------------\n  Income Tax Expense                                21,795\n  Net Income                                       101,832\n\nBALANCE SHEET\n==============================================================================\n                                                   Current            Prior\n  ----------------------------------------------------------------------------\n  Cash and Equivalents                              30,242           34,704\n  Accounts Receivable                               69,905           48,688\n  Inventory                                            938            2,500\n  Total Current Assets                             191,131          184,257\n  ----------------------------------------------------------------------------\n  Property, Plant & Equipment                   215,214.30           95,641\n  Total Assets                                     619,003          411,976\n  ----------------------------------------------------------------------------\n\n  Accounts Payable                               56,487.20\n  Short-Term Debt                                84,730.80\n  Total Current Liabilities                        141,218          104,149\n  ----------------------------------------------------------------------------\n  Long-Term Debt                                    43,151           47,237\n  Total Liabilities                                275,524          205,753\n  ----------------------------------------------------------------------------\n  Retained Earnings                                237,731          118,848\n  Total Equity                                     343,479          166,542\n  Total Liabilities & Equity                       619,003          411,976\n\nCASH FLOW STATEMENT\n==========================================================\n  Net Income                                    106,923.60\n  Changes in Working Capital                        34,330\n  Cash from Operations                             136,162\n  --------------------------------------------------------\n  Capital Expenditures                              64,551\n  Cash from Investing                              -72,599\n  --------------------------------------------------------\n  Dividends Paid                                    24,082\n  Cash from Financing                              -51,699\n  --------------------------------------------------------\n  Net Change in Cash                                11,927\n  --------------------------------------------------------\n  Ending Cash                                       30,242",
+  "question": "Are these financial statements internally consistent? Check all arithmetic totals, cross-statement linkages, and year-over-year continuity. Report any discrepancies found.",
+  "ground_truth": {
+    "has_error": true,
+    "error_count": 2,
+    "errors": [
+      {
+        "has_error": true,
+        "error_type": "AE_ROW_SUM",
+        "error_category": "AE",
+        "error_location": "balance_sheet.current_year.property_plant_equipment",
+        "error_magnitude_pct": 5.0,
+        "original_value": 204966.0,
+        "modified_value": 215214.3,
+        "description": "Modified 'property_plant_equipment' in balance_sheet.current_year so row items no longer sum to the stated subtotal."
+      },
+      {
+        "has_error": true,
+        "error_type": "CL_NET_INCOME_TO_CFS",
+        "error_category": "CL",
+        "error_location": "cash_flow_statement.net_income",
+        "error_magnitude_pct": 5.0,
+        "original_value": 101832.0,
+        "modified_value": 106923.6,
+        "description": "Modified net income on CFS so it no longer matches the IS."
+      }
+    ]
+  },
+  "difficulty": "very_hard",
+  "raw_statements": {
+    "company": "MICROSOFT CORPORATION",
+    "ticker": "MSFT",
+    "period": "FY2025",
+    "currency": "USD",
+    "unit": "millions",
+    "income_statement": {
+      "revenue": 281724.0,
+      "cost_of_goods_sold": 87831.0,
+      "gross_profit": 193893.0,
+      "operating_expenses": 65365.0,
+      "rd_expense": 32488.0,
+      "operating_income": 128528.0,
+      "income_tax_expense": 21795.0,
+      "net_income": 101832.0,
+      "eps_basic": 13.7,
+      "eps_diluted": 13.64,
+      "diluted_shares": 7465000000.0,
+      "income_before_tax": 128528.0
+    },
+    "balance_sheet": {
+      "current_year": {
+        "total_assets": 619003.0,
+        "total_liabilities": 275524.0,
+        "total_equity": 343479.0,
+        "total_liabilities_and_equity": 619003.0,
+        "cash_and_equivalents": 30242.0,
+        "short_term_investments": 64323.0,
+        "accounts_receivable": 69905.0,
+        "inventory": 938.0,
+        "total_current_assets": 191131.0,
+        "property_plant_equipment": 215214.3,
+        "goodwill": 119509.0,
+        "total_current_liabilities": 141218.0,
+        "long_term_debt": 43151.0,
+        "retained_earnings": 237731.0,
+        "shares_outstanding": 7434000000.0,
+        "accounts_payable": 56487.200000000004,
+        "short_term_debt": 84730.79999999999
+      },
+      "prior_year": {
+        "total_assets": 411976.0,
+        "total_liabilities": 205753.0,
+        "total_equity": 166542.0,
+        "total_liabilities_and_equity": 411976.0,
+        "cash_and_equivalents": 34704.0,
+        "short_term_investments": 76558.0,
+        "accounts_receivable": 48688.0,
+        "inventory": 2500.0,
+        "total_current_assets": 184257.0,
+        "property_plant_equipment": 95641.0,
+        "goodwill": 67524.0,
+        "total_current_liabilities": 104149.0,
+        "long_term_debt": 47237.0,
+        "retained_earnings": 118848.0,
+        "shares_outstanding": 7519000000.0
+      }
+    },
+    "cash_flow_statement": {
+      "cash_from_operations": 136162.0,
+      "cash_from_investing": -72599.0,
+      "cash_from_financing": -51699.0,
+      "net_change_in_cash": 11927.0,
+      "capital_expenditures": 64551.0,
+      "dividends_paid": 24082.0,
+      "share_repurchases": 18420.0,
+      "net_income": 106923.6,
+      "changes_in_working_capital": 34330.0,
+      "ending_cash": 30242.0
+    }
+  }
+}

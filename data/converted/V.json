@@ -1,0 +1,59 @@
+{
+  "company": "VISA INC.",
+  "ticker": "V",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 40000.0,
+    "operating_income": 23994.0,
+    "income_tax_expense": 4136.0,
+    "net_income": 20058.0,
+    "income_before_tax": 23994.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 99627.0,
+      "total_liabilities": 61718.0,
+      "total_liabilities_and_equity": 99627.0,
+      "cash_and_equivalents": 17164.0,
+      "accounts_receivable": 3126.0,
+      "total_current_assets": 37766.0,
+      "property_plant_equipment": 4236.0,
+      "goodwill": 19879.0,
+      "intangible_assets": 27646.0,
+      "total_current_liabilities": 35048.0,
+      "long_term_debt": 19602.0,
+      "retained_earnings": 15106.0,
+      "accounts_payable": 14019.2,
+      "short_term_debt": 21028.8
+    },
+    "prior_year": {
+      "total_assets": 90499.0,
+      "total_liabilities": 51766.0,
+      "total_liabilities_and_equity": 90499.0,
+      "cash_and_equivalents": 16286.0,
+      "accounts_receivable": 2291.0,
+      "total_current_assets": 33532.0,
+      "property_plant_equipment": 3425.0,
+      "goodwill": 17787.0,
+      "intangible_assets": 26104.0,
+      "total_current_liabilities": 23098.0,
+      "long_term_debt": 20463.0,
+      "retained_earnings": 18040.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 23059.0,
+    "cash_from_investing": 708.0,
+    "cash_from_financing": -18963.0,
+    "net_change_in_cash": 5224.0,
+    "depreciation_amortization": 1220.0,
+    "dividends_paid": 4634.0,
+    "share_repurchases": 18316.0,
+    "debt_repayment": 0.0,
+    "net_income": 20058.0,
+    "changes_in_working_capital": 1781.0,
+    "ending_cash": 17164.0
+  }
+}

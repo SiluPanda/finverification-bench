@@ -1,0 +1,66 @@
+{
+  "company": "COCA COLA CO",
+  "ticker": "KO",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 47941.0,
+    "gross_profit": 29544.0,
+    "sga_expense": 14521.0,
+    "operating_income": 13762.0,
+    "interest_expense": 1654.0,
+    "income_tax_expense": 2861.0,
+    "net_income": 13107.0,
+    "eps_basic": 3.05,
+    "eps_diluted": 3.04,
+    "diluted_shares": 4313000000.0,
+    "operating_expenses": -14521.0,
+    "income_before_tax": 15416.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 104816.0,
+      "total_equity": 32169.0,
+      "total_liabilities_and_equity": 104816.0,
+      "cash_and_equivalents": 10270.0,
+      "accounts_receivable": 3038.0,
+      "inventory": 4425.0,
+      "total_current_assets": 31044.0,
+      "property_plant_equipment": 9613.0,
+      "goodwill": 15491.0,
+      "total_current_liabilities": 21281.0,
+      "retained_earnings": 80382.0,
+      "total_liabilities": 72647.0,
+      "accounts_payable": 8512.4,
+      "short_term_debt": 12768.6
+    },
+    "prior_year": {
+      "total_assets": 97703.0,
+      "total_equity": 25941.0,
+      "total_liabilities_and_equity": 97703.0,
+      "cash_and_equivalents": 9519.0,
+      "accounts_receivable": 3410.0,
+      "inventory": 4424.0,
+      "total_current_assets": 26732.0,
+      "property_plant_equipment": 9236.0,
+      "goodwill": 18782.0,
+      "total_current_liabilities": 23571.0,
+      "retained_earnings": 73782.0,
+      "total_liabilities": 71762.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 7408.0,
+    "cash_from_investing": -67.0,
+    "cash_from_financing": -8140.0,
+    "net_change_in_cash": -478.0,
+    "depreciation_amortization": 1050.0,
+    "capital_expenditures": 2112.0,
+    "dividends_paid": 8779.0,
+    "share_repurchases": 746.0,
+    "net_income": 13107.0,
+    "changes_in_working_capital": -6749.0,
+    "ending_cash": 10270.0
+  }
+}

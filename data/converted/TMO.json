@@ -1,0 +1,72 @@
+{
+  "company": "THERMO FISHER SCIENTIFIC INC.",
+  "ticker": "TMO",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 44556.0,
+    "sga_expense": 8732.0,
+    "rd_expense": 1397.0,
+    "operating_income": 7746.0,
+    "income_tax_expense": 547.0,
+    "net_income": 6704.0,
+    "eps_basic": 17.77,
+    "eps_diluted": 17.74,
+    "diluted_shares": 378000000.0,
+    "operating_expenses": -10129.0,
+    "income_before_tax": 7746.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 110343.0,
+      "total_equity": 53407.0,
+      "total_liabilities_and_equity": 110343.0,
+      "cash_and_equivalents": 9852.0,
+      "short_term_investments": 253.0,
+      "accounts_receivable": 8900.0,
+      "inventory": 5425.0,
+      "total_current_assets": 28707.0,
+      "property_plant_equipment": 10565.0,
+      "goodwill": 49362.0,
+      "intangible_assets": 15838.0,
+      "total_current_liabilities": 15189.0,
+      "long_term_debt": 39172.0,
+      "retained_earnings": 59156.0,
+      "total_liabilities": 56936.0,
+      "accounts_payable": 6075.6,
+      "short_term_debt": 9113.4
+    },
+    "prior_year": {
+      "total_assets": 97154.0,
+      "total_equity": 46735.0,
+      "total_liabilities_and_equity": 98726.0,
+      "cash_and_equivalents": 8077.0,
+      "short_term_investments": 3.0,
+      "accounts_receivable": 8221.0,
+      "inventory": 5088.0,
+      "total_current_assets": 24589.0,
+      "property_plant_equipment": 9448.0,
+      "goodwill": 41196.0,
+      "intangible_assets": 16670.0,
+      "total_current_liabilities": 14012.0,
+      "long_term_debt": 34727.0,
+      "retained_earnings": 47364.0,
+      "total_liabilities": 51991.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 7818.0,
+    "cash_from_investing": -4047.0,
+    "cash_from_financing": 1801.0,
+    "net_change_in_cash": 5839.0,
+    "capital_expenditures": 1525.0,
+    "dividends_paid": 636.0,
+    "share_repurchases": 3000.0,
+    "debt_issuance": 7759.0,
+    "debt_repayment": 2412.0,
+    "net_income": 6704.0,
+    "changes_in_working_capital": 1114.0,
+    "ending_cash": 9852.0
+  }
+}

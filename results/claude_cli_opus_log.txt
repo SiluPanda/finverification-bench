@@ -1,0 +1,79 @@
+08:49:26 [INFO] Claude CLI version: 2.1.76 (Claude Code)
+08:49:26 [INFO] Loaded 1985 instances
+08:49:26 [INFO] Stratified sample: 43 clean + 65 error = 108 total (33 cells)
+08:49:26 [INFO] Sample size: 108 instances per model
+08:49:26 [INFO] ======================================================================
+08:49:26 [INFO] Starting: Claude Opus 4.6 (claude -p --model opus) — 108 instances
+08:49:26 [INFO] ======================================================================
+08:50:18 [INFO] [Claude Opus 4.6] 1/108 — acc=0.0% prec=0.0% rec=0.0% f1=0.0% fpr=100.0%
+08:54:10 [INFO] [Claude Opus 4.6] 5/108 — acc=20.0% prec=20.0% rec=100.0% f1=33.3% fpr=100.0%
+09:02:23 [INFO] [Claude Opus 4.6] 10/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+09:02:23 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (10 instances)
+09:09:25 [INFO] [Claude Opus 4.6] 15/108 — acc=53.3% prec=53.3% rec=100.0% f1=69.6% fpr=100.0%
+09:12:58 [INFO] [Claude Opus 4.6] 20/108 — acc=50.0% prec=50.0% rec=100.0% f1=66.7% fpr=100.0%
+09:12:58 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (20 instances)
+09:17:58 [WARNING] Retry 1/3 for opus: Command '['claude', '-p', '--model', 'opus', '--tools', '', '--no-session-persistence', '--output-format', 'text']' timed out after 300 seconds
+09:25:17 [INFO] [Claude Opus 4.6] 25/108 — acc=56.0% prec=56.0% rec=100.0% f1=71.8% fpr=100.0%
+09:30:02 [INFO] [Claude Opus 4.6] 30/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+09:30:02 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (30 instances)
+09:35:49 [WARNING] Retry 1/3 for opus: Command '['claude', '-p', '--model', 'opus', '--tools', '', '--no-session-persistence', '--output-format', 'text']' timed out after 300 seconds
+09:40:54 [WARNING] Retry 2/3 for opus: Command '['claude', '-p', '--model', 'opus', '--tools', '', '--no-session-persistence', '--output-format', 'text']' timed out after 300 seconds
+09:49:19 [INFO] [Claude Opus 4.6] 35/108 — acc=62.9% prec=62.9% rec=100.0% f1=77.2% fpr=100.0%
+09:54:53 [INFO] [Claude Opus 4.6] 40/108 — acc=62.5% prec=62.5% rec=100.0% f1=76.9% fpr=100.0%
+09:54:53 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (40 instances)
+10:01:19 [INFO] [Claude Opus 4.6] 45/108 — acc=62.2% prec=62.2% rec=100.0% f1=76.7% fpr=100.0%
+10:09:21 [WARNING] Retry 1/3 for opus: Command '['claude', '-p', '--model', 'opus', '--tools', '', '--no-session-persistence', '--output-format', 'text']' timed out after 300 seconds
+10:13:34 [INFO] [Claude Opus 4.6] 50/108 — acc=62.0% prec=62.0% rec=100.0% f1=76.5% fpr=100.0%
+10:13:34 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (50 instances)
+10:18:56 [INFO] [Claude Opus 4.6] 55/108 — acc=58.2% prec=58.2% rec=100.0% f1=73.6% fpr=100.0%
+10:28:10 [INFO] [Claude Opus 4.6] 60/108 — acc=58.3% prec=58.3% rec=100.0% f1=73.7% fpr=100.0%
+10:28:10 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (60 instances)
+10:32:31 [INFO] [Claude Opus 4.6] 65/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+10:38:43 [INFO] [Claude Opus 4.6] 70/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+10:38:43 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (70 instances)
+10:45:02 [INFO] [Claude Opus 4.6] 75/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+10:51:15 [INFO] [Claude Opus 4.6] 80/108 — acc=58.8% prec=58.8% rec=100.0% f1=74.0% fpr=100.0%
+10:51:15 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (80 instances)
+10:58:13 [INFO] [Claude Opus 4.6] 85/108 — acc=57.6% prec=57.6% rec=100.0% f1=73.1% fpr=100.0%
+11:06:54 [INFO] [Claude Opus 4.6] 90/108 — acc=58.9% prec=58.9% rec=100.0% f1=74.1% fpr=100.0%
+11:06:54 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (90 instances)
+11:10:36 [INFO] [Claude Opus 4.6] 95/108 — acc=58.9% prec=58.9% rec=100.0% f1=74.2% fpr=100.0%
+11:17:13 [INFO] [Claude Opus 4.6] 100/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+11:17:13 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_checkpoint_results.json (100 instances)
+11:22:13 [WARNING] Retry 1/3 for opus: Command '['claude', '-p', '--model', 'opus', '--tools', '', '--no-session-persistence', '--output-format', 'text']' timed out after 300 seconds
+11:29:49 [INFO] [Claude Opus 4.6] 105/108 — acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+11:32:29 [INFO] Results saved to /Users/silupanda/Downloads/finverification-bench/results/claude_cli_claude-opus-4-6_cot_results.json (108 instances)
+
+======================================================================
+Claude Opus 4.6 — CoT — FinVerBench Results
+======================================================================
+
+Overall (n=108)
+  Accuracy:  60.2%
+  Precision: 60.2%
+  Recall:    100.0%
+  F1:        75.1%
+  FPR:       100.0%
+  TP=65  FP=43  TN=0  FN=0
+
+Localization: 51/65 = 78.5%
+
+By Error Category:
+        AE: 100.0%  (tp=16 fn=0)
+        CL: 100.0%  (tp=24 fn=0)
+        MR: 100.0%  (tp=9 fn=0)
+       YOY: 100.0%  (tp=16 fn=0)
+     clean:   0.0%  (tp=0 fn=0)
+
+By Magnitude:
+    1-5%: 100.0%  (tp=16 fn=0)
+   5-20%: 100.0%  (tp=16 fn=0)
+     <1%: 100.0%  (tp=17 fn=0)
+    >20%: 100.0%  (tp=16 fn=0)
+
+Parse methods: {'json_fenced': 102, 'json_inline': 6}
+
+======================================================================
+CLAUDE CLI EXPERIMENT SUMMARY
+======================================================================
+  Claude Opus 4.6            acc= 60.2%  f1= 75.1%  fpr=100.0%

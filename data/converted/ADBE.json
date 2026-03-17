@@ -1,0 +1,70 @@
+{
+  "company": "ADOBE INC.",
+  "ticker": "ADBE",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 23769.0,
+    "cost_of_goods_sold": 2551.0,
+    "gross_profit": 21218.0,
+    "operating_expenses": 12512.0,
+    "operating_income": 8706.0,
+    "income_tax_expense": 1604.0,
+    "net_income": 7130.0,
+    "eps_basic": 16.73,
+    "eps_diluted": 16.7,
+    "diluted_shares": 427000000.0,
+    "income_before_tax": 8706.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 29496.0,
+      "total_liabilities": 17873.0,
+      "total_equity": 11623.0,
+      "total_liabilities_and_equity": 29496.0,
+      "cash_and_equivalents": 5431.0,
+      "short_term_investments": 1164.0,
+      "accounts_receivable": 2344.0,
+      "total_current_assets": 10163.0,
+      "property_plant_equipment": 1873.0,
+      "goodwill": 12857.0,
+      "total_current_liabilities": 10200.0,
+      "long_term_debt": 6210.0,
+      "retained_earnings": 45354.0,
+      "shares_outstanding": 413000000.0,
+      "accounts_payable": 4080.0,
+      "short_term_debt": 6120.0
+    },
+    "prior_year": {
+      "total_assets": 29779.0,
+      "total_liabilities": 13261.0,
+      "total_equity": 14797.0,
+      "total_liabilities_and_equity": 29779.0,
+      "cash_and_equivalents": 7141.0,
+      "short_term_investments": 701.0,
+      "accounts_receivable": 2224.0,
+      "total_current_assets": 11084.0,
+      "property_plant_equipment": 2030.0,
+      "goodwill": 12787.0,
+      "total_current_liabilities": 8251.0,
+      "long_term_debt": 3634.0,
+      "retained_earnings": 33346.0,
+      "shares_outstanding": 455000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 10031.0,
+    "cash_from_investing": -1187.0,
+    "cash_from_financing": -11060.0,
+    "net_change_in_cash": -2182.0,
+    "depreciation_amortization": 818.0,
+    "capital_expenditures": 179.0,
+    "share_repurchases": 11281.0,
+    "debt_issuance": 1997.0,
+    "debt_repayment": 1500.0,
+    "net_income": 7130.0,
+    "changes_in_working_capital": 2083.0,
+    "ending_cash": 5431.0
+  }
+}

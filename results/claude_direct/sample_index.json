@@ -1,0 +1,1406 @@
+[
+  {
+    "instance_id": "general_electric_capital_corp__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "bank_of_america_corporation__AE_COLUMN_SUM_1.0pct_7",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": 1.0,
+      "original_value": 3108495.0,
+      "modified_value": 3139579.95,
+      "description": "Modified subtotal 'total_liabilities' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "abbott_laboratories__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "salesforce,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "lowes_companies_inc__MR_SIGNIFICANT_10.0pct_50",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_location": "cash_flow_statement.capital_expenditures",
+      "error_magnitude_pct": -10.0,
+      "original_value": 1927.0,
+      "modified_value": 1734.3,
+      "description": "Perturbed 'capital_expenditures' by ~10.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_20.0pct_29",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": -20.0,
+      "original_value": 12487.0,
+      "modified_value": 9989.6,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__YOY_COMPUTED_CHANGE_10.0pct_46",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.total_current_liabilities",
+      "error_magnitude_pct": 10.0,
+      "original_value": 15620.0,
+      "modified_value": 17182.0,
+      "description": "Modified current-year 'total_current_liabilities' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__AE_ROW_SUM_5.0pct_3",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "cash_flow_statement.capital_expenditures",
+      "error_magnitude_pct": -5.0,
+      "original_value": 4112.0,
+      "modified_value": 3906.4,
+      "description": "Modified 'capital_expenditures' in cash_flow_statement so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "visa_inc__AE_COLUMN_SUM_2.0pct_8",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": 2.0,
+      "original_value": 61718.0,
+      "modified_value": 62952.36,
+      "description": "Modified subtotal 'total_liabilities' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "coca_cola_co__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "adobe_inc__YOY_OPENING_BALANCE_2.0pct_38",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.total_assets",
+      "error_magnitude_pct": -2.0,
+      "original_value": 29779.0,
+      "modified_value": 29183.42,
+      "description": "Modified prior-year 'total_assets' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "cisco_systems,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "philip_morris_international_inc__MR_MODERATE_2.0pct_49",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_location": "income_statement.income_tax_expense",
+      "error_magnitude_pct": -2.0,
+      "original_value": 2737.0,
+      "modified_value": 2682.26,
+      "description": "Perturbed 'income_tax_expense' by ~2.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "adobe_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "boeing_co__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "intel_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "adobe_inc__AE_ROW_SUM_0.5pct_0",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": 0.5,
+      "original_value": 17873.0,
+      "modified_value": 17962.37,
+      "description": "Modified 'total_liabilities' in balance_sheet.current_year so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "nvidia_corp__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__AE_COLUMN_SUM_20.0pct_11",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": 20.0,
+      "original_value": 502473.0,
+      "modified_value": 602967.6,
+      "description": "Modified subtotal 'total_liabilities' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "abbott_laboratories__CL_ENDING_CASH_10.0pct_28",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": -10.0,
+      "original_value": 8522.0,
+      "modified_value": 7669.8,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "chevron_corp__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": -2.0,
+      "original_value": 12299.0,
+      "modified_value": 12053.02,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__MR_EXTREME_25.0pct_51",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_location": "balance_sheet.current_year.goodwill",
+      "error_magnitude_pct": -25.0,
+      "original_value": 110499.0,
+      "modified_value": 82874.25,
+      "description": "Perturbed 'goodwill' by ~25.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "texas_instruments_inc__AE_ROW_SUM_10.0pct_4",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.long_term_debt",
+      "error_magnitude_pct": -10.0,
+      "original_value": 14048.0,
+      "modified_value": 12643.2,
+      "description": "Modified 'long_term_debt' in balance_sheet.current_year so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__CL_ENDING_CASH_1.0pct_25",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": -1.0,
+      "original_value": 24365.0,
+      "modified_value": 24121.35,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "boeing_co__AE_ROW_SUM_1.0pct_1",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "income_statement.revenue",
+      "error_magnitude_pct": 1.0,
+      "original_value": 89463.0,
+      "modified_value": 90357.63,
+      "description": "Modified 'revenue' in income_statement so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "adobe_inc__MR_MINOR_0.5pct_48",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_location": "cash_flow_statement.depreciation_amortization",
+      "error_magnitude_pct": -0.5,
+      "original_value": 818.0,
+      "modified_value": 813.91,
+      "description": "Perturbed 'depreciation_amortization' by ~0.5% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "chevron_corp__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__YOY_OPENING_BALANCE_1.0pct_37",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.cash_and_equivalents",
+      "error_magnitude_pct": -1.0,
+      "original_value": 31539.0,
+      "modified_value": 31223.61,
+      "description": "Modified prior-year 'cash_and_equivalents' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "microsoft_corporation__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": 2.0,
+      "original_value": 101832.0,
+      "modified_value": 103868.64,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "broadcom_ltd__MR_SIGNIFICANT_10.0pct_50",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_location": "cash_flow_statement.cash_from_investing",
+      "error_magnitude_pct": 10.0,
+      "original_value": -674.0,
+      "modified_value": -606.6,
+      "description": "Perturbed 'cash_from_investing' by ~10.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "visa_inc__CL_ENDING_CASH_0.5pct_24",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": 0.5,
+      "original_value": 17164.0,
+      "modified_value": 17249.82,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "broadcom_ltd__YOY_OPENING_BALANCE_0.5pct_36",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.total_current_assets",
+      "error_magnitude_pct": -0.5001,
+      "original_value": 3759.0,
+      "modified_value": 3740.2,
+      "description": "Modified prior-year 'total_current_assets' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "apple_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "eli_lilly_and_company__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.cash_and_equivalents",
+      "error_magnitude_pct": 0.5,
+      "original_value": 7268.0,
+      "modified_value": 7304.34,
+      "description": "Modified current-year 'cash_and_equivalents' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "oracle_corporation__CL_ENDING_CASH_20.0pct_29",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": 20.0,
+      "original_value": 10786.0,
+      "modified_value": 12943.2,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "broadcom_ltd__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": 0.5,
+      "original_value": 532.0,
+      "modified_value": 534.66,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "lowes_companies_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": -10.0,
+      "original_value": 2235.0,
+      "modified_value": 2011.5,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_ROW_SUM_0.5pct_0",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.accounts_payable",
+      "error_magnitude_pct": -0.5,
+      "original_value": 6598.400000000001,
+      "modified_value": 6565.41,
+      "description": "Modified 'accounts_payable' in balance_sheet.current_year so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "coca_cola_co__MR_EXTREME_25.0pct_51",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_location": "cash_flow_statement.dividends_paid",
+      "error_magnitude_pct": 25.0,
+      "original_value": 8779.0,
+      "modified_value": 10973.75,
+      "description": "Perturbed 'dividends_paid' by ~25.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "visa_inc__YOY_COMPUTED_CHANGE_5.0pct_45",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.cash_and_equivalents",
+      "error_magnitude_pct": 5.0,
+      "original_value": 17164.0,
+      "modified_value": 18022.2,
+      "description": "Modified current-year 'cash_and_equivalents' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "lowes_companies_inc__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": -0.4999,
+      "original_value": 6957.0,
+      "modified_value": 6922.22,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "amgen_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "broadcom_ltd__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_10.0pct_22",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": 10.0,
+      "original_value": 14806.0,
+      "modified_value": 16286.6,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "pepsico,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": 20.0,
+      "original_value": 14806.0,
+      "modified_value": 17767.2,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "walt_disney_co__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "eli_lilly_and_company__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "mcdonald\u2019s\u00a0corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "broadcom_ltd__AE_ROW_SUM_20.0pct_5",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": -20.0,
+      "original_value": 532.0,
+      "modified_value": 425.6,
+      "description": "Modified 'net_income' in cash_flow_statement so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_21",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": -5.0,
+      "original_value": 112010.0,
+      "modified_value": 106409.5,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "texas_instruments_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "walmart_inc__CL_ENDING_CASH_10.0pct_28",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": 10.0,
+      "original_value": 10727.0,
+      "modified_value": 11799.7,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "alphabet_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "comcast_corporation__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": 2.0,
+      "original_value": 19998.0,
+      "modified_value": 20397.96,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "lowes_companies_inc__YOY_OPENING_BALANCE_20.0pct_41",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.retained_earnings",
+      "error_magnitude_pct": -20.0,
+      "original_value": -14862.0,
+      "modified_value": -17834.4,
+      "description": "Modified prior-year 'retained_earnings' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_10.0pct_40",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.total_liabilities",
+      "error_magnitude_pct": 10.0,
+      "original_value": 106302.0,
+      "modified_value": 116932.2,
+      "description": "Modified prior-year 'total_liabilities' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.accounts_receivable",
+      "error_magnitude_pct": -0.5,
+      "original_value": 8900.0,
+      "modified_value": 8855.5,
+      "description": "Modified current-year 'accounts_receivable' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "home_depot,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "pfizer_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "boeing_co__YOY_OPENING_BALANCE_20.0pct_41",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.property_plant_equipment",
+      "error_magnitude_pct": -20.0,
+      "original_value": 10661.0,
+      "modified_value": 8528.8,
+      "description": "Modified prior-year 'property_plant_equipment' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "boeing_co__AE_COLUMN_SUM_20.0pct_11",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_current_assets",
+      "error_magnitude_pct": 20.0,
+      "original_value": 128459.0,
+      "modified_value": 154150.8,
+      "description": "Modified subtotal 'total_current_assets' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "alphabet_inc__CL_ENDING_CASH_0.5pct_24",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": 0.5,
+      "original_value": 30708.0,
+      "modified_value": 30861.54,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": -20.0,
+      "original_value": 57048.0,
+      "modified_value": 45638.4,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_COMPUTED_CHANGE_2.0pct_44",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.retained_earnings",
+      "error_magnitude_pct": 2.0,
+      "original_value": 50964.0,
+      "modified_value": 51983.28,
+      "description": "Modified current-year 'retained_earnings' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": 0.5,
+      "original_value": 18254.0,
+      "modified_value": 18345.27,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "amazon_com_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": 20.0,
+      "original_value": 406977.0,
+      "modified_value": 488372.4,
+      "description": "Modified current-year 'total_liabilities' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "philip_morris_international_inc__AE_ROW_SUM_1.0pct_1",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": -1.0,
+      "original_value": 77213.0,
+      "modified_value": 76440.87,
+      "description": "Modified 'total_liabilities' in balance_sheet.current_year so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "visa_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "amazon_com_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "nike,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "bank_of_america_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "walmart_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "microsoft_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": -0.4999,
+      "original_value": 8099.0,
+      "modified_value": 8058.51,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "philip_morris_international_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.cash_and_equivalents",
+      "error_magnitude_pct": 1.0,
+      "original_value": 4872.0,
+      "modified_value": 4920.72,
+      "description": "Modified current-year 'cash_and_equivalents' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "cisco_systems,_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.current_year.total_current_assets",
+      "error_magnitude_pct": -20.0,
+      "original_value": 34986.0,
+      "modified_value": 27988.8,
+      "description": "Modified current-year 'total_current_assets' so the computed YoY change no longer matches."
+    }
+  },
+  {
+    "instance_id": "walt_disney_co__AE_COLUMN_SUM_0.5pct_6",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_current_assets",
+      "error_magnitude_pct": 0.5,
+      "original_value": 24267.0,
+      "modified_value": 24388.33,
+      "description": "Modified subtotal 'total_current_assets' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_2.0pct_26",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.ending_cash",
+      "error_magnitude_pct": -2.0,
+      "original_value": 12487.0,
+      "modified_value": 12237.26,
+      "description": "Modified ending cash on CFS so it no longer matches BS cash."
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_OPENING_BALANCE_10.0pct_40",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.shares_outstanding",
+      "error_magnitude_pct": -10.0,
+      "original_value": 667600000.0,
+      "modified_value": 600840000.0,
+      "description": "Modified prior-year 'shares_outstanding' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "oracle_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "texas_instruments_inc__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_location": "cash_flow_statement.net_income",
+      "error_magnitude_pct": -2.0,
+      "original_value": 5001.0,
+      "modified_value": 4900.98,
+      "description": "Modified net income on CFS so it no longer matches the IS."
+    }
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_0.5pct_36",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_location": "balance_sheet.prior_year.total_current_liabilities",
+      "error_magnitude_pct": 0.5,
+      "original_value": 31139.0,
+      "modified_value": 31294.69,
+      "description": "Modified prior-year 'total_current_liabilities' on BS so the opening balance no longer equals the prior-year ending balance."
+    }
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": -10.0,
+      "original_value": 57048.0,
+      "modified_value": 51343.2,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "comcast_corporation__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "coca_cola_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": -20.0,
+      "original_value": 13107.0,
+      "modified_value": 10485.6,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "nvidia_corp__MR_MODERATE_2.0pct_49",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_location": "balance_sheet.current_year.accounts_receivable",
+      "error_magnitude_pct": -2.0,
+      "original_value": 38466.0,
+      "modified_value": 37696.68,
+      "description": "Perturbed 'accounts_receivable' by ~2.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "honeywell_international_inc__MR_MODERATE_2.0pct_49",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_location": "income_statement.eps_diluted",
+      "error_magnitude_pct": 0.0,
+      "original_value": -0.18,
+      "modified_value": -0.18,
+      "description": "Perturbed 'eps_diluted' by ~2.0% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "procter_&_gamble_co__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "alphabet_inc__MR_MINOR_0.5pct_48",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_location": "balance_sheet.current_year.short_term_debt",
+      "error_magnitude_pct": -0.5,
+      "original_value": 61647.0,
+      "modified_value": 61338.76,
+      "description": "Perturbed 'short_term_debt' by ~0.5% (magnitude/rounding error)."
+    }
+  },
+  {
+    "instance_id": "meta_platforms,_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_COLUMN_SUM_10.0pct_10",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_current_assets",
+      "error_magnitude_pct": 10.0,
+      "original_value": 25996.0,
+      "modified_value": 28595.6,
+      "description": "Modified subtotal 'total_current_assets' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "general_electric_capital_corp__AE_COLUMN_SUM_0.5pct_6",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_liabilities",
+      "error_magnitude_pct": -0.5,
+      "original_value": 411007.0,
+      "modified_value": 408951.97,
+      "description": "Modified subtotal 'total_liabilities' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "johnson_&_johnson__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  },
+  {
+    "instance_id": "home_depot,_inc__AE_COLUMN_SUM_10.0pct_10",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_location": "balance_sheet.current_year.total_current_assets",
+      "error_magnitude_pct": -10.0,
+      "original_value": 31683.0,
+      "modified_value": 28514.7,
+      "description": "Modified subtotal 'total_current_assets' on BS so it no longer rolls up to the column grand total."
+    }
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_location": "income_statement.net_income",
+      "error_magnitude_pct": 20.0,
+      "original_value": 2235.0,
+      "modified_value": 2682.0,
+      "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+    }
+  },
+  {
+    "instance_id": "chevron_corp__AE_ROW_SUM_20.0pct_5",
+    "ground_truth": {
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_location": "income_statement.revenue",
+      "error_magnitude_pct": 20.0,
+      "original_value": 189031.0,
+      "modified_value": 226837.2,
+      "description": "Modified 'revenue' in income_statement so row items no longer sum to the stated subtotal."
+    }
+  },
+  {
+    "instance_id": "philip_morris_international_inc__clean",
+    "ground_truth": {
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_location": null,
+      "error_magnitude_pct": null,
+      "original_value": null,
+      "modified_value": null,
+      "description": null
+    }
+  }
+]

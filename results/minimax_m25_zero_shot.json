@@ -1,0 +1,153 @@
+{
+  "model": "MiniMax-M2.5",
+  "strategy": "zero_shot",
+  "metrics": {
+    "overall": {
+      "accuracy": 0.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "fpr": 0,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 5,
+      "total": 5
+    },
+    "by_category": {
+      "AE": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1
+      },
+      "CL": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 2
+      },
+      "YOY": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 2
+      }
+    },
+    "by_magnitude": {
+      "1-5%": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 2
+      },
+      "<1%": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1
+      },
+      ">20%": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 2
+      }
+    },
+    "by_type": {
+      "AE_ROW_SUM": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 1
+      },
+      "CL_ENDING_CASH": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 1
+      },
+      "CL_NET_INCOME_TO_CFS": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 1
+      },
+      "YOY_COMPUTED_CHANGE": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "instance_id": "bank_of_america_corporation__CL_NET_INCOME_TO_CFS_20.0pct_23",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": "",
+      "parse_method": "heuristic",
+      "raw_response_length": 8185,
+      "model": "MiniMax-M2.5"
+    },
+    {
+      "instance_id": "procter_&_gamble_co__AE_ROW_SUM_20.0pct_5",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": "",
+      "parse_method": "heuristic",
+      "raw_response_length": 8251,
+      "model": "MiniMax-M2.5"
+    },
+    {
+      "instance_id": "pepsico,_inc__CL_ENDING_CASH_0.5pct_24",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5001,
+      "detected": false,
+      "error_location": null,
+      "explanation": "",
+      "parse_method": "heuristic",
+      "raw_response_length": 7547,
+      "model": "MiniMax-M2.5"
+    },
+    {
+      "instance_id": "home_depot,_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 1.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": "",
+      "parse_method": "heuristic",
+      "raw_response_length": 8796,
+      "model": "MiniMax-M2.5"
+    },
+    {
+      "instance_id": "chevron_corp__YOY_COMPUTED_CHANGE_1.0pct_43",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -1.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": "",
+      "parse_method": "heuristic",
+      "raw_response_length": 8378,
+      "model": "MiniMax-M2.5"
+    }
+  ]
+}

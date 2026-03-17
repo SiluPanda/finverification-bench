@@ -1,0 +1,1285 @@
+{
+  "model": "Llama 4 Maverick",
+  "model_id": "meta-llama/llama-4-maverick",
+  "strategy": "cot",
+  "backend": "openrouter",
+  "partial": false,
+  "per_cell": 2,
+  "metrics": {
+    "overall": {
+      "accuracy": 44.4,
+      "precision": 66.7,
+      "recall": 15.4,
+      "f1": 25.0,
+      "fpr": 11.6,
+      "tp": 10,
+      "fp": 5,
+      "tn": 38,
+      "fn": 55,
+      "total": 108
+    },
+    "localization": {
+      "correct": 8,
+      "total": 10,
+      "accuracy": 80.0
+    },
+    "by_category": {
+      "AE": {
+        "detection_rate": 18.8,
+        "tp": 3,
+        "fp": 0,
+        "tn": 0,
+        "fn": 13
+      },
+      "CL": {
+        "detection_rate": 12.5,
+        "tp": 3,
+        "fp": 0,
+        "tn": 0,
+        "fn": 21
+      },
+      "MR": {
+        "detection_rate": 22.2,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "fn": 7
+      },
+      "YOY": {
+        "detection_rate": 12.5,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "fn": 14
+      },
+      "clean": {
+        "detection_rate": 0,
+        "tp": 0,
+        "fp": 5,
+        "tn": 38,
+        "fn": 0
+      }
+    },
+    "by_magnitude": {
+      "1-5%": {
+        "detection_rate": 25.0,
+        "tp": 4,
+        "fp": 0,
+        "tn": 0,
+        "fn": 12
+      },
+      "5-20%": {
+        "detection_rate": 6.2,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "fn": 15
+      },
+      "<1%": {
+        "detection_rate": 11.8,
+        "tp": 2,
+        "fp": 0,
+        "tn": 0,
+        "fn": 15
+      },
+      ">20%": {
+        "detection_rate": 18.8,
+        "tp": 3,
+        "fp": 0,
+        "tn": 0,
+        "fn": 13
+      }
+    },
+    "by_type": {
+      "AE_COLUMN_SUM": {
+        "detection_rate": 25.0,
+        "tp": 2,
+        "fn": 6
+      },
+      "AE_ROW_SUM": {
+        "detection_rate": 12.5,
+        "tp": 1,
+        "fn": 7
+      },
+      "CL_ENDING_CASH": {
+        "detection_rate": 12.5,
+        "tp": 1,
+        "fn": 7
+      },
+      "CL_NET_INCOME_TO_CFS": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 8
+      },
+      "CL_NET_INCOME_TO_RE": {
+        "detection_rate": 25.0,
+        "tp": 2,
+        "fn": 6
+      },
+      "MR_EXTREME": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 2
+      },
+      "MR_MINOR": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 2
+      },
+      "MR_MODERATE": {
+        "detection_rate": 33.3,
+        "tp": 1,
+        "fn": 2
+      },
+      "MR_SIGNIFICANT": {
+        "detection_rate": 50.0,
+        "tp": 1,
+        "fn": 1
+      },
+      "YOY_COMPUTED_CHANGE": {
+        "detection_rate": 12.5,
+        "tp": 1,
+        "fn": 7
+      },
+      "YOY_OPENING_BALANCE": {
+        "detection_rate": 12.5,
+        "tp": 1,
+        "fn": 7
+      }
+    }
+  },
+  "results": [
+    {
+      "instance_id": "general_electric_capital_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Gross Profit - Operating Expenses = 10,431 - 12,182 = -1,751, but Operating Income is reported as 6,338, which is inconsistent",
+      "parse_method": "json_fenced",
+      "raw_response_length": 239
+    },
+    {
+      "instance_id": "bank_of_america_corporation__AE_COLUMN_SUM_1.0pct_7",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 1.0,
+      "detected": true,
+      "error_location": "balance_sheet.total_liabilities",
+      "explanation": "Total Liabilities is reported as 3,139,579.95, which is not consistent with the reporting precision of millions of USD. It should be rounded to 3,139,580.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 265
+    },
+    {
+      "instance_id": "abbott_laboratories__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5468
+    },
+    {
+      "instance_id": "salesforce,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 4915
+    },
+    {
+      "instance_id": "thermo_fisher_scientific_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5819
+    },
+    {
+      "instance_id": "lowes_companies_inc__MR_SIGNIFICANT_10.0pct_50",
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_magnitude_pct": -10.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "The income statement is missing Depreciation & Amortization (D&A) which is typically part of the operating expenses. The given Operating Expenses (-15,682) likely includes D&A, but D&A is also separately added back in the Cash Flow Statement (1,729). To verify: Gross Profit (27,877) + Operating Expenses (-15,682) = Operating Income (12,195), but reported Operating Income is 10,466, suggesting a discrepancy likely due to unaccounted D&A in the income statement verification step.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 595
+    },
+    {
+      "instance_id": "honeywell_international_inc__CL_ENDING_CASH_20.0pct_29",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "income_statement.gross_profit",
+      "explanation": "Revenue - Cost of Goods Sold should equal Gross Profit, but 9758 - 23613 = -13855, not 3470",
+      "parse_method": "json_fenced",
+      "raw_response_length": 200
+    },
+    {
+      "instance_id": "united_parcel_service,_inc__YOY_COMPUTED_CHANGE_10.0pct_46",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5285
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__AE_ROW_SUM_5.0pct_3",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -5.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5042
+    },
+    {
+      "instance_id": "visa_inc__AE_COLUMN_SUM_2.0pct_8",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 4656
+    },
+    {
+      "instance_id": "coca_cola_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 4735
+    },
+    {
+      "instance_id": "adobe_inc__YOY_OPENING_BALANCE_2.0pct_38",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -2.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Operating Income is calculated as Gross Profit - Operating Expenses, but the given Operating Expenses does not include Depreciation & Amortization (D&A). The correct calculation should be Gross Profit - Operating Expenses (including D&A) = Operating Income. However, D&A is not explicitly given in the income statement. Let's verify: Gross Profit - Operating Expenses = 21,218 - 12,512 = 8,706, which matches Operating Income. But we still need to check if D&A is included in Operating Expenses.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 608
+    },
+    {
+      "instance_id": "cisco_systems,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Operating Income is calculated as Gross Profit - Operating Expenses, but the given Operating Expenses does not include Depreciation & Amortization (D&A). The correct calculation should be: Operating Income = Gross Profit - Operating Expenses, and Operating Expenses should include D&A. However, D&A is not explicitly listed under Operating Expenses. The correct Operating Income should be 11,760 = 36,790 - (25,030 + 700 - 700), but D&A is actually missing from Operating Expenses. Let's check if D&A is included in Operating Expenses or not. If not, then the correct Operating Income should be 11,060 = 36,790 - 25,730 (25,030 + 700). The given Operating Income is 11,760 which is not equal to 11,060.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 815
+    },
+    {
+      "instance_id": "philip_morris_international_inc__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": -2.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Gross Profit + Operating Expenses does not equal Operating Income. Gross Profit (27,282) + Operating Expenses (-756) = 26,526, but Operating Income is 14,892, indicating a discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 297
+    },
+    {
+      "instance_id": "adobe_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Operating Income is calculated as Gross Profit - Operating Expenses, but the given Operating Expenses does not include Depreciation & Amortization (D&A). The correct calculation should be Gross Profit - Operating Expenses (including D&A) = Operating Income. However, D&A is not explicitly given in the income statement.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 432
+    },
+    {
+      "instance_id": "boeing_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.income_before_tax",
+      "explanation": "The calculation for Income Before Tax is incorrect because it does not account for Interest Expense, which is not explicitly given but its absence causes the inconsistency. Operating Income equals Income Before Tax, suggesting Interest Expense is missing or zero, but this is not explicitly verified.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 414
+    },
+    {
+      "instance_id": "intel_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Gross Profit - Operating Expenses = Operating Income, but 18,375 - 20,589 = -2,214 is correct. However, the calculation for Operating Income is not directly verifiable because D&A is not provided. Let's proceed with other checks.",
+      "parse_method": "json_inline",
+      "raw_response_length": 3170
+    },
+    {
+      "instance_id": "adobe_inc__AE_ROW_SUM_0.5pct_0",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 0.5,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Operating Income is calculated as Gross Profit - Operating Expenses, but the given Operating Expenses does not include Depreciation & Amortization (D&A). The correct calculation should be Gross Profit - Operating Expenses - D&A = Operating Income. However, D&A is not provided in the income statement.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 414
+    },
+    {
+      "instance_id": "nvidia_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5214
+    },
+    {
+      "instance_id": "berkshire_hathaway_inc__AE_COLUMN_SUM_20.0pct_11",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": true,
+      "error_location": "income_statement.income_before_tax",
+      "explanation": "Cannot directly verify income statement arithmetic due to missing COGS, Gross Profit, Operating Expenses, Operating Income, and Income Before Tax values. However, we can still check other statements and cross-linkages.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 3510
+    },
+    {
+      "instance_id": "exxon_mobil_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 6526
+    },
+    {
+      "instance_id": "abbott_laboratories__CL_ENDING_CASH_10.0pct_28",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 5846
+    },
+    {
+      "instance_id": "chevron_corp__CL_NET_INCOME_TO_RE_2.0pct_14",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__MR_EXTREME_25.0pct_51",
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_magnitude_pct": -25.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "texas_instruments_inc__AE_ROW_SUM_10.0pct_4",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__CL_ENDING_CASH_1.0pct_25",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__AE_ROW_SUM_1.0pct_1",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "adobe_inc__MR_MINOR_0.5pct_48",
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "chevron_corp__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "exxon_mobil_corporation__YOY_OPENING_BALANCE_1.0pct_37",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "microsoft_corporation__CL_NET_INCOME_TO_CFS_2.0pct_20",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "broadcom_ltd__MR_SIGNIFICANT_10.0pct_50",
+      "has_error": true,
+      "error_type": "MR_SIGNIFICANT",
+      "error_category": "MR",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "visa_inc__CL_ENDING_CASH_0.5pct_24",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "broadcom_ltd__YOY_OPENING_BALANCE_0.5pct_36",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -0.5001,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "apple_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "eli_lilly_and_company__YOY_COMPUTED_CHANGE_0.5pct_42",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "oracle_corporation__CL_ENDING_CASH_20.0pct_29",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "broadcom_ltd__CL_NET_INCOME_TO_RE_0.5pct_12",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "united_parcel_service,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "lowes_companies_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "unitedhealth_group_incorporated__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "abbott_laboratories__AE_ROW_SUM_0.5pct_0",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "costco_wholesale_corp_/new__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "coca_cola_co__MR_EXTREME_25.0pct_51",
+      "has_error": true,
+      "error_type": "MR_EXTREME",
+      "error_category": "MR",
+      "error_magnitude_pct": 25.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "visa_inc__YOY_COMPUTED_CHANGE_5.0pct_45",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 5.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "lowes_companies_inc__CL_NET_INCOME_TO_RE_0.5pct_12",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -0.4999,
+      "detected": true,
+      "error_location": "income_statement.net_income",
+      "explanation": "Net Income on the Income Statement (6,922.22) does not match Net Income on the Cash Flow Statement (6,957), and the difference is more than a minor rounding difference.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 275
+    },
+    {
+      "instance_id": "amgen_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error_location": null,
+      "explanation": null,
+      "parse_method": "json_fenced",
+      "raw_response_length": 4206
+    },
+    {
+      "instance_id": "broadcom_ltd__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_10.0pct_22",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "pepsico,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_20.0pct_23",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "eli_lilly_and_company__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "mcdonald\u2019s\u00a0corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "broadcom_ltd__AE_ROW_SUM_20.0pct_5",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_21",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -5.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "texas_instruments_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walmart_inc__CL_ENDING_CASH_10.0pct_28",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "alphabet_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "comcast_corporation__CL_NET_INCOME_TO_RE_2.0pct_14",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "lowes_companies_inc__YOY_OPENING_BALANCE_20.0pct_41",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_10.0pct_40",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "thermo_fisher_scientific_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "home_depot,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "pfizer_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__YOY_OPENING_BALANCE_20.0pct_41",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__AE_COLUMN_SUM_20.0pct_11",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "alphabet_inc__CL_ENDING_CASH_0.5pct_24",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_CFS_20.0pct_23",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__YOY_COMPUTED_CHANGE_2.0pct_44",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__CL_NET_INCOME_TO_CFS_0.5pct_18",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "merck\u00a0&_co,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "berkshire_hathaway_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "amazon_com_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__AE_ROW_SUM_1.0pct_1",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -1.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "visa_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "amazon_com_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "nike,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "bank_of_america_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walmart_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "microsoft_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "costco_wholesale_corp_/new__CL_NET_INCOME_TO_CFS_0.5pct_18",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -0.4999,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 1.0,
+      "detected": true,
+      "error_location": "income_statement.operating_income",
+      "explanation": "Gross Profit + Operating Expenses does not equal Operating Income. The correct calculation is 27,282 - 756 = 26,526, but Operating Income is reported as 14,892, indicating a discrepancy.",
+      "parse_method": "json_fenced",
+      "raw_response_length": 299
+    },
+    {
+      "instance_id": "cisco_systems,_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__AE_COLUMN_SUM_0.5pct_6",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__CL_ENDING_CASH_2.0pct_26",
+      "has_error": true,
+      "error_type": "CL_ENDING_CASH",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__YOY_OPENING_BALANCE_10.0pct_40",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "oracle_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "texas_instruments_inc__CL_NET_INCOME_TO_CFS_2.0pct_20",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_CFS",
+      "error_category": "CL",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_0.5pct_36",
+      "has_error": true,
+      "error_type": "YOY_OPENING_BALANCE",
+      "error_category": "YOY",
+      "error_magnitude_pct": 0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "comcast_corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "coca_cola_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": -20.0,
+      "detected": true,
+      "error_location": "cash_flow_statement.net_income",
+      "explanation": "Net Income on the Income Statement (10,485.60) does not match Net Income on the Cash Flow Statement (13,107)",
+      "parse_method": "json_fenced",
+      "raw_response_length": 218
+    },
+    {
+      "instance_id": "nvidia_corp__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": -2.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "honeywell_international_inc__MR_MODERATE_2.0pct_49",
+      "has_error": true,
+      "error_type": "MR_MODERATE",
+      "error_category": "MR",
+      "error_magnitude_pct": 0.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "procter_&_gamble_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "alphabet_inc__MR_MINOR_0.5pct_48",
+      "has_error": true,
+      "error_type": "MR_MINOR",
+      "error_category": "MR",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "meta_platforms,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "abbott_laboratories__AE_COLUMN_SUM_10.0pct_10",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "general_electric_capital_corp__AE_COLUMN_SUM_0.5pct_6",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "johnson_&_johnson__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "home_depot,_inc__AE_COLUMN_SUM_10.0pct_10",
+      "has_error": true,
+      "error_type": "AE_COLUMN_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": -10.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+      "has_error": true,
+      "error_type": "CL_NET_INCOME_TO_RE",
+      "error_category": "CL",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "chevron_corp__AE_ROW_SUM_20.0pct_5",
+      "has_error": true,
+      "error_type": "AE_ROW_SUM",
+      "error_category": "AE",
+      "error_magnitude_pct": 20.0,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "philip_morris_international_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "Error code: 402 - {'error': {'message': 'Insufficient credits. Add more using https://openrouter.ai/settings/credits', 'code': 402}}",
+      "parse_method": "error"
+    }
+  ]
+}

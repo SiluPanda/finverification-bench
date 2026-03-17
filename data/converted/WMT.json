@@ -1,0 +1,67 @@
+{
+  "company": "Walmart Inc.",
+  "ticker": "WMT",
+  "period": "FY2026",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 713163.0,
+    "cost_of_goods_sold": 535395.0,
+    "sga_expense": 147943.0,
+    "operating_income": 29825.0,
+    "income_tax_expense": 7199.0,
+    "net_income": 21893.0,
+    "eps_basic": 2.74,
+    "eps_diluted": 2.73,
+    "diluted_shares": 8022000000.0,
+    "gross_profit": 177768.0,
+    "operating_expenses": -147943.0,
+    "income_before_tax": 29825.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 284668.0,
+      "total_equity": 99617.0,
+      "total_liabilities_and_equity": 284668.0,
+      "cash_and_equivalents": 10727.0,
+      "inventory": 58851.0,
+      "total_current_assets": 84874.0,
+      "property_plant_equipment": 136083.0,
+      "goodwill": 28735.0,
+      "total_current_liabilities": 107469.0,
+      "long_term_debt": 38166.0,
+      "retained_earnings": 104774.0,
+      "total_liabilities": 185051.0,
+      "accounts_payable": 42987.600000000006,
+      "short_term_debt": 64481.399999999994
+    },
+    "prior_year": {
+      "total_assets": 243197.0,
+      "total_equity": 83861.0,
+      "total_liabilities_and_equity": 252399.0,
+      "cash_and_equivalents": 9867.0,
+      "inventory": 54892.0,
+      "total_current_assets": 76877.0,
+      "property_plant_equipment": 110810.0,
+      "goodwill": 28174.0,
+      "total_current_liabilities": 92415.0,
+      "long_term_debt": 39579.0,
+      "retained_earnings": 89814.0,
+      "total_liabilities": 168538.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 41565.0,
+    "cash_from_investing": -26350.0,
+    "cash_from_financing": -13553.0,
+    "net_change_in_cash": 1785.0,
+    "capital_expenditures": 26642.0,
+    "dividends_paid": 7507.0,
+    "share_repurchases": 8088.0,
+    "debt_issuance": 3983.0,
+    "debt_repayment": 2625.0,
+    "net_income": 21893.0,
+    "changes_in_working_capital": 19672.0,
+    "ending_cash": 10727.0
+  }
+}

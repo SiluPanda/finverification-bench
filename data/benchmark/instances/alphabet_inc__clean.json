@@ -1,0 +1,84 @@
+{
+  "instance_id": "alphabet_inc__clean",
+  "company": "ALPHABET INC.",
+  "period": "FY2025",
+  "formatted_statements": "ALPHABET INC. — Financial Statements (in millions of USD)\nPeriod: FY2025\n\nINCOME STATEMENT\n==========================================================\n  Revenue                                          402,836\n  Cost of Goods Sold                               162,535\n  Gross Profit                                     240,301\n  --------------------------------------------------------\n  Operating Expenses                               -61,087\n  Operating Income                                 129,039\n  --------------------------------------------------------\n  Income Before Tax                                129,039\n  --------------------------------------------------------\n  Income Tax Expense                                26,656\n  Net Income                                       132,170\n\nBALANCE SHEET\n==============================================================================\n                                                   Current            Prior\n  ----------------------------------------------------------------------------\n  Cash and Equivalents                              30,708           24,048\n  Accounts Receivable                               62,886           47,964\n  Total Current Assets                             206,038          171,530\n  ----------------------------------------------------------------------------\n  Total Assets                                     595,281          402,392\n  ----------------------------------------------------------------------------\n\n  Accounts Payable                                  41,098\n  Short-Term Debt                                   61,647\n  Total Current Liabilities                        102,745           81,814\n  ----------------------------------------------------------------------------\n  Long-Term Debt                                    49,085           12,000\n  Total Liabilities                                180,016          119,013\n  ----------------------------------------------------------------------------\n  Retained Earnings                                324,055          211,247\n  Total Equity                                     415,265          251,635\n  Total Liabilities & Equity                       595,281          402,392\n\nCASH FLOW STATEMENT\n==========================================================\n  Net Income                                       132,170\n  Changes in Working Capital                        32,543\n  Cash from Operations                             164,713\n  --------------------------------------------------------\n  Capital Expenditures                              91,447\n  Cash from Investing                             -120,291\n  --------------------------------------------------------\n  Dividends Paid                                    10,049\n  Cash from Financing                              -37,388\n  --------------------------------------------------------\n  Net Change in Cash                                 7,242\n  --------------------------------------------------------\n  Ending Cash                                       30,708",
+  "question": "Are these financial statements internally consistent? Check all arithmetic totals, cross-statement linkages, and year-over-year continuity. Report any discrepancies found.",
+  "ground_truth": {
+    "has_error": false,
+    "error_type": null,
+    "error_category": null,
+    "error_location": null,
+    "error_magnitude_pct": null,
+    "original_value": null,
+    "modified_value": null,
+    "description": null
+  },
+  "difficulty": "baseline",
+  "raw_statements": {
+    "company": "ALPHABET INC.",
+    "ticker": "GOOGL",
+    "period": "FY2025",
+    "currency": "USD",
+    "unit": "millions",
+    "income_statement": {
+      "revenue": 402836.0,
+      "cost_of_goods_sold": 162535.0,
+      "rd_expense": 61087.0,
+      "operating_income": 129039.0,
+      "income_tax_expense": 26656.0,
+      "net_income": 132170.0,
+      "eps_basic": 10.91,
+      "eps_diluted": 10.81,
+      "diluted_shares": 12230000000.0,
+      "gross_profit": 240301.0,
+      "operating_expenses": -61087.0,
+      "income_before_tax": 129039.0
+    },
+    "balance_sheet": {
+      "current_year": {
+        "total_assets": 595281.0,
+        "total_liabilities": 180016.0,
+        "total_equity": 415265.0,
+        "total_liabilities_and_equity": 595281.0,
+        "cash_and_equivalents": 30708.0,
+        "accounts_receivable": 62886.0,
+        "total_current_assets": 206038.0,
+        "goodwill": 33380.0,
+        "total_current_liabilities": 102745.0,
+        "long_term_debt": 49085.0,
+        "retained_earnings": 324055.0,
+        "shares_outstanding": 12088000000.0,
+        "accounts_payable": 41098.0,
+        "short_term_debt": 61647.0
+      },
+      "prior_year": {
+        "total_assets": 402392.0,
+        "total_liabilities": 119013.0,
+        "total_equity": 251635.0,
+        "total_liabilities_and_equity": 402392.0,
+        "cash_and_equivalents": 24048.0,
+        "accounts_receivable": 47964.0,
+        "total_current_assets": 171530.0,
+        "property_plant_equipment": 171036.0,
+        "goodwill": 28960.0,
+        "total_current_liabilities": 81814.0,
+        "long_term_debt": 12000.0,
+        "retained_earnings": 211247.0,
+        "shares_outstanding": 12460000000.0
+      }
+    },
+    "cash_flow_statement": {
+      "cash_from_operations": 164713.0,
+      "cash_from_investing": -120291.0,
+      "cash_from_financing": -37388.0,
+      "net_change_in_cash": 7242.0,
+      "capital_expenditures": 91447.0,
+      "dividends_paid": 10049.0,
+      "share_repurchases": 45709.0,
+      "net_income": 132170.0,
+      "changes_in_working_capital": 32543.0,
+      "ending_cash": 30708.0
+    }
+  }
+}

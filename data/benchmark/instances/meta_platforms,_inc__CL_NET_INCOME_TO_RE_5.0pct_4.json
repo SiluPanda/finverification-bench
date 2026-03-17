@@ -1,0 +1,85 @@
+{
+  "instance_id": "meta_platforms,_inc__CL_NET_INCOME_TO_RE_5.0pct_4",
+  "company": "Meta Platforms, Inc.",
+  "period": "FY2025",
+  "formatted_statements": "Meta Platforms, Inc. — Financial Statements (in millions of USD)\nPeriod: FY2025\n\nINCOME STATEMENT\n==========================================================\n  Revenue                                          200,966\n  Cost of Goods Sold                                36,175\n  Gross Profit                                     164,791\n  --------------------------------------------------------\n  Operating Expenses                               -57,372\n  Operating Income                                  83,276\n  --------------------------------------------------------\n  Income Before Tax                                 83,276\n  --------------------------------------------------------\n  Income Tax Expense                                25,474\n  Net Income                                     63,480.90\n\nBALANCE SHEET\n==============================================================================\n                                                   Current            Prior\n  ----------------------------------------------------------------------------\n  Cash and Equivalents                              35,873           14,681\n  Accounts Receivable                               19,769           16,169\n  Total Current Assets                             108,722           85,365\n  ----------------------------------------------------------------------------\n  Total Assets                                     366,021          229,623\n  ----------------------------------------------------------------------------\n\n  Accounts Payable                               16,734.40\n  Short-Term Debt                                25,101.60\n  Total Current Liabilities                         41,836           31,960\n  ----------------------------------------------------------------------------\n  Long-Term Debt                                    58,744           18,385\n  Total Liabilities                                148,778           76,455\n  ----------------------------------------------------------------------------\n  Retained Earnings                                121,179           82,070\n  Total Equity                                     217,243          124,879\n  Total Liabilities & Equity                       366,021          229,623\n\nCASH FLOW STATEMENT\n==========================================================\n  Net Income                                        60,458\n  Depreciation & Amortization                       18,616\n  Changes in Working Capital                        36,726\n  Cash from Operations                             115,800\n  --------------------------------------------------------\n  Capital Expenditures                              69,691\n  Cash from Investing                             -102,003\n  --------------------------------------------------------\n  Dividends Paid                                     5,324\n  Cash from Financing                              -20,370\n  --------------------------------------------------------\n  Net Change in Cash                                -6,338\n  --------------------------------------------------------\n  Ending Cash                                       35,873",
+  "question": "Are these financial statements internally consistent? Check all arithmetic totals, cross-statement linkages, and year-over-year continuity. Report any discrepancies found.",
+  "ground_truth": {
+    "has_error": true,
+    "error_type": "CL_NET_INCOME_TO_RE",
+    "error_category": "CL",
+    "error_location": "income_statement.net_income",
+    "error_magnitude_pct": 5.0,
+    "original_value": 60458.0,
+    "modified_value": 63480.9,
+    "description": "Modified net income on IS so it no longer agrees with the change in retained earnings on the BS."
+  },
+  "difficulty": "hard",
+  "raw_statements": {
+    "company": "Meta Platforms, Inc.",
+    "ticker": "META",
+    "period": "FY2025",
+    "currency": "USD",
+    "unit": "millions",
+    "income_statement": {
+      "revenue": 200966.0,
+      "cost_of_goods_sold": 36175.0,
+      "rd_expense": 57372.0,
+      "operating_income": 83276.0,
+      "income_tax_expense": 25474.0,
+      "net_income": 63480.9,
+      "eps_basic": 23.98,
+      "eps_diluted": 23.49,
+      "diluted_shares": 2574000000.0,
+      "gross_profit": 164791.0,
+      "operating_expenses": -57372.0,
+      "income_before_tax": 83276.0
+    },
+    "balance_sheet": {
+      "current_year": {
+        "total_assets": 366021.0,
+        "total_liabilities": 148778.0,
+        "total_equity": 217243.0,
+        "total_liabilities_and_equity": 366021.0,
+        "cash_and_equivalents": 35873.0,
+        "accounts_receivable": 19769.0,
+        "total_current_assets": 108722.0,
+        "goodwill": 24534.0,
+        "intangible_assets": 3692.0,
+        "total_current_liabilities": 41836.0,
+        "long_term_debt": 58744.0,
+        "retained_earnings": 121179.0,
+        "accounts_payable": 16734.4,
+        "short_term_debt": 25101.6
+      },
+      "prior_year": {
+        "total_assets": 229623.0,
+        "total_liabilities": 76455.0,
+        "total_equity": 124879.0,
+        "total_liabilities_and_equity": 229623.0,
+        "cash_and_equivalents": 14681.0,
+        "accounts_receivable": 16169.0,
+        "total_current_assets": 85365.0,
+        "goodwill": 20306.0,
+        "intangible_assets": 788.0,
+        "total_current_liabilities": 31960.0,
+        "long_term_debt": 18385.0,
+        "retained_earnings": 82070.0
+      }
+    },
+    "cash_flow_statement": {
+      "cash_from_operations": 115800.0,
+      "cash_from_investing": -102003.0,
+      "cash_from_financing": -20370.0,
+      "net_change_in_cash": -6338.0,
+      "depreciation_amortization": 18616.0,
+      "capital_expenditures": 69691.0,
+      "dividends_paid": 5324.0,
+      "share_repurchases": 26248.0,
+      "debt_issuance": 29906.0,
+      "net_income": 60458.0,
+      "changes_in_working_capital": 36726.0,
+      "ending_cash": 35873.0
+    }
+  }
+}

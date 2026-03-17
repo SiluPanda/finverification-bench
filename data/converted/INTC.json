@@ -1,0 +1,70 @@
+{
+  "company": "INTEL CORPORATION",
+  "ticker": "INTC",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 52853.0,
+    "cost_of_goods_sold": 34478.0,
+    "gross_profit": 18375.0,
+    "operating_expenses": 20589.0,
+    "sga_expense": 4624.0,
+    "rd_expense": 13774.0,
+    "operating_income": -2214.0,
+    "income_tax_expense": 1531.0,
+    "net_income": -267.0,
+    "eps_basic": -0.06,
+    "eps_diluted": -0.06,
+    "diluted_shares": 4530000000.0,
+    "income_before_tax": -2214.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 211429.0,
+      "total_equity": 114281.0,
+      "total_liabilities_and_equity": 211429.0,
+      "cash_and_equivalents": 14265.0,
+      "accounts_receivable": 3839.0,
+      "inventory": 11618.0,
+      "total_current_assets": 63688.0,
+      "goodwill": 23912.0,
+      "intangible_assets": 2772.0,
+      "total_current_liabilities": 31575.0,
+      "long_term_debt": 46585.0,
+      "retained_earnings": 48983.0,
+      "shares_outstanding": 4994000000.0,
+      "total_liabilities": 97148.0,
+      "accounts_payable": 12630.0,
+      "short_term_debt": 18945.0
+    },
+    "prior_year": {
+      "total_assets": 191572.0,
+      "total_equity": 105590.0,
+      "total_liabilities_and_equity": 191572.0,
+      "accounts_receivable": 3402.0,
+      "inventory": 11127.0,
+      "total_current_assets": 43269.0,
+      "goodwill": 27591.0,
+      "intangible_assets": 4589.0,
+      "total_current_liabilities": 28053.0,
+      "long_term_debt": 49266.0,
+      "retained_earnings": 69156.0,
+      "shares_outstanding": 4228000000.0,
+      "total_liabilities": 85982.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 9697.0,
+    "cash_from_investing": -14821.0,
+    "cash_from_financing": 11587.0,
+    "net_change_in_cash": 6463.0,
+    "capital_expenditures": 14646.0,
+    "dividends_paid": 0.0,
+    "debt_issuance": 0.0,
+    "debt_repayment": 3750.0,
+    "net_income": -267.0,
+    "changes_in_working_capital": 9964.0,
+    "ending_cash": 14265.0
+  }
+}

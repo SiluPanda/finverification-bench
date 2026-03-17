@@ -1,0 +1,66 @@
+{
+  "company": "Oracle Corporation",
+  "ticker": "ORCL",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 57399.0,
+    "rd_expense": 9860.0,
+    "operating_income": 17678.0,
+    "interest_expense": 3578.0,
+    "income_tax_expense": 1717.0,
+    "net_income": 12443.0,
+    "eps_basic": 4.46,
+    "eps_diluted": 4.34,
+    "diluted_shares": 2866000000.0,
+    "operating_expenses": -9860.0,
+    "income_before_tax": 21256.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 168361.0,
+      "total_equity": 20451.0,
+      "total_liabilities_and_equity": 168361.0,
+      "cash_and_equivalents": 10786.0,
+      "accounts_receivable": 8558.0,
+      "inventory": 303.0,
+      "total_current_assets": 24579.0,
+      "property_plant_equipment": 43522.0,
+      "goodwill": 62207.0,
+      "total_current_liabilities": 32643.0,
+      "retained_earnings": -15481.0,
+      "shares_outstanding": 2807000000.0,
+      "total_liabilities": 147910.0,
+      "accounts_payable": 13057.2,
+      "short_term_debt": 19585.8
+    },
+    "prior_year": {
+      "total_assets": 134384.0,
+      "total_equity": 1073.0,
+      "total_liabilities_and_equity": 134384.0,
+      "cash_and_equivalents": 9765.0,
+      "accounts_receivable": 6915.0,
+      "inventory": 298.0,
+      "total_current_assets": 21004.0,
+      "property_plant_equipment": 17069.0,
+      "goodwill": 43811.0,
+      "total_current_liabilities": 23090.0,
+      "retained_earnings": -27620.0,
+      "shares_outstanding": 2713000000.0,
+      "total_liabilities": 133311.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 20821.0,
+    "cash_from_investing": -21711.0,
+    "cash_from_financing": 1098.0,
+    "net_change_in_cash": 332.0,
+    "capital_expenditures": 21215.0,
+    "dividends_paid": 4743.0,
+    "share_repurchases": 600.0,
+    "net_income": 12443.0,
+    "changes_in_working_capital": 8378.0,
+    "ending_cash": 10786.0
+  }
+}

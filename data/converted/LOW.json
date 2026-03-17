@@ -1,0 +1,66 @@
+{
+  "company": "LOWES COMPANIES INC",
+  "ticker": "LOW",
+  "period": "FY2024",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 83674.0,
+    "cost_of_goods_sold": 55797.0,
+    "gross_profit": 27877.0,
+    "sga_expense": 15682.0,
+    "operating_income": 10466.0,
+    "income_tax_expense": 2196.0,
+    "net_income": 6957.0,
+    "eps_basic": 12.25,
+    "eps_diluted": 12.23,
+    "diluted_shares": 568000000.0,
+    "operating_expenses": -15682.0,
+    "income_before_tax": 10466.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 43102.0,
+      "total_liabilities": 57333.0,
+      "total_equity": -14231.0,
+      "total_liabilities_and_equity": 43102.0,
+      "cash_and_equivalents": 1761.0,
+      "short_term_investments": 372.0,
+      "inventory": 17409.0,
+      "total_current_assets": 20358.0,
+      "total_current_liabilities": 18757.0,
+      "long_term_debt": 35319.0,
+      "retained_earnings": -14799.0,
+      "shares_outstanding": 560000000.0,
+      "accounts_payable": 7502.8,
+      "short_term_debt": 11254.2
+    },
+    "prior_year": {
+      "total_assets": 43708.0,
+      "total_liabilities": 57962.0,
+      "total_equity": 1437.0,
+      "total_liabilities_and_equity": 43708.0,
+      "cash_and_equivalents": 1348.0,
+      "short_term_investments": 384.0,
+      "inventory": 18532.0,
+      "total_current_assets": 21442.0,
+      "total_current_liabilities": 19511.0,
+      "long_term_debt": 35770.0,
+      "retained_earnings": -14862.0,
+      "shares_outstanding": 601000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 9625.0,
+    "cash_from_investing": -1738.0,
+    "cash_from_financing": -7047.0,
+    "net_change_in_cash": 840.0,
+    "depreciation_amortization": 1729.0,
+    "capital_expenditures": 1927.0,
+    "dividends_paid": 2566.0,
+    "share_repurchases": 4053.0,
+    "net_income": 6957.0,
+    "changes_in_working_capital": 939.0,
+    "ending_cash": 1761.0
+  }
+}

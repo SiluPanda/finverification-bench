@@ -1,0 +1,71 @@
+{
+  "company": "TEXAS INSTRUMENTS INC",
+  "ticker": "TXN",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 17682.0,
+    "cost_of_goods_sold": 7599.0,
+    "gross_profit": 10083.0,
+    "sga_expense": 1860.0,
+    "rd_expense": 2083.0,
+    "operating_income": 6023.0,
+    "income_tax_expense": 709.0,
+    "net_income": 5001.0,
+    "eps_basic": 5.47,
+    "eps_diluted": 5.45,
+    "diluted_shares": 913000000.0,
+    "operating_expenses": -3943.0,
+    "income_before_tax": 6023.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 34585.0,
+      "total_liabilities": 18312.0,
+      "total_equity": 16273.0,
+      "total_liabilities_and_equity": 34585.0,
+      "cash_and_equivalents": 3225.0,
+      "short_term_investments": 1656.0,
+      "accounts_receivable": 1963.0,
+      "inventory": 4804.0,
+      "total_current_assets": 13750.0,
+      "property_plant_equipment": 12320.0,
+      "goodwill": 4330.0,
+      "total_current_liabilities": 3159.0,
+      "long_term_debt": 14048.0,
+      "retained_earnings": 52236.0,
+      "accounts_payable": 1263.6000000000001,
+      "short_term_debt": 1895.3999999999999
+    },
+    "prior_year": {
+      "total_assets": 32348.0,
+      "total_liabilities": 15451.0,
+      "total_equity": 16897.0,
+      "total_liabilities_and_equity": 32348.0,
+      "cash_and_equivalents": 2964.0,
+      "short_term_investments": 5611.0,
+      "accounts_receivable": 1787.0,
+      "inventory": 3999.0,
+      "total_current_assets": 15122.0,
+      "property_plant_equipment": 9999.0,
+      "goodwill": 4362.0,
+      "total_current_liabilities": 3320.0,
+      "long_term_debt": 11223.0,
+      "retained_earnings": 52283.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 7153.0,
+    "cash_from_investing": -1439.0,
+    "cash_from_financing": -5689.0,
+    "net_change_in_cash": 25.0,
+    "capital_expenditures": 4550.0,
+    "dividends_paid": 4999.0,
+    "share_repurchases": 1477.0,
+    "debt_issuance": 1199.0,
+    "net_income": 5001.0,
+    "changes_in_working_capital": 2152.0,
+    "ending_cash": 3225.0
+  }
+}

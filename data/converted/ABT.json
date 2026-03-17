@@ -1,0 +1,70 @@
+{
+  "company": "ABBOTT LABORATORIES",
+  "ticker": "ABT",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 44328.0,
+    "sga_expense": 12332.0,
+    "rd_expense": 2942.0,
+    "operating_income": 8053.0,
+    "income_tax_expense": 1942.0,
+    "net_income": 6524.0,
+    "eps_basic": 3.73,
+    "eps_diluted": 3.72,
+    "diluted_shares": 1748000000.0,
+    "operating_expenses": -15274.0,
+    "income_before_tax": 8053.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 86713.0,
+      "total_equity": 52130.0,
+      "total_liabilities_and_equity": 86713.0,
+      "cash_and_equivalents": 8522.0,
+      "short_term_investments": 417.0,
+      "accounts_receivable": 7929.0,
+      "inventory": 6488.0,
+      "total_current_assets": 25996.0,
+      "property_plant_equipment": 11816.0,
+      "goodwill": 24035.0,
+      "intangible_assets": 5526.0,
+      "total_current_liabilities": 16496.0,
+      "long_term_debt": 12929.0,
+      "retained_earnings": 49781.0,
+      "total_liabilities": 34583.0,
+      "accounts_payable": 6598.400000000001,
+      "short_term_debt": 9897.599999999999
+    },
+    "prior_year": {
+      "total_assets": 73214.0,
+      "total_equity": 38603.0,
+      "total_liabilities_and_equity": 73214.0,
+      "cash_and_equivalents": 6896.0,
+      "short_term_investments": 383.0,
+      "accounts_receivable": 6565.0,
+      "inventory": 6570.0,
+      "total_current_assets": 22670.0,
+      "property_plant_equipment": 10154.0,
+      "goodwill": 23679.0,
+      "intangible_assets": 8815.0,
+      "total_current_liabilities": 13841.0,
+      "long_term_debt": 14679.0,
+      "retained_earnings": 37554.0,
+      "total_liabilities": 34611.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 9566.0,
+    "cash_from_investing": -2422.0,
+    "cash_from_financing": -6309.0,
+    "net_change_in_cash": 906.0,
+    "capital_expenditures": 2171.0,
+    "dividends_paid": 4116.0,
+    "share_repurchases": 893.0,
+    "net_income": 6524.0,
+    "changes_in_working_capital": 3042.0,
+    "ending_cash": 8522.0
+  }
+}

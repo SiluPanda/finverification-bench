@@ -1,0 +1,242 @@
+[
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_0.5pct_36",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_10.0pct_40",
+    "detected": true,
+    "error_location": "balance_sheet.prior.total_liabilities_plus_equity",
+    "explanation": "balance_sheet.prior.total_liabilities_plus_equity: computed 216209.0, stated 205579.0 (difference of 10630)"
+  },
+  {
+    "instance_id": "general_electric_capital_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "general_electric_capital_corp__AE_COLUMN_SUM_0.5pct_6",
+    "detected": true,
+    "error_location": "balance_sheet.total_liabilities_plus_equity",
+    "explanation": "balance_sheet.total_liabilities_plus_equity: computed 496451.0, stated 501405.0 (difference of 4954)"
+  },
+  {
+    "instance_id": "alphabet_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "alphabet_inc__CL_ENDING_CASH_0.5pct_24",
+    "detected": true,
+    "error_location": "cross_statement.ending_cash_vs_balance_sheet",
+    "explanation": "cross_statement.ending_cash_vs_balance_sheet: computed 30862.0, stated 30708.0 (difference of 154); cross_statement.prior_cash_plus_change_vs_ending: computed 31290.0, stated 30862.0 (difference of 428)"
+  },
+  {
+    "instance_id": "alphabet_inc__MR_MINOR_0.5pct_48",
+    "detected": true,
+    "error_location": "balance_sheet.current_liabilities_sum",
+    "explanation": "balance_sheet.current_liabilities_sum: computed 102437.0, stated 102745.0 (difference of 308)"
+  },
+  {
+    "instance_id": "home_depot,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "home_depot,_inc__AE_COLUMN_SUM_10.0pct_10",
+    "detected": true,
+    "error_location": "balance_sheet.total_current_assets",
+    "explanation": "balance_sheet.total_current_assets: computed 30013.0, stated 28515.0 (difference of 1498)"
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_10.0pct_22",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_operations_components",
+    "explanation": "cash_flow_statement.cash_from_operations_components: computed 21291.0, stated 19810.0 (difference of 1481); cross_statement.net_income_IS_vs_CFS: computed 14806.0, stated 16287.0 (difference of 1481)"
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_operations_components",
+    "explanation": "cash_flow_statement.cash_from_operations_components: computed 22771.0, stated 19810.0 (difference of 2961); cross_statement.net_income_IS_vs_CFS: computed 14806.0, stated 17767.0 (difference of 2961)"
+  },
+  {
+    "instance_id": "honeywell_international_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_2.0pct_26",
+    "detected": true,
+    "error_location": "cross_statement.ending_cash_vs_balance_sheet",
+    "explanation": "cross_statement.ending_cash_vs_balance_sheet: computed 12237.0, stated 12487.0 (difference of 250); cross_statement.prior_cash_plus_change_vs_ending: computed 9845.0, stated 12237.0 (difference of 2392)"
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_20.0pct_29",
+    "detected": true,
+    "error_location": "cross_statement.ending_cash_vs_balance_sheet",
+    "explanation": "cross_statement.ending_cash_vs_balance_sheet: computed 9990.0, stated 12487.0 (difference of 2497); cross_statement.prior_cash_plus_change_vs_ending: computed 9845.0, stated 9990.0 (difference of 145)"
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_OPENING_BALANCE_10.0pct_40",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_COMPUTED_CHANGE_2.0pct_44",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "honeywell_international_inc__MR_MODERATE_2.0pct_49",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "intel_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "johnson_&_johnson__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "cross_statement.net_income_IS_vs_CFS: computed 51343.0, stated 57048.0 (difference of 5705)"
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_operations_components",
+    "explanation": "cash_flow_statement.cash_from_operations_components: computed -159192.0, stated -147782.0 (difference of 11410); cross_statement.net_income_IS_vs_CFS: computed 57048.0, stated 45638.0 (difference of 11410)"
+  },
+  {
+    "instance_id": "coca_cola_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "coca_cola_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "income_statement.net_income: computed 12555.0, stated 10486.0 (difference of 2069); cross_statement.net_income_IS_vs_CFS: computed 10486.0, stated 13107.0 (difference of 2621)"
+  },
+  {
+    "instance_id": "coca_cola_co__MR_EXTREME_25.0pct_51",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "eli_lilly_and_company__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "eli_lilly_and_company__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "detected": true,
+    "error_location": "cross_statement.ending_cash_vs_balance_sheet",
+    "explanation": "cross_statement.ending_cash_vs_balance_sheet: computed 7268.0, stated 7304.0 (difference of 36)"
+  },
+  {
+    "instance_id": "lowes_companies_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "lowes_companies_inc__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "income_statement.net_income: computed 8270.0, stated 6922.0 (difference of 1348); cross_statement.net_income_IS_vs_CFS: computed 6922.0, stated 6957.0 (difference of 35)"
+  },
+  {
+    "instance_id": "lowes_companies_inc__YOY_OPENING_BALANCE_20.0pct_41",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "lowes_companies_inc__MR_SIGNIFICANT_10.0pct_50",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "mcdonald\u2019s\u00a0corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "meta_platforms,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__AE_ROW_SUM_5.0pct_3",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_operations_components",
+    "explanation": "cash_flow_statement.cash_from_operations_components: computed 16563.0, stated 16472.0 (difference of 91); cross_statement.net_income_IS_vs_CFS: computed 18254.0, stated 18345.0 (difference of 91)"
+  },
+  {
+    "instance_id": "microsoft_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "microsoft_corporation__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_operations_components",
+    "explanation": "cash_flow_statement.cash_from_operations_components: computed 138199.0, stated 136162.0 (difference of 2037); cross_statement.net_income_IS_vs_CFS: computed 101832.0, stated 103869.0 (difference of 2037)"
+  },
+  {
+    "instance_id": "nike,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  },
+  {
+    "instance_id": "nvidia_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected"
+  }
+]

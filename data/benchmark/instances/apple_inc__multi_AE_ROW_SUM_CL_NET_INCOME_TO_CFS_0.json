@@ -1,0 +1,105 @@
+{
+  "instance_id": "apple_inc__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0",
+  "company": "Apple Inc.",
+  "period": "FY2025",
+  "formatted_statements": "Apple Inc. — Financial Statements (in millions of USD)\nPeriod: FY2025\n\nINCOME STATEMENT\n==========================================================\n  Revenue                                          416,161\n  Cost of Goods Sold                               220,960\n  Gross Profit                                     195,201\n  --------------------------------------------------------\n  Operating Expenses                                62,151\n  Operating Income                                 133,050\n  --------------------------------------------------------\n  Income Before Tax                                133,050\n  --------------------------------------------------------\n  Income Tax Expense                                20,719\n  Net Income                                       112,010\n\nBALANCE SHEET\n==============================================================================\n                                                   Current            Prior\n  ----------------------------------------------------------------------------\n  Cash and Equivalents                              35,934           29,965\n  Accounts Receivable                               39,777           29,508\n  Inventory                                          5,718            6,331\n  Total Current Assets                             147,957          143,566\n  ----------------------------------------------------------------------------\n  Property, Plant & Equipment                       49,834           43,715\n  Total Assets                                     359,241          352,583\n  ----------------------------------------------------------------------------\n\n  Accounts Payable                               66,252.40\n  Short-Term Debt                                99,378.60\n  Total Current Liabilities                        165,631          145,308\n  ----------------------------------------------------------------------------\n  Long-Term Debt                                    90,678          105,103\n  Total Liabilities                                285,508          290,437\n  ----------------------------------------------------------------------------\n  Retained Earnings                                -14,264             -214\n  Total Equity                                      73,733           63,090\n  Total Liabilities & Equity                       359,241          352,583\n\nCASH FLOW STATEMENT\n==========================================================\n  Net Income                                    106,409.50\n  Depreciation & Amortization                       11,698\n  Changes in Working Capital                       -12,226\n  Cash from Operations                             111,482\n  --------------------------------------------------------\n  Capital Expenditures                              12,715\n  Cash from Investing                               15,195\n  --------------------------------------------------------\n  Debt Repayment                                    10,932\n  Dividends Paid                                 14,649.95\n  Cash from Financing                             -120,686\n  --------------------------------------------------------\n  Net Change in Cash                                 5,991\n  --------------------------------------------------------\n  Ending Cash                                       35,934",
+  "question": "Are these financial statements internally consistent? Check all arithmetic totals, cross-statement linkages, and year-over-year continuity. Report any discrepancies found.",
+  "ground_truth": {
+    "has_error": true,
+    "error_count": 2,
+    "errors": [
+      {
+        "has_error": true,
+        "error_type": "AE_ROW_SUM",
+        "error_category": "AE",
+        "error_location": "cash_flow_statement.dividends_paid",
+        "error_magnitude_pct": -5.0,
+        "original_value": 15421.0,
+        "modified_value": 14649.95,
+        "description": "Modified 'dividends_paid' in cash_flow_statement so row items no longer sum to the stated subtotal."
+      },
+      {
+        "has_error": true,
+        "error_type": "CL_NET_INCOME_TO_CFS",
+        "error_category": "CL",
+        "error_location": "cash_flow_statement.net_income",
+        "error_magnitude_pct": -5.0,
+        "original_value": 112010.0,
+        "modified_value": 106409.5,
+        "description": "Modified net income on CFS so it no longer matches the IS."
+      }
+    ]
+  },
+  "difficulty": "very_hard",
+  "raw_statements": {
+    "company": "Apple Inc.",
+    "ticker": "AAPL",
+    "period": "FY2025",
+    "currency": "USD",
+    "unit": "millions",
+    "income_statement": {
+      "revenue": 416161.0,
+      "cost_of_goods_sold": 220960.0,
+      "gross_profit": 195201.0,
+      "operating_expenses": 62151.0,
+      "sga_expense": 27601.0,
+      "rd_expense": 34550.0,
+      "operating_income": 133050.0,
+      "income_tax_expense": 20719.0,
+      "net_income": 112010.0,
+      "eps_basic": 7.49,
+      "eps_diluted": 7.46,
+      "diluted_shares": 15004697000.0,
+      "income_before_tax": 133050.0
+    },
+    "balance_sheet": {
+      "current_year": {
+        "total_assets": 359241.0,
+        "total_liabilities": 285508.0,
+        "total_equity": 73733.0,
+        "total_liabilities_and_equity": 359241.0,
+        "cash_and_equivalents": 35934.0,
+        "accounts_receivable": 39777.0,
+        "inventory": 5718.0,
+        "total_current_assets": 147957.0,
+        "property_plant_equipment": 49834.0,
+        "total_current_liabilities": 165631.0,
+        "long_term_debt": 90678.0,
+        "retained_earnings": -14264.0,
+        "shares_outstanding": 14773260000.0,
+        "accounts_payable": 66252.40000000001,
+        "short_term_debt": 99378.59999999999
+      },
+      "prior_year": {
+        "total_assets": 352583.0,
+        "total_liabilities": 290437.0,
+        "total_equity": 63090.0,
+        "total_liabilities_and_equity": 352583.0,
+        "cash_and_equivalents": 29965.0,
+        "accounts_receivable": 29508.0,
+        "inventory": 6331.0,
+        "total_current_assets": 143566.0,
+        "property_plant_equipment": 43715.0,
+        "total_current_liabilities": 145308.0,
+        "long_term_debt": 105103.0,
+        "retained_earnings": -214.0,
+        "shares_outstanding": 15550061000.0
+      }
+    },
+    "cash_flow_statement": {
+      "cash_from_operations": 111482.0,
+      "cash_from_investing": 15195.0,
+      "cash_from_financing": -120686.0,
+      "net_change_in_cash": 5991.0,
+      "depreciation_amortization": 11698.0,
+      "capital_expenditures": 12715.0,
+      "dividends_paid": 14649.95,
+      "share_repurchases": 90711.0,
+      "debt_issuance": 4481.0,
+      "debt_repayment": 10932.0,
+      "net_income": 106409.5,
+      "changes_in_working_capital": -12226.0,
+      "ending_cash": 35934.0
+    }
+  }
+}

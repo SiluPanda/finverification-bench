@@ -1,0 +1,73 @@
+{
+  "company": "HONEYWELL INTERNATIONAL INC",
+  "ticker": "HON",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 9758.0,
+    "cost_of_goods_sold": 23613.0,
+    "gross_profit": 3470.0,
+    "sga_expense": 5450.0,
+    "rd_expense": 1812.0,
+    "operating_income": 8127.0,
+    "income_tax_expense": 1008.0,
+    "net_income": -115.0,
+    "eps_basic": -0.18,
+    "eps_diluted": -0.18,
+    "diluted_shares": 642800000.0,
+    "operating_expenses": -7262.0,
+    "income_before_tax": 8127.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 73681.0,
+      "total_equity": 13904.0,
+      "total_liabilities_and_equity": 73681.0,
+      "cash_and_equivalents": 12487.0,
+      "short_term_investments": 443.0,
+      "accounts_receivable": 7621.0,
+      "inventory": 6162.0,
+      "total_current_assets": 30387.0,
+      "goodwill": 21079.0,
+      "intangible_assets": 6736.0,
+      "total_current_liabilities": 23414.0,
+      "long_term_debt": 29046.0,
+      "retained_earnings": 50964.0,
+      "shares_outstanding": 635300000.0,
+      "total_liabilities": 59777.0,
+      "accounts_payable": 9365.6,
+      "short_term_debt": 14048.4
+    },
+    "prior_year": {
+      "total_assets": 61525.0,
+      "total_equity": 15856.0,
+      "total_liabilities_and_equity": 61525.0,
+      "cash_and_equivalents": 7925.0,
+      "short_term_investments": 170.0,
+      "accounts_receivable": 7530.0,
+      "inventory": 6178.0,
+      "total_current_assets": 23502.0,
+      "goodwill": 17497.0,
+      "intangible_assets": 3231.0,
+      "total_current_liabilities": 18539.0,
+      "long_term_debt": 27265.0,
+      "retained_earnings": 47979.0,
+      "shares_outstanding": 667600000.0,
+      "total_liabilities": 45669.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 6408.0,
+    "cash_from_investing": -2711.0,
+    "cash_from_financing": -1953.0,
+    "net_change_in_cash": 1920.0,
+    "depreciation_amortization": 1388.0,
+    "capital_expenditures": 986.0,
+    "dividends_paid": 2976.0,
+    "share_repurchases": 3804.0,
+    "net_income": -115.0,
+    "changes_in_working_capital": 5135.0,
+    "ending_cash": 12487.0
+  }
+}

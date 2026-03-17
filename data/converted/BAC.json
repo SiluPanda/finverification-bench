@@ -1,0 +1,53 @@
+{
+  "company": "Bank of America Corporation",
+  "ticker": "BAC",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 113097.0,
+    "income_tax_expense": 7186.0,
+    "net_income": 30509.0,
+    "eps_basic": 3.86,
+    "eps_diluted": 3.81,
+    "diluted_shares": 7680900000.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 3411738.0,
+      "total_liabilities": 3108495.0,
+      "total_equity": 303243.0,
+      "total_liabilities_and_equity": 3411738.0,
+      "property_plant_equipment": 12516.0,
+      "goodwill": 69021.0,
+      "intangible_assets": 1800.0,
+      "long_term_debt": 317816.0,
+      "retained_earnings": 261693.0,
+      "shares_outstanding": 7212464345.0
+    },
+    "prior_year": {
+      "total_assets": 3180151.0,
+      "total_liabilities": 2888505.0,
+      "total_equity": 270066.0,
+      "total_liabilities_and_equity": 3180151.0,
+      "property_plant_equipment": 11855.0,
+      "goodwill": 69021.0,
+      "intangible_assets": 2000.0,
+      "long_term_debt": 302204.0,
+      "retained_earnings": 224672.0,
+      "shares_outstanding": 7895457665.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 12613.0,
+    "cash_from_investing": -145157.0,
+    "cash_from_financing": 69948.0,
+    "net_change_in_cash": -58269.0,
+    "depreciation_amortization": 2314.0,
+    "share_repurchases": 21433.0,
+    "debt_issuance": 99867.0,
+    "debt_repayment": 76031.0,
+    "net_income": 30509.0,
+    "changes_in_working_capital": -20210.0
+  }
+}

@@ -1,0 +1,42 @@
+03:09:39 [INFO] Loaded 1985 instances
+03:09:39 [INFO] Stratified sample: 43 clean + 65 error = 108 total (33 cells)
+03:09:39 [INFO] Evaluating 108 instances with strategy=cot
+03:11:13 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:11:13 [INFO] [1/108] acc=0.0% prec=0.0% rec=0.0% f1=0.0% fpr=100.0%
+03:17:38 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:18:50 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:20:07 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:20:47 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:22:21 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:23:05 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:23:51 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:26:03 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:27:58 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:27:59 [INFO] [10/108] acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+03:34:53 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:35:48 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:37:36 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:38:52 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:40:07 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:45:20 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:51:15 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:52:43 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:58:34 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:59:20 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+03:59:20 [INFO] [20/108] acc=50.0% prec=50.0% rec=100.0% f1=66.7% fpr=100.0%
+04:01:12 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:02:16 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:03:50 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:05:03 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:07:17 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:09:14 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:10:33 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:11:57 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:13:21 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:14:27 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:14:27 [INFO] [30/108] acc=60.0% prec=60.0% rec=100.0% f1=75.0% fpr=100.0%
+04:14:58 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:15:51 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:16:57 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:17:54 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"
+04:19:59 [INFO] HTTP Request: POST https://api.minimax.io/v1/chat/completions "HTTP/1.1 200 OK"

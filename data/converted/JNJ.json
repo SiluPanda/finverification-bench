@@ -1,0 +1,69 @@
+{
+  "company": "Johnson & Johnson",
+  "ticker": "JNJ",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 94193.0,
+    "gross_profit": 63937.0,
+    "sga_expense": 23676.0,
+    "rd_expense": 109.0,
+    "income_tax_expense": 5777.0,
+    "net_income": 26804.0,
+    "eps_basic": 11.13,
+    "eps_diluted": 11.03,
+    "diluted_shares": 2429400000.0,
+    "operating_expenses": -23785.0,
+    "operating_income": 40152.0,
+    "income_before_tax": 40152.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 199210.0,
+      "total_liabilities": 117666.0,
+      "total_liabilities_and_equity": 199210.0,
+      "cash_and_equivalents": 19709.0,
+      "accounts_receivable": 17178.0,
+      "inventory": 14191.0,
+      "total_current_assets": 55624.0,
+      "property_plant_equipment": 23169.0,
+      "goodwill": 48772.0,
+      "intangible_assets": 50403.0,
+      "total_current_liabilities": 54126.0,
+      "long_term_debt": 41438.0,
+      "retained_earnings": 168978.0,
+      "accounts_payable": 21650.4,
+      "short_term_debt": 32475.6
+    },
+    "prior_year": {
+      "total_assets": 167558.0,
+      "total_liabilities": 98784.0,
+      "total_liabilities_and_equity": 167558.0,
+      "cash_and_equivalents": 21859.0,
+      "accounts_receivable": 14873.0,
+      "inventory": 11181.0,
+      "total_current_assets": 53495.0,
+      "property_plant_equipment": 19898.0,
+      "goodwill": 36047.0,
+      "intangible_assets": 34175.0,
+      "total_current_liabilities": 46282.0,
+      "long_term_debt": 27350.0,
+      "retained_earnings": 153843.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 24530.0,
+    "cash_from_investing": -23588.0,
+    "cash_from_financing": -5539.0,
+    "net_change_in_cash": -4396.0,
+    "depreciation_amortization": 7503.0,
+    "capital_expenditures": 4832.0,
+    "share_repurchases": 5953.0,
+    "debt_issuance": 9138.0,
+    "debt_repayment": 1757.0,
+    "net_income": 26804.0,
+    "changes_in_working_capital": -9777.0,
+    "ending_cash": 19709.0
+  }
+}

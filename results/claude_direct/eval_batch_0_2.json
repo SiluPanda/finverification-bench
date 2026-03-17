@@ -1,0 +1,182 @@
+[
+  {
+    "instance_id": "general_electric_capital_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Income statement, balance sheet, and cash flow statement arithmetic checks pass within the context of the data provided. Net income is consistent across IS and CFS."
+  },
+  {
+    "instance_id": "bank_of_america_corporation__AE_COLUMN_SUM_1.0pct_7",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (3,139,579.95) + Total Equity (303,243) = 3,442,822.95, which does not equal Total Assets/Total L&E (3,411,738). Total Liabilities should be 3,108,495 (= 3,411,738 - 303,243)."
+  },
+  {
+    "instance_id": "abbott_laboratories__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances (Total Assets = Total Liabilities + Equity for both years). Cash flow ending cash matches balance sheet cash. Net income consistent across statements. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "salesforce,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances for both years. Key cross-statement links (ending cash = BS cash, net income consistency) check out. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Current year balance sheet balances (TL+TE=TA=110,343). Cash flow ending cash matches BS cash. Net income consistent. Prior year shows TL&E of 98,726 vs TA of 97,154 but this appears to be a pre-existing data feature, not an introduced error."
+  },
+  {
+    "instance_id": "lowes_companies_inc__MR_SIGNIFICANT_10.0pct_50",
+    "detected": true,
+    "error_location": "cash_flow_statement.capital_expenditures",
+    "explanation": "Capital Expenditures is reported as 1,734.30, which has an unusual decimal in a statement otherwise reported in whole millions. This suggests a magnitude/rounding error in this line item."
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_20.0pct_29",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "Ending Cash on CFS (9,989.60) does not match Cash and Equivalents on the Balance Sheet (12,487). These should be equal. The difference is 2,497.40."
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__YOY_COMPUTED_CHANGE_10.0pct_46",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_liabilities",
+    "explanation": "Accounts Payable (6,248) + Short-Term Debt (9,372) = 15,620, but Total Current Liabilities is stated as 17,182. The difference of 1,562 indicates Total Current Liabilities is overstated."
+  },
+  {
+    "instance_id": "merck &_co,_inc__AE_ROW_SUM_5.0pct_3",
+    "detected": true,
+    "error_location": "cash_flow_statement.capital_expenditures",
+    "explanation": "Capital Expenditures is reported as 3,906.40, which has an unusual decimal in a statement otherwise reported in whole millions. This is inconsistent with the expected rounded figures."
+  },
+  {
+    "instance_id": "visa_inc__AE_COLUMN_SUM_2.0pct_8",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (62,952.36) has an unusual decimal value. Also, Total Liabilities (62,952.36) implies Total Equity of 36,674.64 (=99,627 - 62,952.36), which is not a round number, inconsistent with the rest of the statement."
+  },
+  {
+    "instance_id": "coca_cola_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances for both years. Ending cash matches BS cash. Cash from operations components sum correctly. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "adobe_inc__YOY_OPENING_BALANCE_2.0pct_38",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.total_assets",
+    "explanation": "Prior year Total Assets (29,183.42) does not equal prior year Total Liabilities & Equity (29,779). The decimal value 29,183.42 is also unusual for a statement in whole millions. These should be equal (TA = TL&E)."
+  },
+  {
+    "instance_id": "cisco_systems,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances. Cash flow components sum correctly. Ending cash matches BS cash. Net income consistent. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__MR_MODERATE_2.0pct_49",
+    "detected": true,
+    "error_location": "income_statement.income_tax_expense",
+    "explanation": "Income Tax Expense is reported as 2,682.26, which has an unusual decimal value in a statement otherwise reported in whole millions. This suggests a magnitude/rounding error."
+  },
+  {
+    "instance_id": "adobe_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances for both years. Cash flow components sum correctly. Ending cash matches BS cash. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "boeing_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet approximately balances (TL+TE within rounding of TL&E). Cash flow components sum correctly. Ending cash matches BS cash. Small rounding differences are normal. No genuine errors detected."
+  },
+  {
+    "instance_id": "intel_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances. Cash flow components sum correctly and net change equals sum of operating/investing/financing. Ending cash matches BS cash. No errors detected."
+  },
+  {
+    "instance_id": "adobe_inc__AE_ROW_SUM_0.5pct_0",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (17,962.37) + Total Equity (11,623) = 29,585.37, which does not equal Total Assets/Total L&E (29,496). Total Liabilities has an unusual decimal value. It should be approximately 17,873 (= 29,496 - 11,623)."
+  },
+  {
+    "instance_id": "nvidia_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances for current year. Cash flow components sum correctly. Ending cash matches BS cash. No arithmetic errors detected."
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__AE_COLUMN_SUM_20.0pct_11",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (602,967.60) + Total Equity (717,419) = 1,320,386.60, which far exceeds Total Assets/Total L&E (1,222,176). Total Liabilities should be approximately 504,757. The 602,967.60 value with its decimal is clearly erroneous."
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet identity holds (TL&E = TA). Cash flow components sum correctly. Ending cash matches BS cash. Gaps between shown TL+TE and TL&E are from omitted items, not errors. No errors detected."
+  },
+  {
+    "instance_id": "abbott_laboratories__CL_ENDING_CASH_10.0pct_28",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "Ending Cash on CFS (7,669.80) does not match Cash and Equivalents on the Balance Sheet (8,522). These should be equal. The difference is 852.20."
+  },
+  {
+    "instance_id": "chevron_corp__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "Net Income on IS (12,053.02) does not match Net Income on CFS (12,299). These should be equal. The IS value also has an unusual decimal. The CFS value of 12,299 appears to be the correct figure."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__MR_EXTREME_25.0pct_51",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All visible arithmetic checks pass: TCL components sum correctly, ending cash matches BS cash, net income is consistent across IS and CFS. The prior year shows TA != TL&E but this appears to be a pre-existing data feature. No detectable arithmetic error in the visible line items."
+  },
+  {
+    "instance_id": "texas_instruments_inc__AE_ROW_SUM_10.0pct_4",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.long_term_debt",
+    "explanation": "Long-Term Debt (12,643.20) has an unusual decimal value in a statement otherwise reported in whole millions. This suggests the value has been incorrectly modified."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__CL_ENDING_CASH_1.0pct_25",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "Ending Cash on CFS (24,121.35) does not match Cash and Equivalents on the Balance Sheet (24,365). These should be equal. The difference is 243.65."
+  },
+  {
+    "instance_id": "boeing_co__AE_ROW_SUM_1.0pct_1",
+    "detected": true,
+    "error_location": "income_statement.revenue",
+    "explanation": "Revenue (90,357.63) does not equal COGS (85,174) + Gross Profit (4,289) = 89,463. Revenue has an unusual decimal value and is overstated by 894.63."
+  },
+  {
+    "instance_id": "adobe_inc__MR_MINOR_0.5pct_48",
+    "detected": true,
+    "error_location": "cash_flow_statement.depreciation_amortization",
+    "explanation": "Depreciation & Amortization (813.91) has an unusual decimal value. Also, Net Income (7,130) + D&A (813.91) + Working Capital Changes (2,083) = 10,026.91, which does not equal Cash from Operations (10,031). The difference of 4.09 indicates D&A has been perturbed."
+  },
+  {
+    "instance_id": "chevron_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Income statement subtotals check out (Revenue - COGS = Gross Profit, OpInc correct). Cash flow components sum correctly. Net income consistent across IS and CFS. No errors detected."
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__YOY_OPENING_BALANCE_1.0pct_37",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.cash_and_equivalents",
+    "explanation": "Prior year Cash and Equivalents (31,223.61) has an unusual decimal value in a statement otherwise reported in whole millions. This suggests the prior year opening balance has been incorrectly modified."
+  }
+]

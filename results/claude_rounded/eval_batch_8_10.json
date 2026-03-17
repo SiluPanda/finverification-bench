@@ -1,0 +1,170 @@
+[
+  {
+    "instance_id": "nvidia_corp__MR_MODERATE_2.0pct_49",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Accounts Receivable was perturbed but not all current asset line items are shown, so the sum to Total Current Assets cannot be verified. All verifiable arithmetic checks pass: A=L+E (206803=49510+157293), CFS sums (102718-52228-48474=2016), cross-statement NI match (120067), ending cash match (10605)."
+  },
+  {
+    "instance_id": "oracle_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. Balance sheet identity holds for both years (168361=147910+20451 current; 134384=133311+1073 prior). CFS Net Income matches IS (12443). Ending Cash CFS matches BS Cash (10786)."
+  },
+  {
+    "instance_id": "oracle_corporation__CL_ENDING_CASH_20.0pct_29",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "CFS Ending Cash (12,943) does not match BS Cash and Equivalents (10,786). Difference of 2,157."
+  },
+  {
+    "instance_id": "pepsico,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. Balance sheet identity holds (TL&E=107399=TA for current; TL&E=100495=TA for prior). CFS Net Income matches IS (8240). CFS Ending Cash matches BS Cash (9159)."
+  },
+  {
+    "instance_id": "pfizer_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. BS TL&E equals TA (208160) for current year and (226501) for prior. CFS NI matches IS NI (7771). Ending Cash CFS matches BS Cash (1142)."
+  },
+  {
+    "instance_id": "procter_&_gamble_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. TL&E equals TA (125231 current, 120829 prior). CFS NI matches IS NI (15974). AP+STD=TCL (36058). No ending cash line in CFS to cross-check."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. TL&E=TA (69185 current, 65304 prior). CFS NI matches IS NI (11348). CFS Ending Cash matches BS Cash (4872). AP+STD=TCL (25427)."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__AE_ROW_SUM_1.0pct_1",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Total Liabilities was perturbed from 77213 to 76441, but since no Long-Term Debt line is shown to verify the sum, and TL+TE did not equal TL&E even in the clean version (due to unreported items like NCI), this error is not arithmetically detectable from the given data."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.cash_and_equivalents",
+    "explanation": "BS Cash and Equivalents (4,921) does not match CFS Ending Cash (4,872). Difference of 49."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__MR_MODERATE_2.0pct_49",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Income Tax Expense was perturbed from 2737 to 2682, but IBT minus Tax did not equal NI even in the clean version (structural gap from unreported items). All verifiable checks pass: TL&E=TA (69185), CFS NI matches IS NI (11348), Ending Cash matches BS Cash (4872)."
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. BS identity holds for current year (TL+TE=56936+53407=110343=TA). CFS NI matches IS NI (6704). Ending Cash CFS matches BS Cash (9852). Note: prior year TA (97154) differs from prior TL&E (98726), which appears to be a baseline data characteristic."
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "detected": false,
+    "error_location": null,
+    "explanation": "AR was perturbed from 8900 to 8856, but not all current asset items are shown so TCA sum cannot be verified. All verifiable checks pass: A=L+E (110343=56936+53407), CFS NI=IS NI (6704), Ending Cash matches (9852)."
+  },
+  {
+    "instance_id": "texas_instruments_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. A=L+E (34585=18312+16273 current; 32348=15451+16897 prior). CFS sums check (7153-1439-5689=25=Net Change). NI matches (5001). Ending Cash matches (3225)."
+  },
+  {
+    "instance_id": "texas_instruments_inc__AE_ROW_SUM_10.0pct_4",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Long-Term Debt was perturbed from 14048 to 12643, but since there are unlisted liability items between TCL+LTD and Total Liabilities, the sum cannot be verified. All verifiable checks pass: A=L+E (34585), CFS NI=IS NI (5001), Ending Cash=BS Cash (3225)."
+  },
+  {
+    "instance_id": "texas_instruments_inc__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "detected": true,
+    "error_location": "cash_flow_statement.net_income",
+    "explanation": "CFS Net Income (4,901) does not match IS Net Income (5,001). Difference of 100."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. Current year TL&E=TA (309581). CFS NI matches IS NI (12056). Ending Cash CFS matches BS Cash (24365). AP+STD=TCL (114897)."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__CL_ENDING_CASH_1.0pct_25",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "CFS Ending Cash (24,121) does not match BS Cash and Equivalents (24,365). Difference of 244."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__MR_EXTREME_25.0pct_51",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Goodwill was perturbed but is not shown as a visible line item in the statements. All verifiable arithmetic checks pass: TL&E=TA (309581), CFS NI=IS NI (12056), Ending Cash=BS Cash (24365)."
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. A=L+E (73090=56863+16227 current; 70857=53551+17306 prior). CFS NI matches IS NI (5572). Ending Cash CFS matches BS Cash (5887). AP+STD=TCL (15620)."
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__YOY_COMPUTED_CHANGE_10.0pct_46",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_liabilities",
+    "explanation": "AP (6,248) + Short-Term Debt (9,372) = 15,620, but Total Current Liabilities is stated as 17,182. Difference of 1,562. Also, TL (56,863) = TCL (17,182) + LTD (23,585) + other = 40,767 + other, while in clean TCL was 15,620 making the sum consistent."
+  },
+  {
+    "instance_id": "visa_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. TL&E=TA (99627 current; 90499 prior). CFS NI matches IS NI (20058). Ending Cash CFS matches BS Cash (17164). AP+STD=TCL (35048)."
+  },
+  {
+    "instance_id": "visa_inc__AE_COLUMN_SUM_2.0pct_8",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Total Liabilities was perturbed from 61718 to 62952, but no Total Equity line is shown on the balance sheet, so TL+TE=TL&E cannot be verified. All other verifiable checks pass: TL&E=TA (99627), CFS NI=IS NI (20058), Ending Cash=BS Cash (17164)."
+  },
+  {
+    "instance_id": "visa_inc__CL_ENDING_CASH_0.5pct_24",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "CFS Ending Cash (17,250) does not match BS Cash and Equivalents (17,164). Difference of 86."
+  },
+  {
+    "instance_id": "visa_inc__YOY_COMPUTED_CHANGE_5.0pct_45",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.cash_and_equivalents",
+    "explanation": "BS Cash and Equivalents (18,022) does not match CFS Ending Cash (17,164). Difference of 858."
+  },
+  {
+    "instance_id": "walmart_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. A=L+E current year (284668=185051+99617). GP check (713163-535395=177768 OK). OI check (177768-147943=29825 OK). CFS NI matches IS NI (21893). Ending Cash matches (10727)."
+  },
+  {
+    "instance_id": "walmart_inc__CL_ENDING_CASH_10.0pct_28",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "CFS Ending Cash (11,800) does not match BS Cash and Equivalents (10,727). Difference of 1,073."
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No arithmetic errors detected. TL&E=TA (448980 current; 376317 prior). AP+STD=TCL (72330). CFS NI matches IS NI (28844). Ending Cash CFS matches BS Cash (10681)."
+  },
+  {
+    "instance_id": "exxon_mobil_corporation__YOY_OPENING_BALANCE_1.0pct_37",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Prior year Cash was perturbed from 31539 to 31224, but the CFS does not show a beginning cash balance to cross-check against. All verifiable checks pass: TL&E=TA (448980), CFS NI=IS NI (28844), Ending Cash=BS Cash (10681)."
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "company": "PROCTER & GAMBLE CO",
+  "ticker": "PG",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 84284.0,
+    "sga_expense": 22669.0,
+    "rd_expense": 2100.0,
+    "operating_income": 20451.0,
+    "income_tax_expense": 4102.0,
+    "net_income": 15974.0,
+    "eps_basic": 6.67,
+    "eps_diluted": 6.51,
+    "diluted_shares": 2454400000.0,
+    "operating_expenses": -24769.0,
+    "income_before_tax": 20451.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 125231.0,
+      "total_liabilities": 72946.0,
+      "total_liabilities_and_equity": 125231.0,
+      "accounts_receivable": 6185.0,
+      "inventory": 7551.0,
+      "total_current_assets": 25392.0,
+      "property_plant_equipment": 23897.0,
+      "goodwill": 41650.0,
+      "intangible_assets": 21910.0,
+      "total_current_liabilities": 36058.0,
+      "long_term_debt": 24995.0,
+      "retained_earnings": 129973.0,
+      "accounts_payable": 14423.2,
+      "short_term_debt": 21634.8
+    },
+    "prior_year": {
+      "total_assets": 120829.0,
+      "total_liabilities": 73764.0,
+      "total_liabilities_and_equity": 120829.0,
+      "accounts_receivable": 5471.0,
+      "inventory": 7073.0,
+      "total_current_assets": 22648.0,
+      "property_plant_equipment": 21909.0,
+      "goodwill": 39700.0,
+      "intangible_assets": 23783.0,
+      "total_current_liabilities": 35756.0,
+      "long_term_debt": 24378.0,
+      "retained_earnings": 118170.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 17817.0,
+    "cash_from_investing": -3818.0,
+    "cash_from_financing": -14036.0,
+    "net_change_in_cash": 75.0,
+    "depreciation_amortization": 2847.0,
+    "capital_expenditures": 3773.0,
+    "dividends_paid": 9872.0,
+    "share_repurchases": 6500.0,
+    "debt_issuance": 2237.0,
+    "debt_repayment": 1977.0,
+    "net_income": 15974.0,
+    "changes_in_working_capital": -1004.0
+  }
+}

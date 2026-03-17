@@ -1,0 +1,110 @@
+[
+  {
+    "instance_id": "texas_instruments_inc__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "detected": true,
+    "error_location": "cash_flow_statement.net_income",
+    "explanation": "Net Income on CFS (4,900.98) does not match Net Income on IS (5,001). The CFS figure has suspicious decimals and the difference is ~2%. Using IS NI, NI + WC = 5001 + 2152 = 7153 = CFO, confirming the CFS NI is the erroneous figure."
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Net Income matches between IS and CFS (57,048). Balance sheet balances for the current year (TL + TE = TA = 4,424,900). Prior year figures have gaps due to omitted items typical for a bank. No clear arithmetic error detected."
+  },
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_0.5pct_36",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.total_current_liabilities",
+    "explanation": "Prior year Total Current Liabilities is shown as 31,294.69, which has unusual decimals while all other prior year figures are round numbers. This suggests the prior year TCL has been modified from its original value, creating a year-over-year opening balance inconsistency."
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "Net Income on IS (51,343.20) does not match Net Income on CFS (57,048). The IS figure has suspicious decimals (.20) and is ~10% lower than the CFS figure. The CFS NI correctly flows through operating cash flows, confirming the IS NI is the erroneous figure."
+  },
+  {
+    "instance_id": "comcast_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Balance sheet balances for both periods (TL + TE = TA = 272,631 current, 264,811 prior). Net Income matches between IS and CFS (19,998). CFS internal arithmetic checks out (NI + WC = CFO). No genuine arithmetic error detected."
+  },
+  {
+    "instance_id": "coca_cola_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "Net Income on IS (10,485.60) does not match Net Income on CFS (13,107). The IS figure has suspicious decimals (.60) and is ~20% lower. The CFS NI correctly reconciles with CFO (NI + DA + WC = 13107 + 1050 - 6749 = 7408 = CFO), confirming the IS NI is the modified value."
+  },
+  {
+    "instance_id": "nvidia_corp__MR_MODERATE_2.0pct_49",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.accounts_receivable",
+    "explanation": "Current year Accounts Receivable is 37,696.68, which has unusual decimals (.68) while most other balance sheet figures are round numbers. This suggests AR has been perturbed by approximately 2% from its true value."
+  },
+  {
+    "instance_id": "honeywell_international_inc__MR_MODERATE_2.0pct_49",
+    "detected": true,
+    "error_location": "income_statement.revenue",
+    "explanation": "Revenue (9,758) minus COGS (23,613) equals -13,855, but Gross Profit is stated as 3,470. COGS exceeds Revenue, which makes a positive GP impossible. Revenue appears to be drastically understated, creating a clear income statement arithmetic error."
+  },
+  {
+    "instance_id": "procter_&_gamble_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Net Income matches between IS and CFS (15,974). CFS arithmetic checks out (NI + DA + WC = 17,817 = CFO). AP + STD = TCL (36,058). No Total Equity line shown, but TLE matches TA (125,231). No genuine arithmetic error detected."
+  },
+  {
+    "instance_id": "alphabet_inc__MR_MINOR_0.5pct_48",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.short_term_debt",
+    "explanation": "Short-Term Debt is 61,338.76, which has unusual decimals (.76) while Accounts Payable (41,098) and other balance sheet figures are round numbers. This suggests STD has been perturbed by approximately 0.5% from its true value."
+  },
+  {
+    "instance_id": "meta_platforms,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Revenue - COGS = GP (164,791). Balance sheet balances for current year (TL + TE = TA = 366,021). Net Income matches between IS and CFS (60,458). CFS internal arithmetic checks out (NI + DA + WC = 115,800 = CFO). No genuine arithmetic error detected."
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_COLUMN_SUM_10.0pct_10",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets is 28,595.60, which has suspicious decimals (.60) for a subtotal. The figure appears inflated relative to expectations given the component items shown (Cash 8,522 + AR 7,929 + Inv 6,488 = 22,939). The subtotal has been modified and no longer correctly rolls up."
+  },
+  {
+    "instance_id": "general_electric_capital_corp__AE_COLUMN_SUM_0.5pct_6",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (408,951.97) has suspicious decimals (.97). TL + TE = 408,951.97 + 87,499 = 496,450.97, which does not equal Total Assets / TLE (501,405). The difference of 4,954.03 confirms the balance sheet does not balance due to a modified TL figure."
+  },
+  {
+    "instance_id": "johnson_&_johnson__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "GP + OpEx = OI (40,152) checks out. Net Income matches between IS and CFS (26,804). CFS internal arithmetic is consistent (NI + DA + WC = 24,530 = CFO). AP + STD = TCL (54,126). No genuine arithmetic error detected."
+  },
+  {
+    "instance_id": "home_depot,_inc__AE_COLUMN_SUM_10.0pct_10",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets (28,514.70) is less than the sum of its visible components: Cash (1,659) + AR (4,903) + Inventory (23,451) = 30,013. A subtotal cannot be less than the sum of its known components. TCA has suspicious decimals (.70) confirming it was modified."
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "Net Income on IS (2,682) does not match Net Income on CFS (2,235). The difference is 447, which is 20% of the CFS value. The CFS NI correctly reconciles with CFO (NI + DA + WC = 2235 + 1953 - 3123 = 1065 = CFO), confirming the IS NI is the modified value."
+  },
+  {
+    "instance_id": "chevron_corp__AE_ROW_SUM_20.0pct_5",
+    "detected": true,
+    "error_location": "income_statement.revenue",
+    "explanation": "Revenue (226,837.20) has suspicious decimals (.20). Revenue - COGS = 226,837.20 - 108,214 = 118,623.20, but Gross Profit is stated as 80,817. The difference of 37,806.20 confirms Revenue has been inflated by ~20% and no longer reconciles with COGS and GP."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "Net Income matches between IS and CFS (11,348). CFS internal arithmetic checks out (NI + WC = 12,233 = CFO). AP + STD = TCL (25,427). PMI has negative equity due to buybacks, which is normal for this company. No genuine arithmetic error detected."
+  }
+]

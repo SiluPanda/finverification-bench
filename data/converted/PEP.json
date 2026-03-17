@@ -1,0 +1,71 @@
+{
+  "company": "PepsiCo, Inc.",
+  "ticker": "PEP",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 93925.0,
+    "cost_of_goods_sold": 43066.0,
+    "gross_profit": 50859.0,
+    "sga_expense": 37368.0,
+    "rd_expense": 839.0,
+    "operating_income": 11498.0,
+    "interest_expense": 1121.0,
+    "income_tax_expense": 1949.0,
+    "net_income": 8240.0,
+    "eps_basic": 6.02,
+    "eps_diluted": 6.0,
+    "diluted_shares": 1373000000.0,
+    "operating_expenses": -38207.0,
+    "income_before_tax": 12619.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 107399.0,
+      "total_liabilities": 86852.0,
+      "total_equity": 20406.0,
+      "total_liabilities_and_equity": 107399.0,
+      "cash_and_equivalents": 9159.0,
+      "short_term_investments": 371.0,
+      "inventory": 5845.0,
+      "total_current_assets": 27949.0,
+      "property_plant_equipment": 29905.0,
+      "goodwill": 18916.0,
+      "intangible_assets": 500.0,
+      "total_current_liabilities": 32764.0,
+      "long_term_debt": 46351.0,
+      "retained_earnings": 72788.0,
+      "accounts_payable": 13105.6,
+      "short_term_debt": 19658.4
+    },
+    "prior_year": {
+      "total_assets": 100495.0,
+      "total_liabilities": 81858.0,
+      "total_equity": 18503.0,
+      "total_liabilities_and_equity": 100495.0,
+      "cash_and_equivalents": 9711.0,
+      "short_term_investments": 292.0,
+      "inventory": 5334.0,
+      "total_current_assets": 26950.0,
+      "property_plant_equipment": 27039.0,
+      "total_current_liabilities": 31647.0,
+      "long_term_debt": 41519.0,
+      "retained_earnings": 70035.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 12087.0,
+    "cash_from_investing": -6879.0,
+    "cash_from_financing": -4979.0,
+    "net_change_in_cash": 651.0,
+    "depreciation_amortization": 3451.0,
+    "dividends_paid": 7638.0,
+    "share_repurchases": 1000.0,
+    "debt_issuance": 8189.0,
+    "debt_repayment": 4082.0,
+    "net_income": 8240.0,
+    "changes_in_working_capital": 396.0,
+    "ending_cash": 9159.0
+  }
+}

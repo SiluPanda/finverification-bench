@@ -1,0 +1,70 @@
+{
+  "company": "HOME DEPOT, INC.",
+  "ticker": "HD",
+  "period": "FY2024",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 159514.0,
+    "cost_of_goods_sold": 106206.0,
+    "gross_profit": 53308.0,
+    "operating_expenses": 31782.0,
+    "sga_expense": 28748.0,
+    "operating_income": 21526.0,
+    "income_tax_expense": 4600.0,
+    "net_income": 14806.0,
+    "eps_basic": 14.96,
+    "eps_diluted": 14.91,
+    "diluted_shares": 993000000.0,
+    "income_before_tax": 21526.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 96119.0,
+      "total_liabilities": 89479.0,
+      "total_equity": 6640.0,
+      "total_liabilities_and_equity": 96119.0,
+      "cash_and_equivalents": 1659.0,
+      "accounts_receivable": 4903.0,
+      "inventory": 23451.0,
+      "total_current_assets": 31683.0,
+      "property_plant_equipment": 26702.0,
+      "goodwill": 19475.0,
+      "intangible_assets": 8983.0,
+      "total_current_liabilities": 28661.0,
+      "long_term_debt": 51365.0,
+      "retained_earnings": 89533.0,
+      "shares_outstanding": 994000000.0,
+      "accounts_payable": 11464.400000000001,
+      "short_term_debt": 17196.6
+    },
+    "prior_year": {
+      "total_assets": 76445.0,
+      "total_liabilities": 74883.0,
+      "total_equity": -1696.0,
+      "total_liabilities_and_equity": 76445.0,
+      "cash_and_equivalents": 2757.0,
+      "accounts_receivable": 3317.0,
+      "inventory": 24886.0,
+      "total_current_assets": 32471.0,
+      "property_plant_equipment": 25199.0,
+      "goodwill": 7449.0,
+      "intangible_assets": 3323.0,
+      "total_current_liabilities": 23110.0,
+      "long_term_debt": 42150.0,
+      "retained_earnings": 76896.0,
+      "shares_outstanding": 1035000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 19810.0,
+    "cash_from_investing": -21031.0,
+    "cash_from_financing": -694.0,
+    "depreciation_amortization": 3336.0,
+    "dividends_paid": 8929.0,
+    "share_repurchases": 649.0,
+    "net_income": 14806.0,
+    "changes_in_working_capital": 1668.0,
+    "ending_cash": 1659.0
+  }
+}

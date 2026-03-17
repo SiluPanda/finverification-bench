@@ -1,0 +1,63 @@
+{
+  "company": "Comcast Corporation",
+  "ticker": "CMCSA",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 123707.0,
+    "operating_income": 20672.0,
+    "income_tax_expense": 6106.0,
+    "net_income": 19998.0,
+    "eps_basic": 5.41,
+    "eps_diluted": 5.39,
+    "diluted_shares": 3709000000.0,
+    "income_before_tax": 20672.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 272631.0,
+      "total_equity": 96903.0,
+      "total_liabilities_and_equity": 272631.0,
+      "cash_and_equivalents": 9481.0,
+      "short_term_investments": 14.0,
+      "accounts_receivable": 13869.0,
+      "total_current_assets": 29567.0,
+      "property_plant_equipment": 65680.0,
+      "goodwill": 61502.0,
+      "total_current_liabilities": 33524.0,
+      "retained_earnings": 66675.0,
+      "total_liabilities": 175728.0,
+      "accounts_payable": 13409.6,
+      "short_term_debt": 20114.4
+    },
+    "prior_year": {
+      "total_assets": 264811.0,
+      "total_equity": 82703.0,
+      "total_liabilities_and_equity": 264811.0,
+      "cash_and_equivalents": 6215.0,
+      "short_term_investments": 310.0,
+      "accounts_receivable": 13813.0,
+      "total_current_assets": 23987.0,
+      "property_plant_equipment": 59686.0,
+      "goodwill": 58500.0,
+      "total_current_liabilities": 40198.0,
+      "retained_earnings": 52892.0,
+      "total_liabilities": 182108.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 33643.0,
+    "cash_from_investing": -16157.0,
+    "cash_from_financing": -14346.0,
+    "net_change_in_cash": 3182.0,
+    "capital_expenditures": 11750.0,
+    "dividends_paid": 4894.0,
+    "share_repurchases": 7155.0,
+    "debt_issuance": 3494.0,
+    "debt_repayment": 5740.0,
+    "net_income": 19998.0,
+    "changes_in_working_capital": 13645.0,
+    "ending_cash": 9481.0
+  }
+}

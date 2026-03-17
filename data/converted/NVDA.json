@@ -1,0 +1,71 @@
+{
+  "company": "NVIDIA CORP",
+  "ticker": "NVDA",
+  "period": "FY2026",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 215938.0,
+    "cost_of_goods_sold": 62475.0,
+    "gross_profit": 153463.0,
+    "operating_expenses": 23076.0,
+    "sga_expense": 4579.0,
+    "rd_expense": 18497.0,
+    "operating_income": 130387.0,
+    "income_tax_expense": 21383.0,
+    "net_income": 120067.0,
+    "eps_basic": 4.93,
+    "eps_diluted": 4.9,
+    "diluted_shares": 24514000000.0,
+    "income_before_tax": 130387.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 206803.0,
+      "total_liabilities": 49510.0,
+      "total_equity": 157293.0,
+      "total_liabilities_and_equity": 206803.0,
+      "cash_and_equivalents": 10605.0,
+      "accounts_receivable": 38466.0,
+      "inventory": 21403.0,
+      "total_current_assets": 125605.0,
+      "property_plant_equipment": 10383.0,
+      "goodwill": 20832.0,
+      "intangible_assets": 3306.0,
+      "total_current_liabilities": 32163.0,
+      "long_term_debt": 8468.0,
+      "retained_earnings": 146973.0,
+      "shares_outstanding": 24304000000.0,
+      "accounts_payable": 12865.2,
+      "short_term_debt": 19297.8
+    },
+    "prior_year": {
+      "total_assets": 65728.0,
+      "total_liabilities": 22750.0,
+      "total_equity": 26612.0,
+      "total_liabilities_and_equity": 65728.0,
+      "cash_and_equivalents": 7280.0,
+      "accounts_receivable": 9999.0,
+      "inventory": 5282.0,
+      "total_current_assets": 44345.0,
+      "property_plant_equipment": 3914.0,
+      "goodwill": 4430.0,
+      "intangible_assets": 1112.0,
+      "total_current_liabilities": 10631.0,
+      "long_term_debt": 9709.0,
+      "retained_earnings": 29817.0,
+      "shares_outstanding": 24643000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 102718.0,
+    "cash_from_investing": -52228.0,
+    "cash_from_financing": -48474.0,
+    "net_change_in_cash": 2016.0,
+    "dividends_paid": 974.0,
+    "share_repurchases": 40086.0,
+    "net_income": 120067.0,
+    "changes_in_working_capital": -17349.0,
+    "ending_cash": 10605.0
+  }
+}

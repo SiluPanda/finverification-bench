@@ -1,0 +1,182 @@
+[
+  {
+    "instance_id": "comcast_corporation__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "detected": true,
+    "error_location": "income_statement.net_income",
+    "explanation": "Net Income on IS (20,397.96) does not match Net Income on CFS (19,998). The IS figure has a suspicious decimal value indicating modification."
+  },
+  {
+    "instance_id": "lowes_companies_inc__YOY_OPENING_BALANCE_20.0pct_41",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.retained_earnings",
+    "explanation": "Prior year Retained Earnings (-17,834.40) has an unusual decimal value inconsistent with rounded financial statements, suggesting the opening balance has been modified."
+  },
+  {
+    "instance_id": "walt_disney_co__YOY_OPENING_BALANCE_10.0pct_40",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.total_liabilities",
+    "explanation": "Prior year balance sheet does not balance: Total Liabilities (116,932.20) + Total Equity (99,277) = 216,209.20 far exceeds Total Assets (205,579). Prior Total Liabilities has a suspicious decimal value."
+  },
+  {
+    "instance_id": "thermo_fisher_scientific_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.accounts_receivable",
+    "explanation": "Current year Accounts Receivable (8,855.50) has an unusual decimal value suggesting modification. Prior year BS also does not balance (TL+TE = 98,726 vs TA = 97,154)."
+  },
+  {
+    "instance_id": "home_depot,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. All key cross-statement linkages (IS NI to CFS NI, ending cash CFS to BS cash, BS equation) check out."
+  },
+  {
+    "instance_id": "pfizer_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS arithmetic, BS equation, and cross-statement linkages are consistent."
+  },
+  {
+    "instance_id": "honeywell_international_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. BS balances (current and prior), CFS NI matches IS NI, ending cash matches BS cash."
+  },
+  {
+    "instance_id": "boeing_co__YOY_OPENING_BALANCE_20.0pct_41",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.property_plant_equipment",
+    "explanation": "Prior year Property, Plant & Equipment (8,528.80) has an unusual decimal value suggesting it has been modified from a rounded figure."
+  },
+  {
+    "instance_id": "boeing_co__AE_COLUMN_SUM_20.0pct_11",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets (154,150.80) is inflated. TCA (154,150.80) + PPE (15,361) = 169,511.80 exceeds Total Assets (168,235), which is arithmetically impossible. TCA also has a suspicious decimal."
+  },
+  {
+    "instance_id": "alphabet_inc__CL_ENDING_CASH_0.5pct_24",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "Ending Cash on CFS (30,861.54) does not match Cash and Equivalents on Balance Sheet (30,708). Difference of 153.54."
+  },
+  {
+    "instance_id": "jpmorgan_chase_&_co__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "detected": true,
+    "error_location": "cash_flow_statement.net_income",
+    "explanation": "Net Income on IS (57,048) does not match Net Income on CFS (45,638.40). The CFS figure has a suspicious decimal and is 20% lower than the IS figure."
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_COMPUTED_CHANGE_2.0pct_44",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.retained_earnings",
+    "explanation": "Current year Retained Earnings (51,983.28) has an unusual decimal value. Compared to the clean version (50,964), this represents a 2% modification."
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "detected": true,
+    "error_location": "cash_flow_statement.net_income",
+    "explanation": "Net Income on IS (18,254) does not match Net Income on CFS (18,345.27). The CFS figure has a suspicious decimal value."
+  },
+  {
+    "instance_id": "merck\u00a0&_co,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS NI matches CFS NI, ending cash matches BS cash, BS equation balances."
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. CFS NI matches IS NI, BS equation is consistent with unshown components."
+  },
+  {
+    "instance_id": "amazon_com_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Current year Total Liabilities (488,372.40) + Total Equity (411,065) = 899,437.40, which far exceeds Total Assets (818,042). Total Liabilities has a suspicious decimal value and is grossly inflated."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__AE_ROW_SUM_1.0pct_1",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities (76,440.87) has an unusual decimal value. Total Liabilities + Total Equity (76,440.87 + (-9,994) = 66,446.87) does not equal Total L&E (69,185)."
+  },
+  {
+    "instance_id": "visa_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS NI matches CFS NI, ending cash matches BS cash, BS equation balances."
+  },
+  {
+    "instance_id": "amazon_com_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. Current year BS balances (TL + TE = TA), IS NI matches CFS NI, ending cash matches BS cash."
+  },
+  {
+    "instance_id": "nike,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS arithmetic is correct (Revenue - COGS = GP, GP - OpEx = OI), BS balances for both years, cross-statement linkages are consistent."
+  },
+  {
+    "instance_id": "bank_of_america_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. BS balances, CFS NI matches IS NI."
+  },
+  {
+    "instance_id": "walmart_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS arithmetic correct (Revenue - COGS = GP, GP - OpEx = OI), current BS balances, cross-statement linkages consistent."
+  },
+  {
+    "instance_id": "microsoft_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. IS arithmetic correct (Revenue - COGS = GP, GP - OpEx = OI), current BS balances, IS NI matches CFS NI, ending cash matches BS cash."
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "detected": true,
+    "error_location": "cash_flow_statement.net_income",
+    "explanation": "Net Income on IS (8,099) does not match Net Income on CFS (8,058.51). The CFS figure has a suspicious decimal value."
+  },
+  {
+    "instance_id": "philip_morris_international_inc__YOY_COMPUTED_CHANGE_1.0pct_43",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.cash_and_equivalents",
+    "explanation": "Cash and Equivalents on BS (4,920.72) does not match Ending Cash on CFS (4,872). The BS figure has a suspicious decimal value suggesting modification."
+  },
+  {
+    "instance_id": "cisco_systems,_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets (27,988.80) has an unusual decimal value suggesting modification. This represents a large drop from prior year TCA of 43,348."
+  },
+  {
+    "instance_id": "walt_disney_co__AE_COLUMN_SUM_0.5pct_6",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets (24,388.33) has an unusual decimal value suggesting modification from the expected rounded figure."
+  },
+  {
+    "instance_id": "honeywell_international_inc__CL_ENDING_CASH_2.0pct_26",
+    "detected": true,
+    "error_location": "cash_flow_statement.ending_cash",
+    "explanation": "Ending Cash on CFS (12,237.26) does not match Cash and Equivalents on Balance Sheet (12,487). Difference of 249.74."
+  },
+  {
+    "instance_id": "honeywell_international_inc__YOY_OPENING_BALANCE_10.0pct_40",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No detectable arithmetic errors in the visible financial statements. All shown figures match the clean version. The error is in shares_outstanding which is not displayed in these statements."
+  },
+  {
+    "instance_id": "oracle_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "No genuine arithmetic errors found. BS balances for both years, IS NI matches CFS NI, ending cash matches BS cash."
+  }
+]

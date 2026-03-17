@@ -1,0 +1,109 @@
+{
+  "model": "Claude Sonnet 4",
+  "model_id": "claude-sonnet-4-20250514",
+  "strategy": "zero_shot",
+  "per_cell": 1,
+  "metrics": {
+    "overall": {
+      "accuracy": 80.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "fpr": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "tn": 4,
+      "fn": 1,
+      "total": 5
+    },
+    "localization": {
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0
+    },
+    "by_category": {
+      "YOY": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1
+      },
+      "clean": {
+        "detection_rate": 0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 4,
+        "fn": 0
+      }
+    },
+    "by_magnitude": {
+      "<1%": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 1
+      }
+    },
+    "by_type": {
+      "YOY_COMPUTED_CHANGE": {
+        "detection_rate": 0.0,
+        "tp": 0,
+        "fn": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "instance_id": "home_depot,_inc__YOY_COMPUTED_CHANGE_0.5pct_42",
+      "has_error": true,
+      "error_type": "YOY_COMPUTED_CHANGE",
+      "error_category": "YOY",
+      "error_magnitude_pct": -0.5,
+      "detected": false,
+      "error": "\"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "apple_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "\"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "procter_&_gamble_co__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "\"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "mcdonald\u2019s\u00a0corporation__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "\"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "parse_method": "error"
+    },
+    {
+      "instance_id": "meta_platforms,_inc__clean",
+      "has_error": false,
+      "error_type": null,
+      "error_category": null,
+      "error_magnitude_pct": null,
+      "detected": false,
+      "error": "\"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "parse_method": "error"
+    }
+  ]
+}

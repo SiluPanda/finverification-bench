@@ -1,0 +1,419 @@
+11:35:37 [INFO] Sample: 108 instances
+11:35:37 [INFO] ============================================================
+11:35:37 [INFO] Starting: DeepSeek V3.2
+11:35:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:35:54 [INFO] [DeepSeek V3.2] 1/108 acc=0.0% rec=0.0% fpr=100.0%
+11:36:18 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:36:28 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:36:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:36:50 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:36:50 [INFO] [DeepSeek V3.2] 5/108 acc=20.0% rec=100.0% fpr=100.0%
+11:37:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:37:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:37:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:37:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:37:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:37:57 [INFO] [DeepSeek V3.2] 10/108 acc=60.0% rec=100.0% fpr=100.0%
+11:38:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:38:15 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:38:30 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:39:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:39:22 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:39:22 [INFO] [DeepSeek V3.2] 15/108 acc=53.3% rec=100.0% fpr=100.0%
+11:39:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:39:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:39:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:15 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:15 [INFO] [DeepSeek V3.2] 20/108 acc=50.0% rec=100.0% fpr=100.0%
+11:40:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:40:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:41:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:41:05 [INFO] [DeepSeek V3.2] 25/108 acc=56.0% rec=100.0% fpr=100.0%
+11:41:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:41:28 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:41:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:41:49 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:42:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:42:13 [INFO] [DeepSeek V3.2] 30/108 acc=60.0% rec=100.0% fpr=100.0%
+11:42:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:42:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:42:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:42:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:43:09 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:43:09 [INFO] [DeepSeek V3.2] 35/108 acc=62.9% rec=100.0% fpr=100.0%
+11:43:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:43:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:43:44 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:18 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:18 [INFO] [DeepSeek V3.2] 40/108 acc=62.5% rec=100.0% fpr=100.0%
+11:44:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:44:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:04 [INFO] [DeepSeek V3.2] 45/108 acc=62.2% rec=100.0% fpr=100.0%
+11:45:12 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:25 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:45:59 [INFO] [DeepSeek V3.2] 50/108 acc=62.0% rec=100.0% fpr=100.0%
+11:46:16 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:46:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:46:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:46:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:47:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:47:02 [INFO] [DeepSeek V3.2] 55/108 acc=58.2% rec=100.0% fpr=100.0%
+11:47:09 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:47:18 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:47:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:47:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:48:01 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:48:01 [INFO] [DeepSeek V3.2] 60/108 acc=58.3% rec=100.0% fpr=100.0%
+11:48:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:48:43 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:48:58 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:49:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:49:19 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:49:19 [INFO] [DeepSeek V3.2] 65/108 acc=60.0% rec=100.0% fpr=100.0%
+11:49:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:49:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:00 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:14 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:21 [INFO] [DeepSeek V3.2] 70/108 acc=60.0% rec=100.0% fpr=100.0%
+11:50:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:39 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:50:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:51:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:51:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:51:13 [INFO] [DeepSeek V3.2] 75/108 acc=60.0% rec=100.0% fpr=100.0%
+11:51:22 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:51:35 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:51:50 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:52:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:52:17 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:52:17 [INFO] [DeepSeek V3.2] 80/108 acc=58.8% rec=100.0% fpr=100.0%
+11:52:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:52:44 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:52:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:11 [INFO] [DeepSeek V3.2] 85/108 acc=57.6% rec=100.0% fpr=100.0%
+11:53:24 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:39 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:58 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:53:58 [INFO] [DeepSeek V3.2] 90/108 acc=58.9% rec=100.0% fpr=100.0%
+11:54:12 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:54:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:54:30 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:54:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:54:49 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:54:49 [INFO] [DeepSeek V3.2] 95/108 acc=58.9% rec=100.0% fpr=100.0%
+11:54:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:24 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:33 [INFO] [DeepSeek V3.2] 100/108 acc=60.0% rec=100.0% fpr=100.0%
+11:55:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:55:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:56:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:56:17 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:56:28 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:56:28 [INFO] [DeepSeek V3.2] 105/108 acc=60.0% rec=100.0% fpr=100.0%
+11:56:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:56:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:07 [INFO] Saved: /Users/silupanda/Downloads/finverification-bench/results/deepinfra_deepseek-ai_DeepSeek-V3.2_cot_results.json
+11:57:07 [INFO] ============================================================
+11:57:07 [INFO] Starting: Qwen 3 235B
+11:57:15 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:15 [INFO] [Qwen 3 235B] 1/108 acc=0.0% rec=0.0% fpr=100.0%
+11:57:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:50 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:57:50 [INFO] [Qwen 3 235B] 5/108 acc=0.0% rec=0.0% fpr=100.0%
+11:57:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:58:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:58:16 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:58:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:58:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:58:27 [INFO] [Qwen 3 235B] 10/108 acc=30.0% rec=50.0% fpr=100.0%
+11:58:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:59:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:59:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:59:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:59:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+11:59:59 [INFO] [Qwen 3 235B] 15/108 acc=33.3% rec=62.5% fpr=100.0%
+12:00:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:00:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:00:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:00:39 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:00:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:00:46 [INFO] [Qwen 3 235B] 20/108 acc=35.0% rec=60.0% fpr=90.0%
+12:00:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:36 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:43 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:43 [INFO] [Qwen 3 235B] 25/108 acc=44.0% rec=71.4% fpr=90.9%
+12:01:51 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:01:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:18 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:18 [INFO] [Qwen 3 235B] 30/108 acc=50.0% rec=77.8% fpr=91.7%
+12:02:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:43 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:02:49 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:03:25 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:03:25 [INFO] [Qwen 3 235B] 35/108 acc=54.3% rec=81.8% fpr=92.3%
+12:04:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:04:30 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:04:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:05:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:15:07 [INFO] Retrying request to /chat/completions in 0.425594 seconds
+12:15:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:15:26 [INFO] [Qwen 3 235B] 40/108 acc=57.5% rec=84.0% fpr=86.7%
+12:15:39 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:16:08 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:16:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:17:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:17:39 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:17:39 [INFO] [Qwen 3 235B] 45/108 acc=57.8% rec=85.7% fpr=88.2%
+12:18:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:16 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:35 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:41 [INFO] [Qwen 3 235B] 50/108 acc=60.0% rec=87.1% fpr=84.2%
+12:18:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:18:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:17 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:17 [INFO] [Qwen 3 235B] 55/108 acc=60.0% rec=87.5% fpr=78.3%
+12:19:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:19:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:20:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:20:04 [INFO] [Qwen 3 235B] 60/108 acc=60.0% rec=88.6% fpr=80.0%
+12:20:10 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:20:19 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:20:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:20:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:22:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:22:55 [INFO] [Qwen 3 235B] 65/108 acc=61.5% rec=89.7% fpr=80.8%
+12:23:04 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:15 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:41 [INFO] [Qwen 3 235B] 70/108 acc=61.4% rec=90.5% fpr=82.1%
+12:23:49 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:23:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:24:15 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:24:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:24:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:24:31 [INFO] [Qwen 3 235B] 75/108 acc=64.0% rec=91.1% fpr=76.7%
+12:24:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:24:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:25:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:25:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:25:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:25:55 [INFO] [Qwen 3 235B] 80/108 acc=63.7% rec=91.5% fpr=75.8%
+12:26:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:27:10 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:28:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:28:12 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:28:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:28:38 [INFO] [Qwen 3 235B] 85/108 acc=64.7% rec=91.8% fpr=72.2%
+12:28:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:29:12 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:29:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:30:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:31:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:31:54 [INFO] [Qwen 3 235B] 90/108 acc=65.6% rec=92.5% fpr=73.0%
+12:32:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:33:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:33:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:34:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:35:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:35:07 [INFO] [Qwen 3 235B] 95/108 acc=66.3% rec=92.9% fpr=71.8%
+12:35:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:36:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:36:24 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:37:22 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:37:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:37:40 [INFO] [Qwen 3 235B] 100/108 acc=67.0% rec=93.3% fpr=72.5%
+12:38:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:39:09 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:39:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:39:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:39:51 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:39:51 [INFO] [Qwen 3 235B] 105/108 acc=66.7% rec=93.7% fpr=73.8%
+12:39:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:40:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:40:22 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:40:22 [INFO] Saved: /Users/silupanda/Downloads/finverification-bench/results/deepinfra_Qwen_Qwen3-235B-A22B-Instruct-2507_cot_results.json
+12:40:22 [INFO] ============================================================
+12:40:22 [INFO] Starting: Llama 4 Maverick
+12:40:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:40:27 [INFO] [Llama 4 Maverick] 1/108 acc=0.0% rec=0.0% fpr=100.0%
+12:41:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:41:28 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:41:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:41:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:41:54 [INFO] [Llama 4 Maverick] 5/108 acc=40.0% rec=0.0% fpr=50.0%
+12:41:58 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:42:00 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:42:31 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:43:01 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:43:32 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:43:32 [INFO] [Llama 4 Maverick] 10/108 acc=40.0% rec=33.3% fpr=50.0%
+12:44:01 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:44:36 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:44:40 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:44:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:45:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:45:20 [INFO] [Llama 4 Maverick] 15/108 acc=46.7% rec=37.5% fpr=42.9%
+12:46:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:46:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:46:54 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:47:27 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:47:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:47:29 [INFO] [Llama 4 Maverick] 20/108 acc=55.0% rec=40.0% fpr=30.0%
+12:48:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:48:49 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:48:53 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:48:58 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:49:37 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:49:37 [INFO] [Llama 4 Maverick] 25/108 acc=56.0% rec=42.9% fpr=27.3%
+12:50:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:50:45 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:51:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:51:18 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:52:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:52:20 [INFO] [Llama 4 Maverick] 30/108 acc=50.0% rec=38.9% fpr=33.3%
+12:52:26 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:52:30 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:52:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:52:37 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:53:19 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:53:19 [INFO] [Llama 4 Maverick] 35/108 acc=57.1% rec=50.0% fpr=30.8%
+12:54:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:54:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:54:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:55:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:55:53 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:55:53 [INFO] [Llama 4 Maverick] 40/108 acc=55.0% rec=48.0% fpr=33.3%
+12:55:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:56:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:57:03 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:57:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:57:48 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:57:48 [INFO] [Llama 4 Maverick] 45/108 acc=51.1% rec=46.4% fpr=41.2%
+12:57:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:57:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:58:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:58:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:58:36 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:58:36 [INFO] [Llama 4 Maverick] 50/108 acc=54.0% rec=51.6% fpr=42.1%
+12:59:16 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+12:59:19 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:43 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:46 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:46 [INFO] [Llama 4 Maverick] 55/108 acc=56.4% rec=53.1% fpr=39.1%
+13:00:48 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:00:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:23 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:23 [INFO] [Llama 4 Maverick] 60/108 acc=56.7% rec=57.1% fpr=44.0%
+13:01:25 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:28 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:01:59 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:02:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:02:05 [INFO] [Llama 4 Maverick] 65/108 acc=56.9% rec=59.0% fpr=46.2%
+13:02:07 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:02:12 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:02:37 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:03:09 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:03:14 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:03:14 [INFO] [Llama 4 Maverick] 70/108 acc=55.7% rec=59.5% fpr=50.0%
+13:03:17 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:03:21 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:03:24 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:04:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:04:42 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:04:42 [INFO] [Llama 4 Maverick] 75/108 acc=57.3% rec=62.2% fpr=50.0%
+13:04:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:04:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:05:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:05:38 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:05:44 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:05:44 [INFO] [Llama 4 Maverick] 80/108 acc=57.5% rec=63.8% fpr=51.5%
+13:06:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:06:14 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:06:47 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:06:50 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:06:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:06:52 [INFO] [Llama 4 Maverick] 85/108 acc=58.8% rec=65.3% fpr=50.0%
+13:06:56 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:07:30 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:07:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:07:36 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:08:02 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:08:02 [INFO] [Llama 4 Maverick] 90/108 acc=58.9% rec=66.0% fpr=51.4%
+13:08:06 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:08:13 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:08:52 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:08:55 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:09:09 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:09:09 [INFO] [Llama 4 Maverick] 95/108 acc=57.9% rec=66.1% fpr=53.8%
+13:09:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:09:33 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:09:37 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:10:05 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:10:08 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:10:08 [INFO] [Llama 4 Maverick] 100/108 acc=59.0% rec=66.7% fpr=52.5%
+13:10:57 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:11:41 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:11:44 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:11 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:20 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:20 [INFO] [Llama 4 Maverick] 105/108 acc=60.0% rec=66.7% fpr=50.0%
+13:12:25 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:29 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:34 [INFO] HTTP Request: POST https://api.deepinfra.com/v1/openai/chat/completions "HTTP/1.1 200 OK"
+13:12:34 [INFO] Saved: /Users/silupanda/Downloads/finverification-bench/results/deepinfra_meta-llama_Llama-4-Maverick-17B-128E-Instruct-FP8_cot_results.json
+
+============================================================
+DeepSeek V3.2 — CoT (n=108)
+============================================================
+  Acc=60.2  Prec=60.2  Rec=100.0  F1=75.1  FPR=100.0
+  TP=65 FP=43 TN=0 FN=0
+
+============================================================
+Qwen 3 235B — CoT (n=108)
+============================================================
+  Acc=66.7  Prec=65.6  Rec=93.8  F1=77.2  FPR=74.4
+  TP=61 FP=32 TN=11 FN=4
+
+============================================================
+Llama 4 Maverick — CoT (n=108)
+============================================================
+  Acc=60.2  Prec=66.7  Rec=67.7  F1=67.2  FPR=51.2
+  TP=44 FP=22 TN=21 FN=21

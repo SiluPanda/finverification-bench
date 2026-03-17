@@ -1,0 +1,71 @@
+{
+  "company": "PFIZER INC",
+  "ticker": "PFE",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 62579.0,
+    "cost_of_goods_sold": 16067.0,
+    "sga_expense": 13794.0,
+    "interest_expense": 2671.0,
+    "income_tax_expense": -266.0,
+    "net_income": 7771.0,
+    "eps_basic": 1.37,
+    "eps_diluted": 1.36,
+    "diluted_shares": 5713000000.0,
+    "gross_profit": 46512.0,
+    "operating_expenses": -13794.0,
+    "operating_income": 32718.0,
+    "income_before_tax": 35389.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 208160.0,
+      "total_liabilities": 121385.0,
+      "total_equity": 86476.0,
+      "total_liabilities_and_equity": 208160.0,
+      "cash_and_equivalents": 1142.0,
+      "accounts_receivable": 11874.0,
+      "inventory": 10654.0,
+      "total_current_assets": 42898.0,
+      "property_plant_equipment": 19317.0,
+      "goodwill": 71264.0,
+      "intangible_assets": 53731.0,
+      "total_current_liabilities": 36984.0,
+      "long_term_debt": 61641.0,
+      "retained_earnings": 114610.0,
+      "accounts_payable": 14793.6,
+      "short_term_debt": 22190.4
+    },
+    "prior_year": {
+      "total_assets": 226501.0,
+      "total_liabilities": 137213.0,
+      "total_equity": 89014.0,
+      "total_liabilities_and_equity": 226501.0,
+      "cash_and_equivalents": 2853.0,
+      "accounts_receivable": 11566.0,
+      "inventory": 10189.0,
+      "total_current_assets": 43333.0,
+      "property_plant_equipment": 18940.0,
+      "goodwill": 51375.0,
+      "intangible_assets": 64900.0,
+      "total_current_liabilities": 47794.0,
+      "long_term_debt": 61538.0,
+      "retained_earnings": 118353.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 11704.0,
+    "cash_from_investing": -1351.0,
+    "cash_from_financing": -10304.0,
+    "net_change_in_cash": 91.0,
+    "depreciation_amortization": 6592.0,
+    "capital_expenditures": 2629.0,
+    "debt_issuance": 9678.0,
+    "debt_repayment": 6757.0,
+    "net_income": 7771.0,
+    "changes_in_working_capital": -2659.0,
+    "ending_cash": 1142.0
+  }
+}

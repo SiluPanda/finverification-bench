@@ -1,0 +1,68 @@
+{
+  "company": "Salesforce, Inc.",
+  "ticker": "CRM",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 41525.0,
+    "cost_of_goods_sold": 9270.0,
+    "gross_profit": 32255.0,
+    "operating_expenses": 23924.0,
+    "rd_expense": 5993.0,
+    "operating_income": 8331.0,
+    "income_tax_expense": 2063.0,
+    "net_income": 7457.0,
+    "eps_basic": 7.85,
+    "eps_diluted": 7.8,
+    "diluted_shares": 956000000.0,
+    "income_before_tax": 8331.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 112305.0,
+      "total_liabilities": 53163.0,
+      "total_equity": 59142.0,
+      "total_liabilities_and_equity": 112305.0,
+      "cash_and_equivalents": 7327.0,
+      "accounts_receivable": 14339.0,
+      "total_current_assets": 28222.0,
+      "goodwill": 57941.0,
+      "intangible_assets": 6815.0,
+      "total_current_liabilities": 37118.0,
+      "long_term_debt": 14439.0,
+      "retained_earnings": 22221.0,
+      "shares_outstanding": 929000000.0,
+      "accounts_payable": 14847.2,
+      "short_term_debt": 22270.8
+    },
+    "prior_year": {
+      "total_assets": 98849.0,
+      "total_liabilities": 40490.0,
+      "total_equity": 41493.0,
+      "total_liabilities_and_equity": 98849.0,
+      "cash_and_equivalents": 7016.0,
+      "accounts_receivable": 10755.0,
+      "total_current_assets": 26395.0,
+      "goodwill": 47937.0,
+      "intangible_assets": 7125.0,
+      "total_current_liabilities": 25891.0,
+      "long_term_debt": 10601.0,
+      "retained_earnings": 7585.0,
+      "shares_outstanding": 981000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 14996.0,
+    "cash_from_investing": -8590.0,
+    "cash_from_financing": -8079.0,
+    "net_change_in_cash": -1521.0,
+    "depreciation_amortization": 3631.0,
+    "capital_expenditures": 594.0,
+    "dividends_paid": 1587.0,
+    "share_repurchases": 12596.0,
+    "net_income": 7457.0,
+    "changes_in_working_capital": 3908.0,
+    "ending_cash": 7327.0
+  }
+}

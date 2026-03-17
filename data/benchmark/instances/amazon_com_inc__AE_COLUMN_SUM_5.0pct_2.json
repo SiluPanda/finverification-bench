@@ -1,0 +1,86 @@
+{
+  "instance_id": "amazon_com_inc__AE_COLUMN_SUM_5.0pct_2",
+  "company": "AMAZON COM INC",
+  "period": "FY2025",
+  "formatted_statements": "AMAZON COM INC — Financial Statements (in millions of USD)\nPeriod: FY2025\n\nINCOME STATEMENT\n==========================================================\n  Revenue                                          716,924\n  Cost of Goods Sold                               356,414\n  Gross Profit                                     360,510\n  --------------------------------------------------------\n  Operating Income                                  79,975\n  --------------------------------------------------------\n  Income Before Tax                                 79,975\n  --------------------------------------------------------\n  Income Tax Expense                                19,087\n  Net Income                                        77,670\n\nBALANCE SHEET\n==============================================================================\n                                                   Current            Prior\n  ----------------------------------------------------------------------------\n  Cash and Equivalents                              86,810           73,387\n  Accounts Receivable                               67,729           52,253\n  Inventory                                         38,325           33,318\n  Total Current Assets                          217,628.85          172,351\n  ----------------------------------------------------------------------------\n  Property, Plant & Equipment                      357,025\n  Total Assets                                     818,042          462,675\n  ----------------------------------------------------------------------------\n\n  Accounts Payable                                  87,202\n  Short-Term Debt                                  130,803\n  Total Current Liabilities                        218,005          164,917\n  ----------------------------------------------------------------------------\n  Long-Term Debt                                    68,836           67,182\n  Total Liabilities                                406,977          389,609\n  ----------------------------------------------------------------------------\n  Retained Earnings                                250,536          113,618\n  Total Equity                                     411,065          138,245\n  Total Liabilities & Equity                       818,042          527,854\n\nCASH FLOW STATEMENT\n==========================================================\n  Net Income                                        77,670\n  Depreciation & Amortization                       65,756\n  Changes in Working Capital                        -3,912\n  Cash from Operations                             139,514\n  --------------------------------------------------------\n  Cash from Investing                             -142,545\n  --------------------------------------------------------\n  Debt Repayment                                     5,021\n  Cash from Financing                                9,661\n  --------------------------------------------------------\n  Net Change in Cash                                 7,794\n  --------------------------------------------------------\n  Ending Cash                                       86,810",
+  "question": "Are these financial statements internally consistent? Check all arithmetic totals, cross-statement linkages, and year-over-year continuity. Report any discrepancies found.",
+  "ground_truth": {
+    "has_error": true,
+    "error_type": "AE_COLUMN_SUM",
+    "error_category": "AE",
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "error_magnitude_pct": -5.0,
+    "original_value": 229083.0,
+    "modified_value": 217628.85,
+    "description": "Modified subtotal 'total_current_assets' on BS so it no longer rolls up to the column grand total."
+  },
+  "difficulty": "moderate",
+  "raw_statements": {
+    "company": "AMAZON COM INC",
+    "ticker": "AMZN",
+    "period": "FY2025",
+    "currency": "USD",
+    "unit": "millions",
+    "income_statement": {
+      "revenue": 716924.0,
+      "cost_of_goods_sold": 356414.0,
+      "operating_income": 79975.0,
+      "income_tax_expense": 19087.0,
+      "net_income": 77670.0,
+      "eps_basic": 7.29,
+      "eps_diluted": 7.17,
+      "diluted_shares": 10827000000.0,
+      "gross_profit": 360510.0,
+      "income_before_tax": 79975.0
+    },
+    "balance_sheet": {
+      "current_year": {
+        "total_assets": 818042.0,
+        "total_equity": 411065.0,
+        "total_liabilities_and_equity": 818042.0,
+        "cash_and_equivalents": 86810.0,
+        "accounts_receivable": 67729.0,
+        "inventory": 38325.0,
+        "total_current_assets": 217628.85,
+        "property_plant_equipment": 357025.0,
+        "goodwill": 23273.0,
+        "intangible_assets": 9197.0,
+        "total_current_liabilities": 218005.0,
+        "long_term_debt": 68836.0,
+        "retained_earnings": 250536.0,
+        "shares_outstanding": 10731000000.0,
+        "total_liabilities": 406977.0,
+        "accounts_payable": 87202.0,
+        "short_term_debt": 130803.0
+      },
+      "prior_year": {
+        "total_assets": 462675.0,
+        "total_equity": 138245.0,
+        "total_liabilities_and_equity": 527854.0,
+        "cash_and_equivalents": 73387.0,
+        "accounts_receivable": 52253.0,
+        "inventory": 33318.0,
+        "total_current_assets": 172351.0,
+        "goodwill": 20288.0,
+        "intangible_assets": 7687.0,
+        "total_current_liabilities": 164917.0,
+        "long_term_debt": 67182.0,
+        "retained_earnings": 113618.0,
+        "shares_outstanding": 10383000000.0,
+        "total_liabilities": 389609.0
+      }
+    },
+    "cash_flow_statement": {
+      "cash_from_operations": 139514.0,
+      "cash_from_investing": -142545.0,
+      "cash_from_financing": 9661.0,
+      "net_change_in_cash": 7794.0,
+      "depreciation_amortization": 65756.0,
+      "debt_issuance": 15673.0,
+      "debt_repayment": 5021.0,
+      "net_income": 77670.0,
+      "changes_in_working_capital": -3912.0,
+      "ending_cash": 86810.0
+    }
+  }
+}

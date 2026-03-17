@@ -1,0 +1,182 @@
+[
+  {
+    "instance_id": "microsoft_corporation__CL_NET_INCOME_TO_CFS_2.0pct_20",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Net Income",
+    "explanation": "Net Income on CFS (103,868.64) does not match Net Income on IS (101,832). The CFS figure is exactly 2% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "broadcom_ltd__MR_SIGNIFICANT_10.0pct_50",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Cash from Investing",
+    "explanation": "Cash from Investing (-606.60) was modified from the correct value (-674), causing CFO + CFI + CFF (6,551 - 606.60 + 2,230 = 8,174.40) to not equal the stated Net Change in Cash (8,107). The CFI figure was reduced by exactly 10% in absolute value."
+  },
+  {
+    "instance_id": "visa_inc__CL_ENDING_CASH_0.5pct_24",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Ending Cash",
+    "explanation": "Ending Cash on CFS (17,249.82) does not match Cash and Equivalents on Balance Sheet (17,164). The CFS figure is approximately 0.5% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "broadcom_ltd__YOY_OPENING_BALANCE_0.5pct_36",
+    "detected": true,
+    "error_location": "Balance Sheet: Total Current Assets (Prior)",
+    "explanation": "Prior year Total Current Assets is stated as 3,740.20, but should be 3,759 (as seen in the clean version). The value is approximately 0.5% lower, representing a year-over-year opening balance error."
+  },
+  {
+    "instance_id": "apple_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks pass within acceptable rounding tolerances. Income statement, balance sheet equation, cash flow components, and cross-statement linkages are consistent."
+  },
+  {
+    "instance_id": "eli_lilly_and_company__YOY_COMPUTED_CHANGE_0.5pct_42",
+    "detected": true,
+    "error_location": "Balance Sheet: Cash and Equivalents (Current)",
+    "explanation": "Cash and Equivalents on Balance Sheet (7,304.34) does not match Ending Cash on Cash Flow Statement (7,268). The BS figure is approximately 0.5% higher, indicating a year-over-year computed change error."
+  },
+  {
+    "instance_id": "oracle_corporation__CL_ENDING_CASH_20.0pct_29",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Ending Cash",
+    "explanation": "Ending Cash on CFS (12,943.20) does not match Cash and Equivalents on Balance Sheet (10,786). The CFS figure is approximately 20% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "broadcom_ltd__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "detected": true,
+    "error_location": "Income Statement: Net Income",
+    "explanation": "Net Income on IS (534.66) does not match Net Income on CFS (532). The IS figure is approximately 0.5% higher, indicating a cross-statement linkage error between Net Income and Retained Earnings."
+  },
+  {
+    "instance_id": "united_parcel_service,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All verifiable arithmetic checks pass. Balance sheet equation holds. Cross-statement Net Income linkage is consistent. Minor gaps in cash flow reconciliation are attributable to items not shown in the abbreviated statements."
+  },
+  {
+    "instance_id": "lowes_companies_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All verifiable arithmetic checks pass. Balance sheet equation holds (43,102 = 43,102). Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow operations components sum correctly."
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "detected": true,
+    "error_location": "Income Statement: Net Income",
+    "explanation": "Net Income on IS (2,011.50) does not match Net Income on CFS (2,235). The IS figure is exactly 10% lower, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "unitedhealth_group_incorporated__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Balance sheet equation holds for current period. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow operations components sum correctly."
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_ROW_SUM_0.5pct_0",
+    "detected": true,
+    "error_location": "Balance Sheet: Accounts Payable",
+    "explanation": "Accounts Payable (6,565.41) + Short-Term Debt (9,897.60) = 16,463.01, which does not equal Total Current Liabilities (16,496). The difference of 32.99 indicates an arithmetic error in the row sum."
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Revenue minus COGS equals Gross Profit. Balance sheet equation holds for current period. Cross-statement Net Income and Ending Cash linkages are consistent."
+  },
+  {
+    "instance_id": "coca_cola_co__MR_EXTREME_25.0pct_51",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Dividends Paid",
+    "explanation": "Dividends Paid (10,973.75) appears to be an extreme/inflated value. Given Cash from Financing of -8,140, dividends alone exceed the total financing outflow, which is arithmetically inconsistent without very large offsetting debt issuance. The value appears approximately 25% higher than expected."
+  },
+  {
+    "instance_id": "visa_inc__YOY_COMPUTED_CHANGE_5.0pct_45",
+    "detected": true,
+    "error_location": "Balance Sheet: Cash and Equivalents (Current)",
+    "explanation": "Cash and Equivalents on Balance Sheet (18,022.20) does not match Ending Cash on CFS (17,164). The BS figure is approximately 5% higher, indicating a year-over-year computed change error."
+  },
+  {
+    "instance_id": "lowes_companies_inc__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "detected": true,
+    "error_location": "Income Statement: Net Income",
+    "explanation": "Net Income on IS (6,922.22) does not match Net Income on CFS (6,957). The IS figure is approximately 0.5% lower, indicating a cross-statement linkage error between Net Income and Retained Earnings."
+  },
+  {
+    "instance_id": "amgen_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All verifiable arithmetic checks pass. Revenue minus COGS equals Gross Profit. Balance sheet equation holds. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow operations sum correctly."
+  },
+  {
+    "instance_id": "broadcom_ltd__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All verifiable arithmetic checks pass for the clean version. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow subtotals sum correctly. Income Statement arithmetic gaps are inherent to the abbreviated format."
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_10.0pct_22",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Net Income",
+    "explanation": "Net Income on CFS (16,286.60) does not match Net Income on IS (14,806). The CFS figure is approximately 10% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "pepsico,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Revenue minus COGS equals Gross Profit. Balance sheet equation holds within expected tolerance. Cross-statement Net Income and Ending Cash linkages are consistent."
+  },
+  {
+    "instance_id": "home_depot,_inc__CL_NET_INCOME_TO_CFS_20.0pct_23",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Net Income",
+    "explanation": "Net Income on CFS (17,767.20) does not match Net Income on IS (14,806). The CFS figure is approximately 20% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "walt_disney_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Balance sheet equation holds. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow operations sum correctly."
+  },
+  {
+    "instance_id": "eli_lilly_and_company__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Balance sheet equation holds. Cross-statement Net Income and Ending Cash linkages are consistent. This is the clean version with no injected errors."
+  },
+  {
+    "instance_id": "mcdonald's corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Balance sheet equation holds for current period. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow operations sum correctly."
+  },
+  {
+    "instance_id": "broadcom_ltd__AE_ROW_SUM_20.0pct_5",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Net Income",
+    "explanation": "Net Income on CFS (425.60) does not match Net Income on IS (532), and CFS components (425.60 + 4,737 + 1,282 = 6,444.60) do not sum to stated Cash from Operations (6,551). The CFS Net Income figure is exactly 20% lower than the IS value, creating an arithmetic row sum error."
+  },
+  {
+    "instance_id": "apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_21",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Net Income",
+    "explanation": "Net Income on CFS (106,409.50) does not match Net Income on IS (112,010). The CFS figure is exactly 5% lower, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "texas_instruments_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Revenue minus COGS equals Gross Profit. Balance sheet equation holds. Cross-statement Net Income and Ending Cash linkages are consistent. Cash flow subtotals sum correctly."
+  },
+  {
+    "instance_id": "walmart_inc__CL_ENDING_CASH_10.0pct_28",
+    "detected": true,
+    "error_location": "Cash Flow Statement: Ending Cash",
+    "explanation": "Ending Cash on CFS (11,799.70) does not match Cash and Equivalents on Balance Sheet (10,727). The CFS figure is exactly 10% higher, indicating a cross-statement linkage error."
+  },
+  {
+    "instance_id": "alphabet_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All primary arithmetic checks pass. Revenue minus COGS equals Gross Profit. Balance sheet equation holds. Cross-statement Net Income and Ending Cash linkages are consistent."
+  }
+]

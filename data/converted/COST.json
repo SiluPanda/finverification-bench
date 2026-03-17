@@ -1,0 +1,73 @@
+{
+  "company": "COSTCO WHOLESALE CORP /NEW",
+  "ticker": "COST",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 275235.0,
+    "cost_of_goods_sold": 239886.0,
+    "sga_expense": 24966.0,
+    "operating_income": 10383.0,
+    "interest_expense": 154.0,
+    "income_tax_expense": 2719.0,
+    "net_income": 8099.0,
+    "eps_basic": 18.24,
+    "eps_diluted": 18.21,
+    "diluted_shares": 444803000.0,
+    "gross_profit": 35349.0,
+    "operating_expenses": -24966.0,
+    "income_before_tax": 10537.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 77099.0,
+      "total_liabilities": 47935.0,
+      "total_equity": 29164.0,
+      "total_liabilities_and_equity": 77099.0,
+      "cash_and_equivalents": 14161.0,
+      "short_term_investments": 1123.0,
+      "inventory": 18116.0,
+      "total_current_assets": 38380.0,
+      "property_plant_equipment": 31909.0,
+      "goodwill": 994.0,
+      "total_current_liabilities": 37108.0,
+      "long_term_debt": 5713.0,
+      "retained_earnings": 22650.0,
+      "shares_outstanding": 443237000.0,
+      "accounts_payable": 14843.2,
+      "short_term_debt": 22264.8
+    },
+    "prior_year": {
+      "total_assets": 64166.0,
+      "total_liabilities": 43936.0,
+      "total_equity": 25058.0,
+      "total_liabilities_and_equity": 68994.0,
+      "cash_and_equivalents": 13700.0,
+      "short_term_investments": 1534.0,
+      "inventory": 16651.0,
+      "total_current_assets": 35879.0,
+      "property_plant_equipment": 24646.0,
+      "goodwill": 993.0,
+      "total_current_liabilities": 33583.0,
+      "long_term_debt": 5377.0,
+      "retained_earnings": 19521.0,
+      "shares_outstanding": 442793000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 13335.0,
+    "cash_from_investing": -5311.0,
+    "cash_from_financing": -3775.0,
+    "net_change_in_cash": 4255.0,
+    "depreciation_amortization": 2426.0,
+    "capital_expenditures": 5498.0,
+    "dividends_paid": 2183.0,
+    "share_repurchases": 903.0,
+    "debt_issuance": 0.0,
+    "debt_repayment": 103.0,
+    "net_income": 8099.0,
+    "changes_in_working_capital": 2810.0,
+    "ending_cash": 14161.0
+  }
+}

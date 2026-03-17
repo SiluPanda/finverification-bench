@@ -1,0 +1,700 @@
+{
+  "metadata": {
+    "cik": 1649338,
+    "entity_name": "Broadcom Ltd",
+    "total_line_items": 38,
+    "fiscal_years": [
+      "FY2016",
+      "FY2017"
+    ]
+  },
+  "balance_sheet": {
+    "line_items": {
+      "Total Assets": {
+        "xbrl_concept": "Assets",
+        "periods": {
+          "FY2016": {
+            "value": 10515000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 54418000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Total Liabilities": {
+        "xbrl_concept": "Liabilities",
+        "periods": {
+          "FY2016": {
+            "value": 5801000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 31232000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Total Stockholders Equity": {
+        "xbrl_concept": "StockholdersEquity",
+        "periods": {
+          "FY2016": {
+            "value": 4714000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 20285000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Total Liabilities and Equity": {
+        "xbrl_concept": "LiabilitiesAndStockholdersEquity",
+        "periods": {
+          "FY2016": {
+            "value": 10515000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 54418000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Cash and Cash Equivalents": {
+        "xbrl_concept": "CashAndCashEquivalentsAtCarryingValue",
+        "periods": {
+          "FY2016": {
+            "value": 985000000,
+            "end": "2013-11-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 11204000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Accounts Receivable": {
+        "xbrl_concept": "AccountsReceivableNetCurrent",
+        "periods": {
+          "FY2016": {
+            "value": 1019000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 2448000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Inventory": {
+        "xbrl_concept": "InventoryNet",
+        "periods": {
+          "FY2016": {
+            "value": 524000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 1447000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Total Current Assets": {
+        "xbrl_concept": "AssetsCurrent",
+        "periods": {
+          "FY2016": {
+            "value": 3759000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 15823000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Property, Plant and Equipment (net)": {
+        "xbrl_concept": "PropertyPlantAndEquipmentNet",
+        "periods": {
+          "FY2016": {
+            "value": 1460000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 2599000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Goodwill": {
+        "xbrl_concept": "Goodwill",
+        "periods": {
+          "FY2016": {
+            "value": 1596000000,
+            "end": "2014-11-02",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 24706000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Intangible Assets (net)": {
+        "xbrl_concept": "IntangibleAssetsNetExcludingGoodwill",
+        "periods": {
+          "FY2016": {
+            "value": 3277000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 10832000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Total Current Liabilities": {
+        "xbrl_concept": "LiabilitiesCurrent",
+        "periods": {
+          "FY2016": {
+            "value": 1119000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 2529000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Long-Term Debt": {
+        "xbrl_concept": "LongTermDebt",
+        "periods": {
+          "FY2017": {
+            "value": 17548000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Long-Term Debt (non-current)": {
+        "xbrl_concept": "LongTermDebtNoncurrent",
+        "periods": {
+          "FY2016": {
+            "value": 3826000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 17431000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Retained Earnings (Accumulated Deficit)": {
+        "xbrl_concept": "RetainedEarningsAccumulatedDeficit",
+        "periods": {
+          "FY2016": {
+            "value": 2240000000,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": -129000000,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Common Shares Outstanding": {
+        "xbrl_concept": "CommonStockSharesOutstanding",
+        "periods": {
+          "FY2016": {
+            "value": 276259120,
+            "end": "2015-11-01",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 408732155,
+            "end": "2017-10-29",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      }
+    }
+  },
+  "income_statement": {
+    "line_items": {
+      "Net Sales Revenue": {
+        "xbrl_concept": "SalesRevenueNet",
+        "periods": {
+          "FY2016": {
+            "value": 1840000000,
+            "end": "2015-11-01",
+            "start": "2015-08-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 4844000000,
+            "end": "2017-10-29",
+            "start": "2017-07-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Cost of Goods Sold": {
+        "xbrl_concept": "CostOfGoodsSold",
+        "periods": {
+          "FY2016": {
+            "value": 2392000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 9127000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Gross Profit": {
+        "xbrl_concept": "GrossProfit",
+        "periods": {
+          "FY2016": {
+            "value": 997000000,
+            "end": "2015-11-01",
+            "start": "2015-08-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 2383000000,
+            "end": "2017-10-29",
+            "start": "2017-07-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Operating Expenses": {
+        "xbrl_concept": "OperatingExpenses",
+        "periods": {
+          "FY2016": {
+            "value": 1439000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 6126000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "SG&A Expense": {
+        "xbrl_concept": "SellingGeneralAndAdministrativeExpense",
+        "periods": {
+          "FY2016": {
+            "value": 407000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 787000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "R&D Expense": {
+        "xbrl_concept": "ResearchAndDevelopmentExpense",
+        "periods": {
+          "FY2016": {
+            "value": 695000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 3292000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Operating Income (Loss)": {
+        "xbrl_concept": "OperatingIncomeLoss",
+        "periods": {
+          "FY2016": {
+            "value": 514000000,
+            "end": "2015-11-01",
+            "start": "2015-08-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 755000000,
+            "end": "2017-10-29",
+            "start": "2017-07-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Interest Expense": {
+        "xbrl_concept": "InterestExpense",
+        "periods": {
+          "FY2016": {
+            "value": 110000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 454000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Income Tax Expense": {
+        "xbrl_concept": "IncomeTaxExpenseBenefit",
+        "periods": {
+          "FY2016": {
+            "value": 33000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 35000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Net Income (Loss)": {
+        "xbrl_concept": "NetIncomeLoss",
+        "periods": {
+          "FY2016": {
+            "value": 429000000,
+            "end": "2015-11-01",
+            "start": "2015-08-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 532000000,
+            "end": "2017-10-29",
+            "start": "2017-07-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Earnings Per Share (Basic)": {
+        "xbrl_concept": "EarningsPerShareBasic",
+        "periods": {
+          "FY2016": {
+            "value": 1.49,
+            "end": "2015-11-01",
+            "start": "2015-08-03",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 1.25,
+            "end": "2017-10-29",
+            "start": "2017-07-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Earnings Per Share (Diluted)": {
+        "xbrl_concept": "EarningsPerShareDiluted",
+        "periods": {
+          "FY2016": {
+            "value": 0.99,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 4.02,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Weighted Avg Diluted Shares Outstanding": {
+        "xbrl_concept": "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "periods": {
+          "FY2016": {
+            "value": 267000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 421000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      }
+    }
+  },
+  "cash_flow_statement": {
+    "line_items": {
+      "Cash from Operating Activities": {
+        "xbrl_concept": "NetCashProvidedByUsedInOperatingActivities",
+        "periods": {
+          "FY2016": {
+            "value": 1175000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 6551000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Cash from Investing Activities": {
+        "xbrl_concept": "NetCashProvidedByUsedInInvestingActivities",
+        "periods": {
+          "FY2016": {
+            "value": -5885000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": -674000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Cash from Financing Activities": {
+        "xbrl_concept": "NetCashProvidedByUsedInFinancingActivities",
+        "periods": {
+          "FY2016": {
+            "value": 5329000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 2230000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Net Change in Cash (legacy)": {
+        "xbrl_concept": "CashAndCashEquivalentsPeriodIncreaseDecrease",
+        "periods": {
+          "FY2016": {
+            "value": 619000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 8107000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Depreciation & Amortization": {
+        "xbrl_concept": "DepreciationDepletionAndAmortization",
+        "periods": {
+          "FY2016": {
+            "value": 625000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 4737000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Capital Expenditures": {
+        "xbrl_concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "periods": {
+          "FY2016": {
+            "value": 409000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 1069000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Dividends Paid": {
+        "xbrl_concept": "PaymentsOfDividends",
+        "periods": {
+          "FY2016": {
+            "value": 284000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 1745000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      },
+      "Share Repurchases": {
+        "xbrl_concept": "PaymentsForRepurchaseOfCommonStock",
+        "periods": {
+          "FY2016": {
+            "value": 0,
+            "end": "2016-10-30",
+            "start": "2015-11-02",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          }
+        }
+      },
+      "Proceeds from Debt Issuance": {
+        "xbrl_concept": "ProceedsFromIssuanceOfLongTermDebt",
+        "periods": {
+          "FY2016": {
+            "value": 4600000000,
+            "end": "2014-11-02",
+            "start": "2013-11-04",
+            "filed": "2016-12-23",
+            "form": "10-K"
+          },
+          "FY2017": {
+            "value": 17426000000,
+            "end": "2017-10-29",
+            "start": "2016-10-31",
+            "filed": "2017-12-21",
+            "form": "10-K"
+          }
+        }
+      }
+    }
+  }
+}

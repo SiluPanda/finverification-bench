@@ -1,0 +1,596 @@
+{
+  "model": "MiniMax M2.5",
+  "model_id": "MiniMax-M2.5",
+  "strategy": "zero_shot",
+  "note": "Aggregated from best partial run (90/108 instances). Pattern was 100% FPR across 5 independent runs totaling 290 evaluations.",
+  "metrics": {
+    "overall": {
+      "accuracy": 58.9,
+      "precision": 58.9,
+      "recall": 100.0,
+      "f1": 74.1,
+      "fpr": 100.0,
+      "tp": 53,
+      "fp": 37,
+      "tn": 0,
+      "fn": 0,
+      "total": 90
+    },
+    "by_category": {
+      "AE": {
+        "detection_rate": 100.0
+      },
+      "CL": {
+        "detection_rate": 100.0
+      },
+      "YOY": {
+        "detection_rate": 100.0
+      },
+      "MR": {
+        "detection_rate": 100.0
+      },
+      "clean": {
+        "detection_rate": 0.0,
+        "fp": 37,
+        "tn": 0,
+        "note": "All clean instances flagged as erroneous"
+      }
+    },
+    "by_magnitude": {
+      "<1%": {
+        "detection_rate": 100.0
+      },
+      "1-5%": {
+        "detection_rate": 100.0
+      },
+      "5-20%": {
+        "detection_rate": 100.0
+      },
+      ">20%": {
+        "detection_rate": 100.0
+      }
+    }
+  },
+  "results": [
+    {
+      "instance_id": "error_0",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_1",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_2",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_3",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_4",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_5",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_6",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_7",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_8",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_9",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_10",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_11",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_12",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_13",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_14",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_15",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_16",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_17",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_18",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_19",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_20",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_21",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_22",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_23",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_24",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_25",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_26",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_27",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_28",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_29",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_30",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_31",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_32",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_33",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_34",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_35",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_36",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_37",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_38",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_39",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_40",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_41",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_42",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_43",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_44",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_45",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_46",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_47",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_48",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_49",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_50",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_51",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "error_52",
+      "has_error": true,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_0",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_1",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_2",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_3",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_4",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_5",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_6",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_7",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_8",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_9",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_10",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_11",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_12",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_13",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_14",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_15",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_16",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_17",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_18",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_19",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_20",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_21",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_22",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_23",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_24",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_25",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_26",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_27",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_28",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_29",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_30",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_31",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_32",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_33",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_34",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_35",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    },
+    {
+      "instance_id": "clean_36",
+      "has_error": false,
+      "detected": true,
+      "parse_method": "json_inline"
+    }
+  ]
+}

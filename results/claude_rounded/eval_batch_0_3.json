@@ -1,0 +1,242 @@
+[
+  {
+    "instance_id": "apple_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_21",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (112,010) != Cash Flow Statement Net Income (106,410)"
+  },
+  {
+    "instance_id": "abbott_laboratories__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_ROW_SUM_0.5pct_0",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_liabilities",
+    "explanation": "Accounts Payable (6,565.0) + Short-Term Debt (9,897.6) = 16,462.6, but Total Current Liabilities stated as 16,496"
+  },
+  {
+    "instance_id": "abbott_laboratories__AE_COLUMN_SUM_10.0pct_10",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets on Balance Sheet (current year) is 28,596 but should be 25,996 (difference: 2,600)"
+  },
+  {
+    "instance_id": "abbott_laboratories__CL_ENDING_CASH_10.0pct_28",
+    "detected": true,
+    "error_location": "cross_statement.ending_cash_CFS_vs_BS",
+    "explanation": "CFS Ending Cash (7,670) != BS Cash and Equivalents (8,522)"
+  },
+  {
+    "instance_id": "adobe_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "adobe_inc__AE_ROW_SUM_0.5pct_0",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities on Balance Sheet (current year) is 17,962 but should be 17,873 (difference: 89)"
+  },
+  {
+    "instance_id": "adobe_inc__YOY_OPENING_BALANCE_2.0pct_38",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.total_assets",
+    "explanation": "Total Assets on Balance Sheet (prior year) is 29,183 but should be 29,779 (difference: -596)"
+  },
+  {
+    "instance_id": "adobe_inc__MR_MINOR_0.5pct_48",
+    "detected": true,
+    "error_location": "cash_flow_statement.depreciation_and_amortization",
+    "explanation": "Depreciation & Amortization on Cash Flow Statement is 814 but should be 818 (difference: -4)"
+  },
+  {
+    "instance_id": "amgen_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "amazon_com_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "amazon_com_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities on Balance Sheet (current year) is 488,372 but should be 406,977 (difference: 81,395)"
+  },
+  {
+    "instance_id": "broadcom_ltd__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "broadcom_ltd__AE_ROW_SUM_20.0pct_5",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (532) != Cash Flow Statement Net Income (426)"
+  },
+  {
+    "instance_id": "broadcom_ltd__CL_NET_INCOME_TO_RE_0.5pct_12",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (535) != Cash Flow Statement Net Income (532)"
+  },
+  {
+    "instance_id": "broadcom_ltd__YOY_OPENING_BALANCE_0.5pct_36",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.total_current_assets",
+    "explanation": "Total Current Assets on Balance Sheet (prior year) is 3,740 but should be 3,759 (difference: -19)"
+  },
+  {
+    "instance_id": "broadcom_ltd__MR_SIGNIFICANT_10.0pct_50",
+    "detected": true,
+    "error_location": "cash_flow_statement.cash_from_investing",
+    "explanation": "Cash from Investing on Cash Flow Statement is -607 but should be -674 (difference: 67)"
+  },
+  {
+    "instance_id": "boeing_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "boeing_co__AE_ROW_SUM_1.0pct_1",
+    "detected": true,
+    "error_location": "income_statement.gross_profit",
+    "explanation": "Revenue (90,358) - COGS (85,174) = 5,184, but Gross Profit stated as 4,289"
+  },
+  {
+    "instance_id": "boeing_co__AE_COLUMN_SUM_20.0pct_11",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets on Balance Sheet (current year) is 154,151 but should be 128,459 (difference: 25,692)"
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_10.0pct_16",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (2,012) != Cash Flow Statement Net Income (2,235)"
+  },
+  {
+    "instance_id": "boeing_co__CL_NET_INCOME_TO_RE_20.0pct_17",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (2,682) != Cash Flow Statement Net Income (2,235)"
+  },
+  {
+    "instance_id": "boeing_co__YOY_OPENING_BALANCE_20.0pct_41",
+    "detected": true,
+    "error_location": "balance_sheet.prior_year.property,_plant_and_equipment",
+    "explanation": "Property, Plant & Equipment on Balance Sheet (prior year) is 8,529 but should be 10,661 (difference: -2,132)"
+  },
+  {
+    "instance_id": "bank_of_america_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "bank_of_america_corporation__AE_COLUMN_SUM_1.0pct_7",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities on Balance Sheet (current year) is 3,139,580 but should be 3,108,495 (difference: 31,085)"
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "berkshire_hathaway_inc__AE_COLUMN_SUM_20.0pct_11",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_liabilities",
+    "explanation": "Total Liabilities on Balance Sheet (current year) is 602,968 but should be 502,473 (difference: 100,495)"
+  },
+  {
+    "instance_id": "comcast_corporation__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "comcast_corporation__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (20,398) != Cash Flow Statement Net Income (19,998)"
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "costco_wholesale_corp_/new__CL_NET_INCOME_TO_CFS_0.5pct_18",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (8,099) != Cash Flow Statement Net Income (8,059)"
+  },
+  {
+    "instance_id": "salesforce,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "cisco_systems,_inc__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "cisco_systems,_inc__YOY_COMPUTED_CHANGE_20.0pct_47",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets on Balance Sheet (current year) is 27,989 but should be 34,986 (difference: -6,997)"
+  },
+  {
+    "instance_id": "chevron_corp__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "chevron_corp__AE_ROW_SUM_20.0pct_5",
+    "detected": true,
+    "error_location": "income_statement.gross_profit",
+    "explanation": "Revenue (226,837) - COGS (108,214) = 118,623, but Gross Profit stated as 80,817"
+  },
+  {
+    "instance_id": "chevron_corp__CL_NET_INCOME_TO_RE_2.0pct_14",
+    "detected": true,
+    "error_location": "cross_statement.net_income_IS_vs_CFS",
+    "explanation": "Income Statement Net Income (12,053) != Cash Flow Statement Net Income (12,299)"
+  },
+  {
+    "instance_id": "walt_disney_co__clean",
+    "detected": false,
+    "error_location": null,
+    "explanation": "All arithmetic checks passed. No errors detected."
+  },
+  {
+    "instance_id": "walt_disney_co__AE_COLUMN_SUM_0.5pct_6",
+    "detected": true,
+    "error_location": "balance_sheet.current_year.total_current_assets",
+    "explanation": "Total Current Assets on Balance Sheet (current year) is 24,388 but should be 24,267 (difference: 121)"
+  }
+]

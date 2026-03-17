@@ -1,0 +1,71 @@
+{
+  "company": "BOEING CO",
+  "ticker": "BA",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 89463.0,
+    "cost_of_goods_sold": 85174.0,
+    "gross_profit": 4289.0,
+    "rd_expense": 3615.0,
+    "operating_income": 4281.0,
+    "income_tax_expense": 397.0,
+    "net_income": 2235.0,
+    "eps_basic": 2.49,
+    "eps_diluted": 2.48,
+    "diluted_shares": 762300000.0,
+    "operating_expenses": -3615.0,
+    "income_before_tax": 4281.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 168235.0,
+      "total_liabilities": 162778.0,
+      "total_equity": 5454.0,
+      "total_liabilities_and_equity": 168235.0,
+      "cash_and_equivalents": 10921.0,
+      "short_term_investments": 18479.0,
+      "accounts_receivable": 2921.0,
+      "total_current_assets": 128459.0,
+      "property_plant_equipment": 15361.0,
+      "goodwill": 17275.0,
+      "intangible_assets": 1567.0,
+      "total_current_liabilities": 108115.0,
+      "long_term_debt": 53848.0,
+      "retained_earnings": 17252.0,
+      "shares_outstanding": 1012261159.0,
+      "accounts_payable": 43246.0,
+      "short_term_debt": 64869.0
+    },
+    "prior_year": {
+      "total_assets": 137012.0,
+      "total_liabilities": 154240.0,
+      "total_equity": -17233.0,
+      "total_liabilities_and_equity": 137012.0,
+      "cash_and_equivalents": 14614.0,
+      "short_term_investments": 3274.0,
+      "accounts_receivable": 2649.0,
+      "total_current_assets": 109275.0,
+      "property_plant_equipment": 10661.0,
+      "goodwill": 8057.0,
+      "intangible_assets": 2094.0,
+      "total_current_liabilities": 95827.0,
+      "long_term_debt": 52055.0,
+      "retained_earnings": 27251.0,
+      "shares_outstanding": 1012261159.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 1065.0,
+    "cash_from_investing": 499.0,
+    "cash_from_financing": -3763.0,
+    "net_change_in_cash": -2159.0,
+    "depreciation_amortization": 1953.0,
+    "capital_expenditures": 2942.0,
+    "dividends_paid": 331.0,
+    "net_income": 2235.0,
+    "changes_in_working_capital": -3123.0,
+    "ending_cash": 10921.0
+  }
+}

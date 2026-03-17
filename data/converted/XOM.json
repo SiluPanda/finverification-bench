@@ -1,0 +1,63 @@
+{
+  "company": "Exxon Mobil Corporation",
+  "ticker": "XOM",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 332238.0,
+    "sga_expense": 11128.0,
+    "rd_expense": 1200.0,
+    "interest_expense": 603.0,
+    "income_tax_expense": 11504.0,
+    "net_income": 28844.0,
+    "eps_basic": 6.7,
+    "eps_diluted": 6.7,
+    "operating_expenses": -12328.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 448980.0,
+      "total_liabilities": 182354.0,
+      "total_equity": 259386.0,
+      "total_liabilities_and_equity": 448980.0,
+      "cash_and_equivalents": 10681.0,
+      "accounts_receivable": 35744.0,
+      "total_current_assets": 83382.0,
+      "property_plant_equipment": 299373.0,
+      "total_current_liabilities": 72330.0,
+      "retained_earnings": 482494.0,
+      "shares_outstanding": 4179000000.0,
+      "accounts_payable": 28932.0,
+      "short_term_debt": 43398.0
+    },
+    "prior_year": {
+      "total_assets": 376317.0,
+      "total_liabilities": 163779.0,
+      "total_equity": 204802.0,
+      "total_liabilities_and_equity": 376317.0,
+      "cash_and_equivalents": 31539.0,
+      "accounts_receivable": 30296.0,
+      "total_current_assets": 96609.0,
+      "property_plant_equipment": 204692.0,
+      "total_current_liabilities": 65316.0,
+      "retained_earnings": 453927.0,
+      "shares_outstanding": 4239000000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 51970.0,
+    "cash_from_investing": -25927.0,
+    "cash_from_financing": -39081.0,
+    "net_change_in_cash": -12506.0,
+    "depreciation_amortization": 25993.0,
+    "capital_expenditures": 28358.0,
+    "dividends_paid": 17231.0,
+    "share_repurchases": 20273.0,
+    "debt_issuance": 2311.0,
+    "debt_repayment": 1108.0,
+    "net_income": 28844.0,
+    "changes_in_working_capital": -2867.0,
+    "ending_cash": 10681.0
+  }
+}

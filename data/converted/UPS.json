@@ -1,0 +1,66 @@
+{
+  "company": "United Parcel Service, Inc.",
+  "ticker": "UPS",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 88661.0,
+    "operating_income": 7867.0,
+    "income_tax_expense": 1592.0,
+    "net_income": 5572.0,
+    "eps_basic": 6.56,
+    "eps_diluted": 6.56,
+    "diluted_shares": 850000000.0,
+    "income_before_tax": 7867.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 73090.0,
+      "total_equity": 16227.0,
+      "total_liabilities_and_equity": 73090.0,
+      "cash_and_equivalents": 5887.0,
+      "accounts_receivable": 11209.0,
+      "inventory": 739.0,
+      "total_current_assets": 19045.0,
+      "goodwill": 5837.0,
+      "intangible_assets": 4021.0,
+      "total_current_liabilities": 15620.0,
+      "long_term_debt": 23585.0,
+      "retained_earnings": 20151.0,
+      "total_liabilities": 56863.0,
+      "accounts_payable": 6248.0,
+      "short_term_debt": 9372.0
+    },
+    "prior_year": {
+      "total_assets": 70857.0,
+      "total_equity": 17306.0,
+      "total_liabilities_and_equity": 70857.0,
+      "cash_and_equivalents": 3206.0,
+      "accounts_receivable": 11216.0,
+      "inventory": 935.0,
+      "total_current_assets": 19413.0,
+      "goodwill": 4300.0,
+      "intangible_assets": 3305.0,
+      "total_current_liabilities": 17676.0,
+      "long_term_debt": 21030.0,
+      "retained_earnings": 21055.0,
+      "total_liabilities": 53551.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 8450.0,
+    "cash_from_investing": -4735.0,
+    "cash_from_financing": -4141.0,
+    "net_change_in_cash": -225.0,
+    "depreciation_amortization": 3746.0,
+    "capital_expenditures": 3685.0,
+    "dividends_paid": 5398.0,
+    "share_repurchases": 1000.0,
+    "debt_issuance": 4153.0,
+    "debt_repayment": 2069.0,
+    "net_income": 5572.0,
+    "changes_in_working_capital": -868.0,
+    "ending_cash": 5887.0
+  }
+}

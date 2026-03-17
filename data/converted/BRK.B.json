@@ -1,0 +1,44 @@
+{
+  "company": "BERKSHIRE HATHAWAY INC",
+  "ticker": "BRK.B",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 371444.0,
+    "interest_expense": 5069.0,
+    "income_tax_expense": 15199.0,
+    "net_income": 66968.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 1222176.0,
+      "total_liabilities": 502473.0,
+      "total_equity": 717419.0,
+      "total_liabilities_and_equity": 1222176.0,
+      "inventory": 24424.0,
+      "goodwill": 83074.0,
+      "retained_earnings": 763186.0
+    },
+    "prior_year": {
+      "total_assets": 1069978.0,
+      "total_liabilities": 499208.0,
+      "total_equity": 561273.0,
+      "total_liabilities_and_equity": 1069978.0,
+      "inventory": 25856.0,
+      "goodwill": 78119.0,
+      "retained_earnings": 607350.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 45969.0,
+    "cash_from_investing": -44487.0,
+    "cash_from_financing": 2233.0,
+    "net_change_in_cash": 4193.0,
+    "depreciation_amortization": 13476.0,
+    "capital_expenditures": 20927.0,
+    "share_repurchases": 2918.0,
+    "net_income": 66968.0,
+    "changes_in_working_capital": -34475.0
+  }
+}

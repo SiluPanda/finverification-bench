@@ -1,0 +1,68 @@
+{
+  "company": "NIKE, Inc.",
+  "ticker": "NKE",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 46309.0,
+    "cost_of_goods_sold": 26519.0,
+    "gross_profit": 19790.0,
+    "sga_expense": 16088.0,
+    "income_tax_expense": 666.0,
+    "net_income": 3219.0,
+    "eps_basic": 2.17,
+    "eps_diluted": 2.16,
+    "diluted_shares": 1487600000.0,
+    "operating_expenses": -16088.0,
+    "operating_income": 3702.0,
+    "income_before_tax": 3702.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 36579.0,
+      "total_equity": 13213.0,
+      "total_liabilities_and_equity": 36579.0,
+      "cash_and_equivalents": 7464.0,
+      "accounts_receivable": 4717.0,
+      "total_current_assets": 23362.0,
+      "property_plant_equipment": 4828.0,
+      "goodwill": 240.0,
+      "intangible_assets": 259.0,
+      "total_current_liabilities": 10566.0,
+      "long_term_debt": 7961.0,
+      "retained_earnings": -727.0,
+      "total_liabilities": 23366.0,
+      "accounts_payable": 4226.400000000001,
+      "short_term_debt": 6339.599999999999
+    },
+    "prior_year": {
+      "total_assets": 37531.0,
+      "total_equity": 12767.0,
+      "total_liabilities_and_equity": 37531.0,
+      "cash_and_equivalents": 7441.0,
+      "accounts_receivable": 4131.0,
+      "total_current_assets": 25202.0,
+      "property_plant_equipment": 5081.0,
+      "goodwill": 281.0,
+      "intangible_assets": 274.0,
+      "total_current_liabilities": 9256.0,
+      "long_term_debt": 8927.0,
+      "retained_earnings": 1358.0,
+      "total_liabilities": 24764.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 3698.0,
+    "cash_from_investing": -275.0,
+    "cash_from_financing": -5820.0,
+    "net_change_in_cash": -2396.0,
+    "depreciation_amortization": 775.0,
+    "capital_expenditures": 430.0,
+    "dividends_paid": 2300.0,
+    "share_repurchases": 2985.0,
+    "net_income": 3219.0,
+    "changes_in_working_capital": -296.0,
+    "ending_cash": 7464.0
+  }
+}

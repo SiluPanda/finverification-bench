@@ -1,0 +1,67 @@
+{
+  "company": "McDONALD\u2019S\u00a0CORPORATION",
+  "ticker": "MCD",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 26885.0,
+    "sga_expense": 3039.0,
+    "operating_income": 12393.0,
+    "interest_expense": 1582.0,
+    "income_tax_expense": 2334.0,
+    "net_income": 8563.0,
+    "eps_basic": 12.0,
+    "eps_diluted": 11.95,
+    "diluted_shares": 716.4,
+    "operating_expenses": -3039.0,
+    "income_before_tax": 13975.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 59515.0,
+      "total_equity": -1791.0,
+      "total_liabilities_and_equity": 59515.0,
+      "cash_and_equivalents": 774.0,
+      "inventory": 61.0,
+      "total_current_assets": 4163.0,
+      "property_plant_equipment": 28241.0,
+      "goodwill": 3354.0,
+      "total_current_liabilities": 4361.0,
+      "long_term_debt": 39973.0,
+      "retained_earnings": 70282.0,
+      "total_liabilities": 61306.0,
+      "accounts_payable": 1744.4,
+      "short_term_debt": 2616.6
+    },
+    "prior_year": {
+      "total_assets": 50436.0,
+      "total_equity": -4601.0,
+      "total_liabilities_and_equity": 56147.0,
+      "cash_and_equivalents": 4579.0,
+      "inventory": 53.0,
+      "total_current_assets": 7986.0,
+      "property_plant_equipment": 24908.0,
+      "goodwill": 3040.0,
+      "total_current_liabilities": 6859.0,
+      "long_term_debt": 39345.0,
+      "retained_earnings": 63480.0,
+      "total_liabilities": 60748.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 10551.0,
+    "cash_from_investing": -3822.0,
+    "cash_from_financing": -7125.0,
+    "net_change_in_cash": -311.0,
+    "depreciation_amortization": 2199.0,
+    "capital_expenditures": 3365.0,
+    "dividends_paid": 5115.0,
+    "share_repurchases": 2056.0,
+    "debt_issuance": 4724.0,
+    "debt_repayment": 4802.0,
+    "net_income": 8563.0,
+    "changes_in_working_capital": -211.0,
+    "ending_cash": 774.0
+  }
+}

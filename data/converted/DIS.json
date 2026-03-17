@@ -1,0 +1,71 @@
+{
+  "company": "Walt Disney Co",
+  "ticker": "DIS",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 94425.0,
+    "sga_expense": 16501.0,
+    "operating_income": 17551.0,
+    "interest_expense": -1812.0,
+    "income_tax_expense": -1428.0,
+    "net_income": 12404.0,
+    "eps_basic": 6.88,
+    "eps_diluted": 6.85,
+    "diluted_shares": 1811000000.0,
+    "operating_expenses": -16501.0,
+    "income_before_tax": 15739.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 197514.0,
+      "total_equity": 109869.0,
+      "total_liabilities_and_equity": 197514.0,
+      "cash_and_equivalents": 5695.0,
+      "inventory": 2134.0,
+      "total_current_assets": 24267.0,
+      "property_plant_equipment": 41255.0,
+      "goodwill": 73294.0,
+      "intangible_assets": 9272.0,
+      "total_current_liabilities": 34162.0,
+      "long_term_debt": 42026.0,
+      "retained_earnings": 60410.0,
+      "shares_outstanding": 1900000000.0,
+      "total_liabilities": 87645.0,
+      "accounts_payable": 13664.800000000001,
+      "short_term_debt": 20497.199999999997
+    },
+    "prior_year": {
+      "total_assets": 205579.0,
+      "total_equity": 99277.0,
+      "total_liabilities_and_equity": 205579.0,
+      "cash_and_equivalents": 11615.0,
+      "inventory": 1963.0,
+      "total_current_assets": 32763.0,
+      "property_plant_equipment": 34941.0,
+      "goodwill": 77897.0,
+      "intangible_assets": 13061.0,
+      "total_current_liabilities": 31139.0,
+      "long_term_debt": 46431.0,
+      "retained_earnings": 46093.0,
+      "shares_outstanding": 1800000000.0,
+      "total_liabilities": 106302.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 18101.0,
+    "cash_from_investing": -8043.0,
+    "cash_from_financing": -10366.0,
+    "net_change_in_cash": -303.0,
+    "depreciation_amortization": 5326.0,
+    "capital_expenditures": 8024.0,
+    "dividends_paid": 1803.0,
+    "share_repurchases": 3500.0,
+    "debt_issuance": 1057.0,
+    "debt_repayment": 3735.0,
+    "net_income": 12404.0,
+    "changes_in_working_capital": 371.0,
+    "ending_cash": 5695.0
+  }
+}

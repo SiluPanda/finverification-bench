@@ -1,0 +1,62 @@
+{
+  "company": "Chevron Corp",
+  "ticker": "CVX",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 189031.0,
+    "cost_of_goods_sold": 108214.0,
+    "sga_expense": 5126.0,
+    "rd_expense": 427.0,
+    "income_tax_expense": 7258.0,
+    "net_income": 12299.0,
+    "eps_basic": 6.65,
+    "eps_diluted": 6.63,
+    "diluted_shares": 1856000000.0,
+    "gross_profit": 80817.0,
+    "operating_expenses": -5553.0,
+    "operating_income": 75264.0,
+    "income_before_tax": 75264.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 324012.0,
+      "total_liabilities": 131836.0,
+      "total_equity": 186450.0,
+      "total_liabilities_and_equity": 324012.0,
+      "accounts_receivable": 15986.0,
+      "inventory": 9711.0,
+      "total_current_assets": 38552.0,
+      "goodwill": 4568.0,
+      "total_current_liabilities": 33387.0,
+      "retained_earnings": 205365.0,
+      "accounts_payable": 13354.800000000001,
+      "short_term_debt": 20032.199999999997
+    },
+    "prior_year": {
+      "total_assets": 261632.0,
+      "total_liabilities": 99703.0,
+      "total_equity": 160957.0,
+      "total_liabilities_and_equity": 261632.0,
+      "accounts_receivable": 18338.0,
+      "inventory": 8612.0,
+      "total_current_assets": 41128.0,
+      "goodwill": 4722.0,
+      "total_current_liabilities": 32258.0,
+      "retained_earnings": 200025.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": 33939.0,
+    "cash_from_investing": -15911.0,
+    "cash_from_financing": -19063.0,
+    "net_change_in_cash": -977.0,
+    "depreciation_amortization": 20132.0,
+    "dividends_paid": 12751.0,
+    "share_repurchases": 12079.0,
+    "debt_issuance": 11402.0,
+    "net_income": 12299.0,
+    "changes_in_working_capital": 1508.0
+  }
+}

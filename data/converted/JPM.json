@@ -1,0 +1,45 @@
+{
+  "company": "JPMorgan Chase & Co",
+  "ticker": "JPM",
+  "period": "FY2025",
+  "currency": "USD",
+  "unit": "millions",
+  "income_statement": {
+    "revenue": 182447.0,
+    "income_tax_expense": 15547.0,
+    "net_income": 57048.0,
+    "eps_basic": 20.05,
+    "eps_diluted": 20.02,
+    "diluted_shares": 2781500000.0
+  },
+  "balance_sheet": {
+    "current_year": {
+      "total_assets": 4424900.0,
+      "total_liabilities": 4062462.0,
+      "total_equity": 362438.0,
+      "total_liabilities_and_equity": 4424900.0,
+      "goodwill": 52731.0,
+      "retained_earnings": 416055.0,
+      "shares_outstanding": 2696200000.0
+    },
+    "prior_year": {
+      "total_assets": 3665743.0,
+      "total_liabilities": 3547515.0,
+      "total_equity": 292332.0,
+      "total_liabilities_and_equity": 3875393.0,
+      "goodwill": 50315.0,
+      "retained_earnings": 332901.0,
+      "shares_outstanding": 2934200000.0
+    }
+  },
+  "cash_flow_statement": {
+    "cash_from_operations": -147782.0,
+    "cash_from_investing": -265565.0,
+    "cash_from_financing": 269533.0,
+    "net_change_in_cash": -125979.0,
+    "dividends_paid": 16625.0,
+    "share_repurchases": 31591.0,
+    "net_income": 57048.0,
+    "changes_in_working_capital": -204830.0
+  }
+}
