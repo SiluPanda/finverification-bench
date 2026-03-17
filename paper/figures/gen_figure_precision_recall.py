@@ -12,9 +12,12 @@ from matplotlib.patches import FancyBboxPatch
 systems = {
     "Rule-based":        {"precision": 100.0, "recall": 52.8,  "marker": "s", "color": "#888888",  "size": 140},
     "Claude Sonnet 4":   {"precision": 100.0, "recall": 96.9,  "marker": "*", "color": "#2166AC",  "size": 260},
+    "Gemma 3 27B":       {"precision": 78.6,  "recall": 50.8,  "marker": "d", "color": "#B8860B",  "size": 140},
     "Qwen 3 235B":       {"precision": 65.6,  "recall": 93.8,  "marker": "v", "color": "#984EA3",  "size": 140},
     "GPT-4.1":           {"precision": 61.3,  "recall": 100.0, "marker": "D", "color": "#4DAF4A",  "size": 130},
+    "DeepSeek R1":       {"precision": 61.0,  "recall": 98.5,  "marker": "8", "color": "#CD853F",  "size": 130},
     "Llama 4 Maverick":  {"precision": 66.7,  "recall": 67.7,  "marker": "h", "color": "#A0522D",  "size": 180},
+    "Llama 4 Scout":     {"precision": 60.9,  "recall": 86.2,  "marker": ">", "color": "#D2691E",  "size": 130},
     "Claude Opus 4.6":   {"precision": 60.2,  "recall": 100.0, "marker": "X", "color": "#6BAED6",  "size": 140},
     "Claude Sonnet 4.6": {"precision": 60.2,  "recall": 100.0, "marker": "P", "color": "#4A90D9",  "size": 140},
     "DeepSeek V3.2":     {"precision": 60.2,  "recall": 100.0, "marker": "H", "color": "#8B4513",  "size": 140},
@@ -22,10 +25,10 @@ systems = {
     "Gemini 2.5 Pro":    {"precision": 58.8,  "recall": 100.0, "marker": "p", "color": "#FF7F00",  "size": 140},
 }
 
-# Apply small jitter to the 5 biased models (recall=100, precision~58-61) so they
-# don't stack on top of each other.  GPT-4.1 is at (100, 61.3) which is close too.
+# Apply small jitter to overlapping models so they don't stack.
 jitter = {
     "GPT-4.1":           (0.0,   +0.6),
+    "DeepSeek R1":       (-0.8,  -0.6),
     "Claude Opus 4.6":   (-0.9,  +0.5),
     "Claude Sonnet 4.6": (+0.9,  +0.5),
     "DeepSeek V3.2":     (0.0,   -0.5),
@@ -84,14 +87,17 @@ for name, d in systems.items():
 label_positions = {
     "Rule-based":        {"xytext": (37.0, 96.0),  "ha": "left"},
     "Claude Sonnet 4":   {"xytext": (76.0, 105.0), "ha": "left"},
-    "Qwen 3 235B":       {"xytext": (68.0, 86.0),  "ha": "left"},
-    "Llama 4 Maverick":  {"xytext": (37.0, 72.0),  "ha": "left"},
+    "Gemma 3 27B":       {"xytext": (37.0, 82.0),  "ha": "left"},
+    "Qwen 3 235B":       {"xytext": (76.0, 69.0),  "ha": "left"},
+    "Llama 4 Maverick":  {"xytext": (48.0, 72.0),  "ha": "left"},
+    "Llama 4 Scout":     {"xytext": (68.0, 53.0),  "ha": "left"},
     "GPT-4.1":           {"xytext": (37.0, 65.0),  "ha": "left"},
-    "Claude Opus 4.6":   {"xytext": (37.0, 82.0),  "ha": "left"},
-    "Claude Sonnet 4.6": {"xytext": (37.0, 76.0),  "ha": "left"},
-    "DeepSeek V3.2":     {"xytext": (37.0, 59.0),  "ha": "left"},
-    "MiniMax M2.5":      {"xytext": (37.0, 53.0),  "ha": "left"},
-    "Gemini 2.5 Pro":    {"xytext": (68.0, 53.0),  "ha": "left"},
+    "DeepSeek R1":       {"xytext": (37.0, 59.0),  "ha": "left"},
+    "Claude Opus 4.6":   {"xytext": (37.0, 76.0),  "ha": "left"},
+    "Claude Sonnet 4.6": {"xytext": (37.0, 53.0),  "ha": "left"},
+    "DeepSeek V3.2":     {"xytext": (37.0, 47.0),  "ha": "left"},
+    "MiniMax M2.5":      {"xytext": (76.0, 47.0),  "ha": "left"},
+    "Gemini 2.5 Pro":    {"xytext": (76.0, 53.0),  "ha": "left"},
 }
 for name, d in systems.items():
     cfg = label_positions[name]
@@ -109,7 +115,7 @@ for name, d in systems.items():
 ax.set_xlabel("Recall (%)")
 ax.set_ylabel("Precision (%)")
 ax.set_xlim(35, 108)
-ax.set_ylim(42, 110)
+ax.set_ylim(38, 110)
 ax.set_xticks(np.arange(40, 110, 10))
 ax.set_yticks(np.arange(50, 110, 10))
 ax.spines["top"].set_visible(False)

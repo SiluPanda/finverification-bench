@@ -10,9 +10,12 @@ metrics = ["Accuracy", "Precision", "Recall", "F1", "Specificity\n(100\u2013FPR)
 systems = {
     "Rule-based":        [53.8, 100.0, 52.8, 69.1,  100.0],
     "Claude Sonnet 4":   [98.1, 100.0, 96.9, 98.4,  100.0],
+    "Gemma 3 27B":       [62.0, 78.6,  50.8, 61.7,  79.1],
     "Qwen 3 235B":       [66.7, 65.6,  93.8, 77.2,  25.6],
     "GPT-4.1":           [62.0, 61.3,  100.0, 76.0,  4.7],
+    "DeepSeek R1":       [61.1, 61.0,  98.5, 75.3,  4.7],
     "Llama 4 Maverick":  [60.2, 66.7,  67.7, 67.2,  48.8],
+    "Llama 4 Scout":     [58.3, 60.9,  86.2, 71.3,  16.3],
     "Claude Opus 4.6":   [60.2, 60.2,  100.0, 75.1,  0.0],
     "Claude Sonnet 4.6": [60.2, 60.2,  100.0, 75.1,  0.0],
     "DeepSeek V3.2":     [60.2, 60.2,  100.0, 75.1,  0.0],
@@ -23,9 +26,12 @@ systems = {
 colors = {
     "Rule-based":        "#888888",
     "Claude Sonnet 4":   "#2166AC",
+    "Gemma 3 27B":       "#B8860B",
     "Qwen 3 235B":       "#984EA3",
     "GPT-4.1":           "#4DAF4A",
+    "DeepSeek R1":       "#CD853F",
     "Llama 4 Maverick":  "#A0522D",
+    "Llama 4 Scout":     "#D2691E",
     "Claude Opus 4.6":   "#6BAED6",
     "Claude Sonnet 4.6": "#4A90D9",
     "DeepSeek V3.2":     "#8B4513",
@@ -48,10 +54,10 @@ plt.rcParams.update({
 
 n_metrics = len(metrics)
 n_systems = len(systems)
-bar_width = 0.078
+bar_width = 0.062
 x = np.arange(n_metrics)
 
-fig, ax = plt.subplots(figsize=(10.5, 5.2))
+fig, ax = plt.subplots(figsize=(12.0, 5.5))
 
 for i, (name, vals) in enumerate(systems.items()):
     offset = (i - (n_systems - 1) / 2) * bar_width

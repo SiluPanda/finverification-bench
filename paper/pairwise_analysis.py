@@ -34,10 +34,13 @@ MODEL_FILES = {
     "Claude Sonnet 4.6": "claude_cli_claude-sonnet-4-6_cot_results.json",
     "GPT-4.1":           "openrouter_openai_gpt-4.1_cot_results.json",
     "DeepSeek V3.2":     "deepinfra_deepseek-ai_DeepSeek-V3.2_cot_results.json",
+    "DeepSeek R1":       "deepinfra_deepseek-ai_DeepSeek-R1-0528_cot_results.json",
     "Qwen 3 235B":       "deepinfra_Qwen_Qwen3-235B-A22B-Instruct-2507_cot_results.json",
     "Gemini 2.5 Pro":    "openrouter_google_gemini-2.5-pro-preview-03-25_cot_results.json",
     "MiniMax M2.5":      "minimax_cot_results.json",
     "Llama 4 Maverick":  "deepinfra_meta-llama_Llama-4-Maverick-17B-128E-Instruct-FP8_cot_results.json",
+    "Llama 4 Scout":     "deepinfra_meta-llama_Llama-4-Scout-17B-16E-Instruct_cot_results.json",
+    "Gemma 3 27B":       "deepinfra_google_gemma-3-27b-it_cot_results.json",
 }
 
 # ---------------------------------------------------------------------------

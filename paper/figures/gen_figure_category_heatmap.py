@@ -20,9 +20,12 @@ category_labels = [
 system_names = [
     "Rule-\nbased",
     "Claude\nSonnet 4",
+    "Gemma 3\n27B",
     "Qwen 3\n235B",
     "GPT-4.1",
+    "DeepSeek\nR1",
     "Llama 4\nMaverick",
+    "Llama 4\nScout",
     "Claude\nOpus 4.6",
     "Claude\nSonnet 4.6",
     "DeepSeek\nV3.2",
@@ -30,21 +33,14 @@ system_names = [
     "Gemini\n2.5 Pro",
 ]
 
-# Detection rates by category.
-# Opus 4.6, Sonnet 4.6: flag everything -> 100% detection, 0% specificity.
-# Qwen 3 235B: 93.8% recall overall, 25.6% specificity (FPR=74.4%).
-#   Per-category estimates for Qwen based on partial calibration:
-#   AE=100, CL=100, YoY=81.3, MR=88.9, Clean=25.6
-# Llama 4 Maverick: 67.7% recall, 48.8% specificity (FPR=51.2%).
-#   Per-category: AE=43.8, CL=87.5, YoY=62.5, MR=66.7, Clean=48.8
-# MiniMax and Gemini: 100% recall, 100% FPR -> all errors detected, 0% specificity.
+# Detection rates by category from evaluation results.
 data = np.array([
-    # Rul    Son4   Qwen3  GPT41  Llama  Op46   Son46  DSV32  MiniM  Gem25
-    [31.0,  100.0,  100.0, 100.0,  43.8, 100.0, 100.0, 100.0, 100.0, 100.0],  # AE
-    [100.0, 100.0,  100.0, 100.0,  87.5, 100.0, 100.0, 100.0, 100.0, 100.0],  # CL
-    [14.2,   93.8,   81.3, 100.0,  62.5, 100.0, 100.0, 100.0, 100.0, 100.0],  # YoY
-    [32.0,   88.9,   88.9, 100.0,  66.7, 100.0, 100.0, 100.0, 100.0, 100.0],  # MR
-    [100.0, 100.0,   25.6,   4.7,  48.8,   0.0,   0.0,   0.0,   0.0,   0.0],  # Clean (specificity)
+    # Rul    Son4  Gem3  Qwen3  GPT41   R1   Mav   Sct   Op46  Son46  DSV32  MiniM  Gem25
+    [31.0,  100.0, 25.0, 93.8, 100.0, 100.0, 43.8, 87.5, 100.0, 100.0, 100.0, 100.0, 100.0],  # AE
+    [100.0, 100.0, 75.0, 95.8, 100.0,  95.8, 87.5, 83.3, 100.0, 100.0, 100.0, 100.0, 100.0],  # CL
+    [14.2,   93.8, 37.5, 87.5, 100.0, 100.0, 62.5, 87.5, 100.0, 100.0, 100.0, 100.0, 100.0],  # YoY
+    [32.0,   88.9, 55.6, 100.0,100.0, 100.0, 66.7, 88.9, 100.0, 100.0, 100.0, 100.0, 100.0],  # MR
+    [100.0, 100.0, 79.1, 25.6,  4.7,   4.7,  48.8, 16.3,   0.0,   0.0,   0.0,   0.0,   0.0],  # Clean
 ])
 
 # Style
@@ -63,7 +59,7 @@ cmap = mcolors.LinearSegmentedColormap.from_list(
     N=256,
 )
 
-fig, ax = plt.subplots(figsize=(11.0, 4.5))
+fig, ax = plt.subplots(figsize=(14.0, 4.5))
 
 im = ax.imshow(data, cmap=cmap, aspect="auto", vmin=0, vmax=100)
 

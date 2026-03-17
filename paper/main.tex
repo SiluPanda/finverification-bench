@@ -957,12 +957,11 @@ This confirms that the calibrated model's advantage is statistically robust and 
 
 Inter-rater agreement further clarifies the landscape.
 Three models (Claude Opus 4.6, Sonnet 4.6, and DeepSeek V3.2) produce \emph{identical} predictions on all 108 instances ($\kappa = 1.0$), all flagging every instance as erroneous; MiniMax M2.5 exhibits the same behavior on its 90 evaluated instances.
-Fleiss' $\kappa$ across all twelve models' raw predictions is $-0.005$ (no agreement beyond chance), reflecting the fundamental disagreement: models do not agree on \emph{which} instances contain errors, despite similar aggregate accuracy.
-Fleiss' $\kappa$ on correctness (whether each model's prediction matches the ground truth) is $0.448$ (moderate agreement), indicating that models tend to agree on which instances are easy versus hard---but differ in how they resolve the hard ones.
+Fleiss' $\kappa$ across all twelve models' raw predictions is $0.012$ (no agreement beyond chance), reflecting the fundamental disagreement: models do not agree on \emph{which} instances contain errors, despite similar aggregate accuracy.
+Fleiss' $\kappa$ on correctness (whether each model's prediction matches the ground truth) is $0.381$ (fair agreement), indicating that models tend to agree on which instances are easy versus hard---but differ in how they resolve the hard ones.
 
-Instance-level analysis on the original nine models reveals that 22 of 108 instances are \emph{universally correct} (all models answer correctly), while zero instances are universally wrong.
-Thirteen instances are correctly classified \emph{only} by Claude Sonnet 4; all 13 are clean (no-error) instances, confirming that the calibrated model's advantage lies entirely in clean-instance specificity rather than superior error detection.
-The two additional models (Gemma 3 27B, Llama 4 Scout) do not alter these conclusions: both fall within the non-calibrated cluster and neither achieves the clean-instance specificity of Claude Sonnet 4.
+Instance-level analysis reveals that 14 of 108 instances are \emph{universally correct} (all twelve models answer correctly), while zero instances are universally wrong.
+Three instances are correctly classified \emph{only} by Claude Sonnet 4; all 3 are clean (no-error) instances, confirming that the calibrated model's advantage lies in clean-instance specificity.
 
 \subsection{Anatomy of False Positives: Why Models Miscalibrate}
 \label{sec:analysis:fp}
