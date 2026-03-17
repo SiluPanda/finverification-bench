@@ -487,6 +487,7 @@ Preliminary runs with chain-of-thought prompting produced identical behavior (al
 \paragraph{Evaluation protocol.}
 All models are evaluated at temperature 0 for deterministic output.
 Ten of eleven models are evaluated with chain-of-thought prompting (\Cref{app:prompts}), which instructs the model to systematically check specific accounting relationships step by step, mirroring audit procedures.
+The open-weight models (DeepSeek V3.2, Qwen 3, Llama 4 Maverick/Scout, Gemma 3) receive an additional rounding tolerance instruction (``Small rounding differences within 1 unit of the reporting precision should NOT be flagged as errors''), which if anything should \emph{reduce} false positive rates; despite this, five of six still exhibit FPR $\geq 74\%$.
 MiniMax is evaluated with zero-shot prompting, which provides general verification instructions without step-by-step guidance; supplementary CoT and few-shot evaluations produced identical behavior (100\% FPR).
 All strategies instruct the model to respond in structured JSON format with detection decision, error location, and explanation.
 Responses are parsed with a multi-stage pipeline: JSON extraction from code fences, inline JSON matching, and keyword heuristic fallback.
