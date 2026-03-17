@@ -744,7 +744,7 @@ These systems occupy fundamentally different positions in the precision-recall s
 \centering
 \includegraphics[width=0.95\textwidth]{figures/figure_model_comparison_updated.pdf}
 \caption{Comparison of all verification systems across five metrics.
-Nine of twelve LLMs achieve $\geq$86\% recall; Gemma 3 27B and Llama 4 Maverick trade recall for higher precision.
+Ten of twelve LLMs achieve $\geq$86\% recall; Gemma 3 27B and Llama 4 Maverick trade recall for higher precision.
 Only Claude Sonnet 4 combines high recall with low FPR.
 Only Claude Sonnet 4 achieves low FPR (0\%) and high accuracy (98.1\%).}
 \label{fig:model_comparison}
@@ -760,7 +760,7 @@ Notably, Claude achieves \textbf{100\% localization accuracy}: for every detecte
 \centering
 \footnotesize
 \caption{Detection rate (\%) by error category.
-Nine of twelve LLMs achieve $\geq$86\% recall, but seven achieve this at the cost of high FPR (95--100\%), flagging nearly all clean instances as erroneous.
+Ten of twelve LLMs achieve $\geq$86\% recall, but seven achieve this at the cost of high FPR (95--100\%), flagging nearly all clean instances as erroneous.
 Only Claude Sonnet 4 achieves selective detection with 0\% FPR.
 $^\dagger$Gemini metrics on 68 valid responses (37\% API error rate).
 }
@@ -1085,7 +1085,7 @@ Our results show that Claude Sonnet 4 achieves \textbf{100\% detection at magnit
 This has direct implications for AI-assisted auditing: a sufficiently capable LLM could serve as a pre-screening tool to flag potential misstatements before human auditor review, potentially catching errors that would otherwise be dismissed as immaterial.
 
 \paragraph{The calibration challenge.}
-The contrast across all twelve LLMs reveals that the key challenge in LLM-based verification is not error detection per se (nine of twelve achieve $\geq$86\% recall) but \emph{calibration}---the ability to distinguish genuine errors from expected discrepancies in real financial data.
+The contrast across all twelve LLMs reveals that the key challenge in LLM-based verification is not error detection per se (ten of twelve achieve $\geq$86\% recall) but \emph{calibration}---the ability to distinguish genuine errors from expected discrepancies in real financial data.
 Claude Sonnet 4's 0\% false positive rate demonstrates that this calibration is achievable, while the 95--100\% FPR exhibited by seven of twelve models---from seven independent providers---shows it is the exception rather than the rule among current frontier models.
 This finding aligns with recent work on neuro-symbolic approaches~\citep{venra2026} that argues for constraining LLM arithmetic responsibility, though our results suggest that \emph{some} models can already perform calibrated numerical verification without explicit symbolic scaffolding.
 The question of \emph{why} Claude uniquely achieves calibration---whether through training data composition, RLHF alignment, or architectural factors---remains an important open question.
