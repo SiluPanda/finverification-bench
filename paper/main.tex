@@ -52,7 +52,7 @@
 % ==============================================================================
 We introduce \benchmark{}, a benchmark for evaluating LLMs on financial statement \emph{verification}---detecting numerical inconsistencies in real corporate filings---a task distinct from the question-answering paradigm of existing financial NLP benchmarks.
 \benchmark{} comprises 1,985 instances constructed from 43 S\&P 500 companies' SEC 10-K filings via controlled error injection across a four-category taxonomy (arithmetic, cross-statement linkage, year-over-year, and magnitude errors) at six magnitude levels.
-Evaluating twelve frontier LLMs---spanning seven providers, both closed-source and open-weight architectures, and multiple model generations within three providers---alongside a rule-based baseline, we identify \emph{error detection bias} as the dominant failure mode: seven of twelve models flag 95--100\% of \emph{clean} statements as erroneous.
+Evaluating twelve frontier LLMs---spanning seven providers, both closed-source and open-weight architectures, and multiple model generations within four providers---alongside a rule-based baseline, we identify \emph{error detection bias} as the dominant failure mode: seven of twelve models flag 95--100\% of \emph{clean} statements as erroneous.
 Four models achieve intermediate calibration---Gemma 3 27B at 20.9\% FPR, Llama 4 Maverick at 51.2\%, Qwen 3 235B at 74.4\%, and Llama 4 Scout at 83.7\%---revealing that calibration quality forms a \emph{spectrum} rather than a binary outcome.
 Only one model achieves fully calibrated verification (0\% FPR, 96.9\% recall); a rounding ablation shows 21.5 percentage points of this recall reflects format anomalies, reducing true arithmetic recall to 75.4\%.
 Two newer models from the \emph{same provider} exhibit 100\% FPR, demonstrating checkpoint-specific rather than provider-level calibration.
@@ -758,26 +758,27 @@ Notably, Claude achieves \textbf{100\% localization accuracy}: for every detecte
 
 \begin{table}[t]
 \centering
-\small
+\footnotesize
 \caption{Detection rate (\%) by error category.
-Nine of twelve LLMs achieve $\geq$93.8\% recall, but six achieve this trivially by flagging all instances (including clean ones) as erroneous.
+Nine of twelve LLMs achieve $\geq$86\% recall, but seven achieve this at the cost of high FPR (95--100\%), flagging nearly all clean instances as erroneous.
 Only Claude Sonnet 4 achieves selective detection with 0\% FPR.
 $^\dagger$Gemini metrics on 68 valid responses (37\% API error rate).
 }
 \label{tab:category_results}
-\begin{tabular}{lrrrrrrrrrrrrr}
+\begin{tabular}{lrrrrrrrrrrrr}
 \toprule
-\textbf{Cat.} & $\bm{n}$ & \textbf{Cl.S4} & \textbf{Gem3} & \textbf{Qwen} & \textbf{GPT} & \textbf{Mav} & \textbf{Sct} & \textbf{O4.6} & \textbf{S4.6} & \textbf{DSk} & \textbf{Gmi$^\dagger$} & \textbf{Rule} \\
+\textbf{Cat.} & $\bm{n}$ & \textbf{Cl.S4} & \textbf{Gem3} & \textbf{Qwen} & \textbf{GPT} & \textbf{R1} & \textbf{Mav} & \textbf{Sct} & \textbf{Biased$^*$} & \textbf{Rule} \\
 \midrule
-AE       & 16 & 100.0 & 25.0 & 93.8 & 100.0 & 43.8 & 87.5 & 100.0 & 100.0 & 100.0 & 100.0 & 31.0 \\
-CL  & 24 & 100.0 & 75.0 & 95.8 & 100.0 & 87.5 & 83.3 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 \\
-YoY  & 16 & 93.8 & 37.5 & 87.5 & 100.0 & 62.5 & 87.5 & 100.0 & 100.0 & 100.0 & 100.0 & 14.2 \\
-MR        &  9 & 88.9 & 55.6 & 100.0 & 100.0 & 66.7 & 88.9 & 100.0 & 100.0 & 100.0 & 100.0 & 32.0 \\
+AE       & 16 & 100.0 & 25.0 & 93.8 & 100.0 & 100.0 & 43.8 & 87.5 & 100.0 & 31.0 \\
+CL  & 24 & 100.0 & 75.0 & 95.8 & 100.0 & 95.8 & 87.5 & 83.3 & 100.0 & 100.0 \\
+YoY  & 16 & 93.8 & 37.5 & 87.5 & 100.0 & 100.0 & 62.5 & 87.5 & 100.0 & 14.2 \\
+MR        &  9 & 88.9 & 55.6 & 100.0 & 100.0 & 100.0 & 66.7 & 88.9 & 100.0 & 32.0 \\
 \midrule
-\textbf{Overall}      & 65 & \textbf{96.9} & 50.8 & 93.8 & 100.0 & 67.7 & 86.2 & 100.0 & 100.0 & 100.0 & 100.0 & 52.8 \\
+\textbf{Overall}      & 65 & \textbf{96.9} & 50.8 & 93.8 & 100.0 & 98.5 & 67.7 & 86.2 & 100.0 & 52.8 \\
 \midrule
-\textbf{Clean}  & 43 & \textbf{100.0} & 79.1 & 25.6 & 4.7 & 48.8 & 16.3 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 \\
+\textbf{Clean}  & 43 & \textbf{100.0} & 79.1 & 25.6 & 4.7 & 4.7 & 48.8 & 16.3 & 0.0 & 100.0 \\
 \bottomrule
+\multicolumn{10}{l}{\scriptsize $^*$Biased = Cl.~Opus~4.6, Cl.~Sonnet~4.6, DeepSeek V3.2, Gemini 2.5 Pro, MiniMax M2.5 (all 100\% on all categories).}
 \end{tabular}
 \end{table}
 
@@ -828,9 +829,9 @@ Second, MiniMax exhibits the same bias under all three tested strategies (zero-s
 Third---and most strikingly---Claude Opus 4.6 and Sonnet 4.6, from the \emph{same provider} as the calibrated Claude Sonnet 4, both exhibit 100\% FPR, demonstrating that error detection bias can emerge \emph{within a model family} across generations.
 Manual inspection reveals that all biased models identify \emph{genuine but benign} discrepancies arising from partial observability in the data---the same issues discussed in \Cref{sec:results:noise}.
 For GPT-4.1, false positives typically involve miscomputing operating income from an abbreviated statement that omits certain line items (e.g., stock-based compensation).
-Among models with high FPR, localization accuracy on true positives varies: DeepSeek V3.2 achieves 86.2\%, Qwen 85.2\%, Gemini 85.0\%, Claude Opus 4.6 78.5\%, Claude Sonnet 4.6 73.8\%, and GPT-4.1 70.8\%---suggesting that even when models correctly detect an injected error, they frequently attribute it to the wrong field.
+Among non-calibrated models, localization accuracy on true positives varies widely: Gemma 3 93.9\%, DeepSeek V3.2 86.2\%, Qwen 85.2\%, Gemini 85.0\%, Llama 4 Maverick 84.1\%, Scout 82.1\%, Claude Opus 4.6 78.5\%, Claude Sonnet 4.6 73.8\%, GPT-4.1 70.8\%, and DeepSeek R1 60.7\%---suggesting that even when models correctly detect an injected error, they frequently attribute it to the wrong field.
 Claude Sonnet 4, by contrast, demonstrates the calibrated judgment needed to distinguish injected errors from expected rounding discrepancies, achieving a 0\% false positive rate [95\% CI: 0--8.2\%] with 100\% localization accuracy.
-The observation that non-calibrated behavior (FPR $>$ 0\%) appears across all seven evaluated providers (Anthropic, OpenAI, DeepSeek, Google, Alibaba/Qwen, Meta, MiniMax), across prompting strategies (CoT, zero-shot), and \emph{within} three model families (Anthropic, Meta, Google), establishes this as a fundamental challenge for LLMs in verification tasks.
+The observation that non-calibrated behavior (FPR $>$ 0\%) appears across all seven evaluated providers (Anthropic, OpenAI, DeepSeek, Google, Alibaba/Qwen, Meta, MiniMax), across prompting strategies (CoT, zero-shot), and \emph{within} four model families (Anthropic, DeepSeek, Meta, Google), establishes this as a fundamental challenge for LLMs in verification tasks.
 \Cref{fig:category_heatmap} visualizes detection rates across error categories and systems, highlighting the contrast between universal error recall and divergent clean-instance specificity.
 
 \begin{figure}[t]
@@ -1127,7 +1128,7 @@ Future benchmark versions should round injected errors to the statement's report
 We also present financial statements as formatted text rather than the complex layouts (PDFs with tables, footnotes, charts) used in actual filings.
 
 \paragraph{External validity.}
-We evaluate twelve frontier LLMs from seven providers (Anthropic, OpenAI, DeepSeek, Qwen/Alibaba, Meta, Google, MiniMax), including both closed-source and open-weight models, and multiple model generations within three providers' families (Anthropic, Meta, DeepSeek).
+We evaluate twelve frontier LLMs from seven providers (Anthropic, OpenAI, DeepSeek, Qwen/Alibaba, Meta, Google, MiniMax), including both closed-source and open-weight models, and multiple model generations within four providers' families (Anthropic, Meta, DeepSeek).
 This provides broader coverage than prior work, but results may not generalize to future releases.
 Eleven of twelve models are evaluated under identical CoT prompting on the same sample, enabling direct comparison; MiniMax was evaluated under zero-shot prompting.
 In supplementary experiments, we also evaluated MiniMax under all three prompting strategies (zero-shot, few-shot, and CoT, each $n=108$); all three produced identical 100\% FPR, confirming that MiniMax's error detection bias is intrinsic rather than prompt-dependent.
